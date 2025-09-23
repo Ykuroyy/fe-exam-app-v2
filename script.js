@@ -308,6 +308,12 @@ function stopTimer() {
 function finishExam() {
     stopTimer();
 
+    // 単一問題の場合は専用の結果表示
+    if (currentExamType === 'single-algorithm' && examQuestions.length === 1) {
+        showResultsForSingleExam();
+        return;
+    }
+
     // 結果計算
     const results = calculateResults();
 
@@ -1079,12 +1085,153 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// アルゴリズム問題選択機能
+function showAlgorithmSelection() {
+    showScreen('algorithm-selection-container');
+    generateProblemButtons();
+}
+
+function hideAlgorithmSelection() {
+    showScreen('menu-container');
+}
+
+function generateProblemButtons() {
+    const grid = document.getElementById('problem-selection-grid');
+    grid.innerHTML = '';
+    
+    for (let i = 1; i <= 60; i++) {
+        const button = document.createElement('button');
+        button.className = 'problem-number-btn';
+        button.textContent = i;
+        button.onclick = () => startSingleProblem(i);
+        
+        // 解答履歴に基づいて色分け
+        const solvedProblems = JSON.parse(localStorage.getItem('solvedAlgorithmProblems') || '[]');
+        if (solvedProblems.includes(i)) {
+            button.classList.add('solved');
+        }
+        
+        grid.appendChild(button);
+    }
+}
+
+function startSingleProblem(problemNumber) {
+    // 選択された問題番号（1-60）を配列インデックス（0-59）に変換
+    const problemIndex = problemNumber - 1;
+    
+    if (questions.algorithm && questions.algorithm[problemIndex]) {
+        currentExamType = 'single-algorithm';
+        currentQuestionIndex = 0;
+        userAnswers = [];
+        
+        // 選択された1問だけを試験問題として設定
+        examQuestions = [questions.algorithm[problemIndex]];
+        
+        showScreen('exam-container');
+        startTimer();
+        displayQuestion();
+        
+        console.log(`アルゴリズム問題${problemNumber}番を開始`);
+    } else {
+        alert('選択された問題が見つかりません。');
+    }
+}
+
+function startRandomAlgorithm() {
+    currentExamType = 'random-algorithm';
+    currentQuestionIndex = 0;
+    userAnswers = [];
+    
+    // ランダムに20問選択
+    examQuestions = shuffleArray([...questions.algorithm]).slice(0, 20);
+    
+    showScreen('exam-container');
+    startTimer();
+    displayQuestion();
+    
+    console.log('ランダムアルゴリズム20問を開始');
+}
+
+// 解答履歴を保存する関数
+function saveSolvedProblem(examType, questionId) {
+    if (examType === 'single-algorithm' && questionId) {
+        const solvedProblems = JSON.parse(localStorage.getItem('solvedAlgorithmProblems') || '[]');
+        
+        // 問題IDから番号を抽出（例：'alg001' → 1）
+        const problemNumber = parseInt(questionId.replace('alg', ''));
+        
+        if (!solvedProblems.includes(problemNumber)) {
+            solvedProblems.push(problemNumber);
+            localStorage.setItem('solvedAlgorithmProblems', JSON.stringify(solvedProblems));
+        }
+    }
+}
+
+// 既存のshowResultsForSingleExam関数を修正（1問完了後の処理）
+function showResultsForSingleExam() {
+    if (currentExamType === 'single-algorithm' && examQuestions.length === 1) {
+        const question = examQuestions[0];
+        const userAnswer = userAnswers[0];
+        const isCorrect = userAnswer === question.correct;
+        
+        // 解答履歴を保存
+        saveSolvedProblem(currentExamType, question.id);
+        
+        // 結果表示を短縮版に変更
+        showSingleProblemResult(question, userAnswer, isCorrect);
+    } else {
+        // 既存の複数問題用結果表示
+        showResults();
+    }
+}
+
+function showSingleProblemResult(question, userAnswer, isCorrect) {
+    const resultContainer = document.getElementById('result-container');
+    const resultCard = resultContainer.querySelector('.result-card');
+    
+    resultCard.innerHTML = `
+        <h2>🎯 問題結果</h2>
+        <div class="single-result">
+            <div class="result-status ${isCorrect ? 'correct' : 'incorrect'}">
+                ${isCorrect ? '✅ 正解！' : '❌ 不正解'}
+            </div>
+            <div class="question-info">
+                <h3>${question.text}</h3>
+                <div class="answer-info">
+                    <p><strong>あなたの回答:</strong> ${question.choices[userAnswer]}</p>
+                    <p><strong>正解:</strong> ${question.choices[question.correct]}</p>
+                </div>
+                <div class="explanation-section">
+                    <h4>📝 解説</h4>
+                    <div class="explanation-content">
+                        ${question.explanation || '解説はありません。'}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="single-result-actions">
+            <button class="control-btn" onclick="showAlgorithmSelection()">
+                🔙 問題選択に戻る
+            </button>
+            <button class="control-btn" onclick="backToMenu()">
+                🏠 メニューに戻る
+            </button>
+        </div>
+    `;
+    
+    showScreen('result-container');
+}
+
 // エクスポート（モジュール対応）
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         startExam,
         showStats,
         showBookmarks,
-        backToMenu
+        backToMenu,
+        showAlgorithmSelection,
+        hideAlgorithmSelection,
+        startSingleProblem,
+        startRandomAlgorithm
     };
 }

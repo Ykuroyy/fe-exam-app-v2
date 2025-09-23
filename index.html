@@ -43,9 +43,9 @@
                     🎯 模擬試験（16問）
                     <span class="sub-text">本番と同じ問題構成</span>
                 </button>
-                <button class="menu-btn" onclick="startExam('algorithm')">
+                <button class="menu-btn" onclick="showAlgorithmSelection()">
                     🧮 アルゴリズム問題（60問）
-                    <span class="sub-text">ソート・探索・データ構造・グラフ</span>
+                    <span class="sub-text">問題を番号で選択して学習</span>
                 </button>
                 <button class="menu-btn" onclick="startExam('security')">
                     🔐 情報セキュリティ問題（4問）
@@ -153,6 +153,38 @@
             <div class="exit-controls">
                 <button class="control-btn exit-btn" onclick="exitExam()">
                     🏠 メニューに戻る
+                </button>
+            </div>
+        </div>
+
+        <!-- アルゴリズム問題選択画面 -->
+        <div class="algorithm-selection-container" id="algorithm-selection-container" style="display: none;">
+            <div class="selection-header">
+                <h2>🧮 アルゴリズム問題を選択</h2>
+                <p class="selection-description">学習したい問題番号を選択してください（1〜60問）</p>
+            </div>
+            
+            <!-- 全問開始オプション -->
+            <div class="selection-options">
+                <button class="option-btn" onclick="startExam('algorithm')">
+                    📚 全60問を連続で学習
+                    <span class="sub-text">順番に全問題を解く</span>
+                </button>
+                <button class="option-btn" onclick="startRandomAlgorithm()">
+                    🎲 ランダム20問
+                    <span class="sub-text">ランダムに選択された20問</span>
+                </button>
+            </div>
+            
+            <!-- 問題番号選択グリッド -->
+            <div class="problem-selection-grid" id="problem-selection-grid">
+                <!-- JavaScriptで1〜60の番号ボタンを生成 -->
+            </div>
+            
+            <!-- 戻るボタン -->
+            <div class="selection-controls">
+                <button class="control-btn exit-btn" onclick="hideAlgorithmSelection()">
+                    🔙 メニューに戻る
                 </button>
             </div>
         </div>

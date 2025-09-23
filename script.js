@@ -77,53 +77,7 @@ function initializeApp() {
     }
 }
 
-// 試験開始
-function startExam(examType) {
-    currentExamType = examType;
-    currentQuestionIndex = 0;
-    userAnswers = [];
 
-    // 問題選択
-    selectExamQuestions(examType);
-
-    if (examQuestions.length === 0) {
-        alert('問題データが読み込まれていません。');
-        return;
-    }
-
-    // UI切り替え
-    showScreen('exam-container');
-
-    // タイマー開始
-    startTimer();
-
-    // 最初の問題を表示
-    displayQuestion();
-
-    console.log(`${examType}試験開始 - ${examQuestions.length}問`);
-}
-
-function selectExamQuestions(examType) {
-    switch (examType) {
-        case 'all':
-            // アルゴリズム16問 + セキュリティ4問 = 20問
-            const algorithmQuestions = questions.algorithm.slice(0, 16);
-            const securityQuestions = questions.security.slice(0, 4);
-            examQuestions = [...algorithmQuestions, ...securityQuestions];
-            break;
-        case 'algorithm':
-            examQuestions = questions.algorithm.slice(0, 16);
-            break;
-        case 'security':
-            examQuestions = questions.security.slice(0, 4);
-            break;
-        default:
-            examQuestions = [];
-    }
-
-    // 問題をシャッフル（オプション）
-    // examQuestions = shuffleArray(examQuestions);
-}
 
 function shuffleArray(array) {
     const newArray = [...array];
@@ -1056,7 +1010,7 @@ function startIntensiveTraining() {
     currentQuestionIndex = 0;
     userAnswers = [];
     
-    startExamTimer();
+    startTimer();
     showScreen('exam-container');
     displayQuestion();
 }
@@ -1106,7 +1060,7 @@ function startExam(examType) {
         return;
     }
 
-    startExamTimer();
+    startTimer();
     showScreen('exam-container');
     displayQuestion();
 }

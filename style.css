@@ -171,13 +171,13 @@ body {
 }
 
 .question-code {
-    background: #1a202c;
-    color: #f7fafc;
+    background: #f8f9fa;
+    color: #2d3748;
     padding: 20px;
     border-radius: 8px;
     margin-top: 15px;
     overflow-x: auto;
-    border: 1px solid #4a5568;
+    border: 2px solid #e2e8f0;
 }
 
 .question-code pre {
@@ -269,12 +269,12 @@ body {
 }
 
 .next-btn, .prev-btn {
-    background: #4a5568;
+    background: #4facfe;
     color: white;
 }
 
 .next-btn:hover, .prev-btn:hover {
-    background: #2d3748;
+    background: #3182ce;
     transform: translateY(-2px);
 }
 
@@ -299,12 +299,12 @@ body {
 }
 
 .exit-btn {
-    background: #718096;
+    background: #e53e3e;
     color: white;
 }
 
 .exit-btn:hover {
-    background: #4a5568;
+    background: #c53030;
 }
 
 /* 解説エリア */
@@ -854,10 +854,11 @@ body {
 .countdown-item {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
-    color: white;
+    background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
+    color: #1e40af;
     border-radius: 15px;
     min-width: 100px;
+    border: 2px solid #3b82f6;
 }
 
 .countdown-value {

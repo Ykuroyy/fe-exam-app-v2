@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本情報技術者試験 科目B対策アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <header class="header">
+            <h1>🖥️ 基本情報技術者試験 科目B対策</h1>
+            <p class="subtitle">アルゴリズム16問 + 情報セキュリティ4問 = 計20問</p>
+        </header>
+
+        <!-- メインメニュー -->
+        <div class="main-menu" id="main-menu">
+            <div class="menu-card">
+                <h2>📖 学習メニュー</h2>
+                <button class="menu-btn" onclick="startExam('all')">
+                    🎯 全20問チャレンジ
+                    <span class="sub-text">本番と同じ問題構成</span>
+                </button>
+                <button class="menu-btn" onclick="startExam('algorithm')">
+                    🧮 アルゴリズム問題（16問）
+                    <span class="sub-text">ソート・探索・データ構造</span>
+                </button>
+                <button class="menu-btn" onclick="startExam('security')">
+                    🔐 情報セキュリティ問題（4問）
+                    <span class="sub-text">暗号化・認証・脅威対策</span>
+                </button>
+                <button class="menu-btn" onclick="showStats()">
+                    📊 学習履歴
+                    <span class="sub-text">正答率・復習問題</span>
+                </button>
+                <button class="menu-btn" onclick="showBookmarks()">
+                    📌 ブックマーク
+                    <span class="sub-text">重要問題の確認</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 問題表示エリア -->
+        <div class="exam-container" id="exam-container" style="display: none;">
+            <!-- 進捗情報 -->
+            <div class="progress-area">
+                <div class="progress-info">
+                    <span id="current-question">1</span> / <span id="total-questions">20</span>
+                    <span class="category-badge" id="current-category">アルゴリズム</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="time-info">
+                    <span>⏱️ 経過時間: <span id="timer">00:00</span></span>
+                </div>
+            </div>
+
+            <!-- 問題文 -->
+            <div class="question-card">
+                <h3>問題 <span id="question-number">1</span></h3>
+                <div class="question-text" id="question-text">
+                    問題文がここに表示されます
+                </div>
+                <div class="question-code" id="question-code" style="display: none;">
+                    <pre><code id="code-content"></code></pre>
+                </div>
+            </div>
+
+            <!-- 選択肢 -->
+            <div class="choices-container" id="choices-container">
+                <!-- 選択肢はJavaScriptで動的生成 -->
+            </div>
+
+            <!-- 操作ボタン -->
+            <div class="controls">
+                <button class="control-btn bookmark-btn" id="bookmark-btn" onclick="toggleBookmark()">
+                    📌 ブックマーク
+                </button>
+                <button class="control-btn prev-btn" id="prev-btn" onclick="prevQuestion()" disabled>
+                    ← 前の問題
+                </button>
+                <button class="control-btn next-btn" id="next-btn" onclick="nextQuestion()" disabled>
+                    次の問題 →
+                </button>
+                <button class="control-btn submit-btn" id="submit-btn" onclick="submitAnswer()" disabled>
+                    回答する
+                </button>
+            </div>
+
+            <!-- 解説表示エリア -->
+            <div class="explanation-area" id="explanation-area" style="display: none;">
+                <div class="explanation-card">
+                    <h4>📝 解説</h4>
+                    <div class="correct-answer">
+                        正解: <span id="correct-answer-text"></span>
+                    </div>
+                    <div class="explanation-content" id="explanation-content">
+                        解説がここに表示されます
+                    </div>
+                    <div class="key-points" id="key-points">
+                        <!-- 重要ポイントがここに表示 -->
+                    </div>
+                    <div class="related-info" id="related-info">
+                        <!-- 関連知識がここに表示 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 終了ボタン -->
+            <div class="exit-controls">
+                <button class="control-btn exit-btn" onclick="exitExam()">
+                    🏠 メニューに戻る
+                </button>
+            </div>
+        </div>
+
+        <!-- 結果表示エリア -->
+        <div class="result-container" id="result-container" style="display: none;">
+            <div class="result-card">
+                <h2>🎯 結果発表</h2>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="score-percentage">0</span>%
+                    </div>
+                    <div class="score-details">
+                        <p>正解数: <span id="correct-count">0</span> / <span id="total-count">20</span></p>
+                        <p>所要時間: <span id="total-time">00:00</span></p>
+                    </div>
+                </div>
+
+                <div class="category-results" id="category-results">
+                    <!-- 分野別結果がここに表示 -->
+                </div>
+
+                <div class="result-actions">
+                    <button class="control-btn" onclick="showDetailedResults()">
+                        📊 詳細結果を見る
+                    </button>
+                    <button class="control-btn" onclick="reviewIncorrect()">
+                        📖 間違い問題を復習
+                    </button>
+                    <button class="control-btn" onclick="backToMenu()">
+                        🏠 メニューに戻る
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 学習履歴画面 -->
+        <div class="stats-container" id="stats-container" style="display: none;">
+            <div class="stats-card">
+                <h2>📊 学習履歴</h2>
+                <div class="stats-summary" id="stats-summary">
+                    <!-- 学習統計がここに表示 -->
+                </div>
+                <div class="category-stats" id="category-stats">
+                    <!-- 分野別統計がここに表示 -->
+                </div>
+                <button class="control-btn" onclick="backToMenu()">
+                    🏠 メニューに戻る
+                </button>
+            </div>
+        </div>
+
+        <!-- ブックマーク画面 -->
+        <div class="bookmark-container" id="bookmark-container" style="display: none;">
+            <div class="bookmark-card">
+                <h2>📌 ブックマーク問題</h2>
+                <div class="bookmark-list" id="bookmark-list">
+                    <!-- ブックマーク一覧がここに表示 -->
+                </div>
+                <button class="control-btn" onclick="backToMenu()">
+                    🏠 メニューに戻る
+                </button>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <p>© 2024 基本情報技術者試験 科目B対策アプリ</p>
+            <p>実際の試験: アルゴリズム16問 + 情報セキュリティ4問</p>
+        </footer>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

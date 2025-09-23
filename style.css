@@ -507,7 +507,7 @@ body {
 .footer {
     text-align: center;
     margin-top: 40px;
-    color: white;
+    color: #4a5568;
     opacity: 0.8;
 }
 
@@ -704,7 +704,7 @@ body {
 }
 
 .current-score, .target-score {
-    color: #fff;
+    color: #2d3748;
     font-weight: bold;
 }
 
@@ -1084,7 +1084,7 @@ body {
 }
 
 .exam-countdown {
-    color: #ffeaa7;
+    color: #d97706;
     font-weight: bold;
     margin-top: 10px;
     animation: pulse 2s infinite;

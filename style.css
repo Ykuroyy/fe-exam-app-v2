@@ -154,25 +154,28 @@ body {
 }
 
 .question-card h3 {
-    color: #2d3748;
+    color: #1a202c;
     margin-bottom: 15px;
     font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .question-text {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #4a5568;
+    color: #1a202c;
     white-space: pre-wrap;
+    font-weight: 500;
 }
 
 .question-code {
-    background: #2d3748;
-    color: #e2e8f0;
+    background: #1a202c;
+    color: #f7fafc;
     padding: 20px;
     border-radius: 8px;
     margin-top: 15px;
     overflow-x: auto;
+    border: 1px solid #4a5568;
 }
 
 .question-code pre {
@@ -195,6 +198,8 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    color: #1a202c;
+    font-weight: 500;
 }
 
 .choice-item:hover {
@@ -332,6 +337,8 @@ body {
     line-height: 1.8;
     margin-bottom: 20px;
     white-space: pre-wrap;
+    color: #2d3748;
+    font-weight: 500;
 }
 
 .key-points {

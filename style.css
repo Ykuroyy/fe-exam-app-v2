@@ -146,11 +146,12 @@ body {
 
 /* 問題カード */
 .question-card {
-    background: #f7fafc;
+    background: #ffffff;
     padding: 25px;
     border-radius: 12px;
     margin-bottom: 25px;
     border-left: 5px solid #4facfe;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .question-card h3 {
@@ -650,17 +651,24 @@ body {
     }
 
     .question-card {
-        background: #4a5568;
+        background: #ffffff;
+        color: #1a202c;
+    }
+
+    .question-card h3,
+    .question-text {
+        color: #1a202c !important;
     }
 
     .choice-item {
-        background: #4a5568;
-        border-color: #718096;
-        color: #e2e8f0;
+        background: #ffffff;
+        border-color: #e2e8f0;
+        color: #1a202c;
     }
 
     .choice-item:hover {
-        background: #718096;
+        background: #f0f9ff;
+        border-color: #4facfe;
     }
 }
 

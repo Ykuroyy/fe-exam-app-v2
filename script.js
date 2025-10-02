@@ -23,7 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializeApp() {
-    console.log('基本情報技術者試験 科目B対策アプリを初期化中...');
+    console.log('基本情報技術者試験対策アプリを初期化中...');
+    
+    // シミュレートしたローディング処理
+    setTimeout(() => {
+        document.getElementById('loading-message').style.display = 'none';
+        document.getElementById('main-menu').style.display = 'block';
+    }, 1500);
 
     // 統計データの初期化
     if (!localStorage.getItem(STORAGE_KEYS.STATS)) {
@@ -75,9 +81,30 @@ function initializeApp() {
         };
         localStorage.setItem(STORAGE_KEYS.STUDY_PLAN, JSON.stringify(initialPlan));
     }
+    
+    // 実際の試験結果を統計データに反映
+    updateActualExamScores();
 }
 
-
+// 実際の試験結果を反映する関数
+function updateActualExamScores() {
+    const actualResults = {
+        examDate: '2024-09-25',
+        subjectA: {
+            current: 590,
+            previous: 580,
+            target: 600
+        },
+        subjectB: {
+            current: 415,
+            previous: 265,
+            target: 600
+        },
+        nextExamDate: '2025-10-26'
+    };
+    
+    localStorage.setItem('actual_exam_results', JSON.stringify(actualResults));
+}
 
 function shuffleArray(array) {
     const newArray = [...array];

@@ -106,6 +106,39 @@ function updateActualExamScores() {
     localStorage.setItem('actual_exam_results', JSON.stringify(actualResults));
 }
 
+// 年度別過去問選択画面を表示
+function showPastYearMenu(year) {
+    const yearNames = {
+        'r5': '令和5年度',
+        'r6': '令和6年度', 
+        'r7': '令和7年度'
+    };
+    
+    document.getElementById('year-title').textContent = `📚 ${yearNames[year]} 過去問`;
+    
+    // 各ボタンにイベントリスナーを設定
+    const subjectABtn = document.getElementById('subject-a-btn');
+    const subjectBBtn = document.getElementById('subject-b-btn'); 
+    const bothBtn = document.getElementById('both-subjects-btn');
+    
+    // 既存のイベントリスナーを削除
+    subjectABtn.replaceWith(subjectABtn.cloneNode(true));
+    subjectBBtn.replaceWith(subjectBBtn.cloneNode(true));
+    bothBtn.replaceWith(bothBtn.cloneNode(true));
+    
+    // 新しいイベントリスナーを設定
+    document.getElementById('subject-a-btn').onclick = () => startExam(`past-${year}-a`);
+    document.getElementById('subject-b-btn').onclick = () => startExam(`past-${year}-b`);
+    document.getElementById('both-subjects-btn').onclick = () => startExam(`past-${year}`);
+    
+    showScreen('past-year-selection-container');
+}
+
+// 年度別過去問選択画面を隠す
+function hidePastYearSelection() {
+    showScreen('main-menu');
+}
+
 function shuffleArray(array) {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -1084,17 +1117,49 @@ function startExam(examType) {
         case 'level-advanced':
             examQuestions = questions.algorithm.filter(q => q.level === 'advanced');
             break;
+        case 'past-r7-a':
+            // 令和7年度 科目A
+            examQuestions = [...questions.past_r7_a];
+            break;
+        case 'past-r7-b':
+            // 令和7年度 科目B
+            examQuestions = [...questions.past_r7_b];
+            break;
+        case 'past-r6-a':
+            // 令和6年度 科目A
+            examQuestions = [...questions.past_r6_a];
+            break;
+        case 'past-r6-b':
+            // 令和6年度 科目B
+            examQuestions = [...questions.past_r6_b];
+            break;
+        case 'past-r5-a':
+            // 令和5年度 科目A
+            examQuestions = [...questions.past_r5_a];
+            break;
+        case 'past-r5-b':
+            // 令和5年度 科目B
+            examQuestions = [...questions.past_r5_b];
+            break;
+        case 'past-r7':
+            // 令和7年度 科目A+B
+            examQuestions = [...questions.past_r7_a, ...questions.past_r7_b];
+            break;
+        case 'past-r6':
+            // 令和6年度 科目A+B
+            examQuestions = [...questions.past_r6_a, ...questions.past_r6_b];
+            break;
         case 'past-r5':
-            // 令和5年春期過去問
-            examQuestions = [...questions.past_r5];
+            // 令和5年度 科目A+B（下位互換）
+            examQuestions = [...questions.past_r5_a, ...questions.past_r5_b];
             break;
         case 'past-r4':
-            // 令和4年春期過去問
-            examQuestions = [...questions.past_r4];
+            // 令和4年春期過去問（下位互換）
+            examQuestions = [...questions.past_r4] || [];
             break;
         case 'past-r3':
-            // 令和3年春期過去問
-            examQuestions = [...questions.past_r3];
+            // 令和3年春期過去問（下位互換）
+            examQuestions = [...questions.past_r3] || [];
             break;
         default:
             return;

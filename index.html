@@ -77,10 +77,22 @@
             <div class="menu-section">
                 <h2>📅 過去問・学習管理</h2>
                 <div class="menu-grid">
-                    <button class="menu-card" onclick="showPastExamSelection()">
+                    <button class="menu-card" onclick="showPastYearMenu('r7')">
+                        <div class="card-icon">🆕</div>
+                        <div class="card-title">令和7年度</div>
+                        <div class="card-subtitle">最新年度 科目A/B</div>
+                    </button>
+                    
+                    <button class="menu-card" onclick="showPastYearMenu('r6')">
                         <div class="card-icon">📖</div>
-                        <div class="card-title">過去問</div>
-                        <div class="card-subtitle">R3-R5年度</div>
+                        <div class="card-title">令和6年度</div>
+                        <div class="card-subtitle">科目A/B</div>
+                    </button>
+
+                    <button class="menu-card" onclick="showPastYearMenu('r5')">
+                        <div class="card-icon">📚</div>
+                        <div class="card-title">令和5年度</div>
+                        <div class="card-subtitle">科目A/B</div>
                     </button>
 
                     <button class="menu-card" onclick="showStats()">
@@ -618,6 +630,40 @@
                         🏠 メニューに戻る
                     </button>
                 </div>
+            </div>
+        </div>
+
+        <!-- 年度別過去問選択画面 -->
+        <div class="past-year-selection-container" id="past-year-selection-container" style="display: none;">
+            <div class="selection-header">
+                <h2 id="year-title">📚 過去問を選択</h2>
+                <p class="selection-description">科目を選択してください</p>
+            </div>
+            
+            <div class="subject-categories">
+                <button class="category-btn" id="subject-a-btn">
+                    <div class="subject-icon">📖</div>
+                    <div class="subject-title">科目A</div>
+                    <div class="subject-desc">基礎知識・理論問題</div>
+                </button>
+                
+                <button class="category-btn" id="subject-b-btn">
+                    <div class="subject-icon">💻</div>
+                    <div class="subject-title">科目B</div>
+                    <div class="subject-desc">アルゴリズム・プログラミング</div>
+                </button>
+                
+                <button class="category-btn" id="both-subjects-btn">
+                    <div class="subject-icon">🎯</div>
+                    <div class="subject-title">科目A+B</div>
+                    <div class="subject-desc">両科目まとめて学習</div>
+                </button>
+            </div>
+            
+            <div class="selection-controls">
+                <button class="control-btn exit-btn" onclick="hidePastYearSelection()">
+                    🔙 メニューに戻る
+                </button>
             </div>
         </div>
 

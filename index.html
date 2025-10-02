@@ -155,6 +155,66 @@
                     🏠 メニューに戻る
                 </button>
             </div>
+            
+            <!-- 過去問メニュー -->
+            <div class="menu-card">
+                <h2>📅 過去問チャレンジ</h2>
+                <button class="menu-btn past-exam-btn" onclick="startExam('past-r5')">
+                    📝 令和5年春期（最新）
+                    <span class="sub-text">最新傾向の4問で実力確認</span>
+                </button>
+                <button class="menu-btn past-exam-btn" onclick="startExam('past-r4')">
+                    📝 令和4年春期
+                    <span class="sub-text">重要アルゴリズム4問</span>
+                </button>
+                <button class="menu-btn past-exam-btn" onclick="startExam('past-r3')">
+                    📝 令和3年春期
+                    <span class="sub-text">基礎固め4問</span>
+                </button>
+                <button class="menu-btn past-exam-btn" onclick="showPastExamSelection()">
+                    🎯 過去問ミックス
+                    <span class="sub-text">3年分から選択して学習</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 過去問選択画面 -->
+        <div class="past-exam-selection-container" id="past-exam-selection-container" style="display: none;">
+            <div class="selection-header">
+                <h2>📅 過去問を選択</h2>
+                <p class="selection-description">学習したい過去問を選択してください</p>
+            </div>
+            
+            <!-- 年度別セクション -->
+            <div class="past-exam-sections">
+                <div class="year-section">
+                    <h3>📝 令和5年春期（最新傾向）</h3>
+                    <div class="past-problem-grid" id="past-r5-grid">
+                        <!-- JavaScriptで問題ボタンを生成 -->
+                    </div>
+                </div>
+                
+                <div class="year-section">
+                    <h3>📝 令和4年春期</h3>
+                    <div class="past-problem-grid" id="past-r4-grid">
+                        <!-- JavaScriptで問題ボタンを生成 -->
+                    </div>
+                </div>
+                
+                <div class="year-section">
+                    <h3>📝 令和3年春期</h3>
+                    <div class="past-problem-grid" id="past-r3-grid">
+                        <!-- JavaScriptで問題ボタンを生成 -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 戻るボタン -->
+            <div class="selection-controls">
+                <button class="control-btn exit-btn" onclick="hidePastExamSelection()">
+                    🔙 メニューに戻る
+                </button>
+            </div>
         </div>
 
         <!-- アルゴリズム問題選択画面 -->

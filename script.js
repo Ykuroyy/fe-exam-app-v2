@@ -309,7 +309,7 @@ function finishExam() {
     stopTimer();
 
     // 単一問題の場合は専用の結果表示
-    if (currentExamType === 'single-algorithm' && examQuestions.length === 1) {
+    if ((currentExamType === 'single-algorithm' || currentExamType === 'single-past-exam') && examQuestions.length === 1) {
         showResultsForSingleExam();
         return;
     }
@@ -1057,6 +1057,18 @@ function startExam(examType) {
         case 'level-advanced':
             examQuestions = questions.algorithm.filter(q => q.level === 'advanced');
             break;
+        case 'past-r5':
+            // 令和5年春期過去問
+            examQuestions = [...questions.past_r5];
+            break;
+        case 'past-r4':
+            // 令和4年春期過去問
+            examQuestions = [...questions.past_r4];
+            break;
+        case 'past-r3':
+            // 令和3年春期過去問
+            examQuestions = [...questions.past_r3];
+            break;
         default:
             return;
     }
@@ -1222,6 +1234,191 @@ function showSingleProblemResult(question, userAnswer, isCorrect) {
     showScreen('result-container');
 }
 
+// 過去問選択機能
+function showPastExamSelection() {
+    showScreen('past-exam-selection-container');
+    generatePastExamButtons();
+}
+
+function hidePastExamSelection() {
+    showScreen('menu-container');
+}
+
+function generatePastExamButtons() {
+    // 各年度の過去問ボタンを生成
+    const years = ['r5', 'r4', 'r3'];
+    const yearNames = {
+        'r5': '令和5年',
+        'r4': '令和4年', 
+        'r3': '令和3年'
+    };
+    
+    years.forEach(year => {
+        const grid = document.getElementById(`past-${year}-grid`);
+        if (!grid) return;
+        
+        grid.innerHTML = '';
+        const pastQuestions = questions[`past_${year}`] || [];
+        
+        pastQuestions.forEach((question, index) => {
+            const button = document.createElement('button');
+            button.className = 'past-problem-btn';
+            
+            // 解答履歴に基づいて色分け
+            const solvedProblems = JSON.parse(localStorage.getItem(`solvedPastProblems_${year}`) || '[]');
+            if (solvedProblems.includes(question.id)) {
+                button.classList.add('solved');
+            }
+            
+            // 問題のプレビューテキストを作成
+            const previewText = question.text.substring(0, 50) + (question.text.length > 50 ? '...' : '');
+            
+            button.innerHTML = `
+                <div class="past-problem-title">
+                    ${yearNames[year]} 問題${index + 1}
+                </div>
+                <div class="past-problem-preview">
+                    ${previewText}
+                </div>
+            `;
+            
+            button.onclick = () => startSinglePastProblem(year, question.id);
+            grid.appendChild(button);
+        });
+    });
+}
+
+function startSinglePastProblem(year, questionId) {
+    const pastQuestions = questions[`past_${year}`] || [];
+    const question = pastQuestions.find(q => q.id === questionId);
+    
+    if (!question) {
+        alert('選択された問題が見つかりません。');
+        return;
+    }
+    
+    currentExamType = 'single-past-exam';
+    currentQuestionIndex = 0;
+    userAnswers = [];
+    
+    // 選択された1問だけを試験問題として設定
+    examQuestions = [question];
+    
+    showScreen('exam-container');
+    startTimer();
+    displayQuestion();
+    
+    console.log(`過去問 ${question.year} ${question.id} を開始`);
+}
+
+// 過去問の解答履歴を保存する関数
+function saveSolvedPastProblem(questionId) {
+    if (!questionId) return;
+    
+    // 問題IDから年度を特定（例：'r5_01' → 'r5'）
+    const year = questionId.substring(0, 2);
+    const storageKey = `solvedPastProblems_${year}`;
+    
+    const solvedProblems = JSON.parse(localStorage.getItem(storageKey) || '[]');
+    
+    if (!solvedProblems.includes(questionId)) {
+        solvedProblems.push(questionId);
+        localStorage.setItem(storageKey, JSON.stringify(solvedProblems));
+    }
+}
+
+// 既存のshowResultsForSingleExam関数を拡張
+function showResultsForSingleExam() {
+    if (examQuestions.length === 1) {
+        const question = examQuestions[0];
+        const userAnswer = userAnswers[0];
+        const isCorrect = userAnswer === question.correct;
+        
+        // 解答履歴を保存
+        if (currentExamType === 'single-algorithm') {
+            saveSolvedProblem(currentExamType, question.id);
+        } else if (currentExamType === 'single-past-exam') {
+            saveSolvedPastProblem(question.id);
+        }
+        
+        // 結果表示
+        showSingleProblemResult(question, userAnswer, isCorrect);
+    }
+}
+
+// 結果表示を過去問に対応
+function showSingleProblemResult(question, userAnswer, isCorrect) {
+    const resultContainer = document.getElementById('result-container');
+    const resultCard = resultContainer.querySelector('.result-card');
+    
+    // 過去問か通常問題かで戻るボタンを変更
+    const isPastExam = question.category === 'past_exam';
+    const backButtonHTML = isPastExam ? 
+        `<button class="control-btn" onclick="showPastExamSelection()">
+            🔙 過去問選択に戻る
+        </button>` :
+        `<button class="control-btn" onclick="showAlgorithmSelection()">
+            🔙 問題選択に戻る
+        </button>`;
+    
+    // 問題情報の表示を拡張
+    const questionInfoHTML = isPastExam ?
+        `<div class="question-info">
+            <div class="exam-info">
+                <span class="exam-year">${question.year}</span>
+                <span class="exam-session">${question.session}</span>
+                <span class="exam-subject">${question.subject}</span>
+            </div>
+            <h3>${question.text}</h3>
+            <div class="answer-info">
+                <p><strong>あなたの回答:</strong> ${question.choices[userAnswer]}</p>
+                <p><strong>正解:</strong> ${question.choices[question.correct]}</p>
+            </div>
+            <div class="explanation-section">
+                <h4>📝 解説</h4>
+                <div class="explanation-content">
+                    ${question.explanation || '解説はありません。'}
+                </div>
+                ${question.keyPoints ? `
+                <div class="key-points">
+                    <h5>💡 重要ポイント</h5>
+                    <p>${question.keyPoints}</p>
+                </div>` : ''}
+            </div>
+        </div>` :
+        `<div class="question-info">
+            <h3>${question.text}</h3>
+            <div class="answer-info">
+                <p><strong>あなたの回答:</strong> ${question.choices[userAnswer]}</p>
+                <p><strong>正解:</strong> ${question.choices[question.correct]}</p>
+            </div>
+            <div class="explanation-section">
+                <h4>📝 解説</h4>
+                <div class="explanation-content">
+                    ${question.explanation || '解説はありません。'}
+                </div>
+            </div>
+        </div>`;
+    
+    resultCard.innerHTML = `
+        <h2>🎯 ${isPastExam ? '過去問' : '問題'}結果</h2>
+        <div class="single-result">
+            <div class="result-status ${isCorrect ? 'correct' : 'incorrect'}">
+                ${isCorrect ? '✅ 正解！' : '❌ 不正解'}
+            </div>
+            ${questionInfoHTML}
+        </div>
+        <div class="single-result-actions">
+            ${backButtonHTML}
+            <button class="control-btn" onclick="backToMenu()">
+                🏠 メニューに戻る
+            </button>
+        </div>
+    `;
+    
+    showScreen('result-container');
+}
+
 // エクスポート（モジュール対応）
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -1232,6 +1429,9 @@ if (typeof module !== 'undefined' && module.exports) {
         showAlgorithmSelection,
         hideAlgorithmSelection,
         startSingleProblem,
-        startRandomAlgorithm
+        startRandomAlgorithm,
+        showPastExamSelection,
+        hidePastExamSelection,
+        startSinglePastProblem
     };
 }

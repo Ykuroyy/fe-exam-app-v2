@@ -169,6 +169,34 @@ function displayQuestion() {
         codeElement.style.display = 'none';
     }
 
+    // PDF添付ファイル表示
+    const pdfElement = document.getElementById('question-pdf');
+    const pdfContainer = document.getElementById('pdf-container');
+    if (question.pdfUrl) {
+        // PDFまたはHTML図表の表示
+        const isPdf = question.pdfUrl.endsWith('.pdf');
+        pdfContainer.innerHTML = `
+            <div class="pdf-attachment">
+                <h4>📄 問題図表・資料</h4>
+                <div class="pdf-viewer">
+                    ${isPdf ? 
+                        `<embed src="${question.pdfUrl}" type="application/pdf" width="100%" height="600px" />` :
+                        `<iframe src="${question.pdfUrl}" width="100%" height="600px" frameborder="0" style="border-radius: 6px;"></iframe>`
+                    }
+                    <p class="pdf-fallback">
+                        図表が表示されない場合は 
+                        <a href="${question.pdfUrl}" target="_blank" class="pdf-link">
+                            🔗 こちらをクリックして新しいタブで開く
+                        </a>
+                    </p>
+                </div>
+            </div>
+        `;
+        pdfElement.style.display = 'block';
+    } else {
+        pdfElement.style.display = 'none';
+    }
+
     // 選択肢表示
     displayChoices(question.choices);
 
@@ -554,7 +582,7 @@ function showStats() {
     const history = JSON.parse(localStorage.getItem(STORAGE_KEYS.HISTORY));
 
     // 統計サマリー
-    const statssummary = document.getElementById('stats-summary');
+    const statsSummary = document.getElementById('stats-summary');
     const overallPercentage = stats.totalQuestions > 0 ? 
         Math.round((stats.correctAnswers / stats.totalQuestions) * 100) : 0;
 
@@ -1173,6 +1201,24 @@ function startExam(examType) {
             // 令和3年春期過去問（下位互換）
             examQuestions = [...questions.past_r3] || [];
             break;
+        case 'subject-a-all':
+            examQuestions = shuffleArray([...questions.subject_a]);
+            break;
+        case 'subject-a-random':
+            examQuestions = shuffleArray([...questions.subject_a]).slice(0, 20);
+            break;
+        case 'computer-system':
+            examQuestions = questions.subject_a.filter(q => q.subcategory === 'computer_system');
+            break;
+        case 'database':
+            examQuestions = questions.subject_a.filter(q => q.subcategory === 'database');
+            break;
+        case 'network':
+            examQuestions = questions.subject_a.filter(q => q.subcategory === 'network');
+            break;
+        case 'security-theory':
+            examQuestions = questions.subject_a.filter(q => q.subcategory === 'security');
+            break;
         default:
             return;
     }
@@ -1632,11 +1678,14 @@ function showProgress() {
 
 // 試験日カウントダウン更新
 function updateExamCountdown() {
+    const examCountdown = document.getElementById('exam-countdown');
+    if (!examCountdown) return; // 要素が存在しない場合は終了
+    
     const now = new Date();
     const timeDiff = EXAM_DATE.getTime() - now.getTime();
     
     if (timeDiff <= 0) {
-        document.getElementById('exam-countdown').textContent = '🎯 試験当日！頑張って！';
+        examCountdown.textContent = '🎯 試験当日！頑張って！';
         return;
     }
     
@@ -1644,61 +1693,11 @@ function updateExamCountdown() {
     const hours = Math.floor((timeDiff % (1000 * 3600 * 24)) / (1000 * 3600));
     const minutes = Math.floor((timeDiff % (1000 * 3600)) / (1000 * 60));
     
-    document.getElementById('exam-countdown').textContent = 
+    examCountdown.textContent = 
         `⏰ 試験まで ${days}日 ${hours}時間 ${minutes}分`;
 }
 
-// startExam関数を拡張（科目A対応）
-const originalStartExam = window.startExam;
-window.startExam = function(examType) {
-    // 科目A関連の処理を追加
-    if (examType.startsWith('subject-a') || examType.includes('computer-system') || 
-        examType.includes('database') || examType.includes('network') || examType.includes('security-theory')) {
-        
-        currentExamType = examType;
-        userAnswers = [];
-        currentQuestionIndex = 0;
-
-        // 科目A問題の選択
-        switch(examType) {
-            case 'subject-a-all':
-                examQuestions = shuffleArray([...questions.subject_a]);
-                break;
-            case 'subject-a-random':
-                examQuestions = shuffleArray([...questions.subject_a]).slice(0, 20);
-                break;
-            case 'computer-system':
-                examQuestions = questions.subject_a.filter(q => q.subcategory === 'computer_system');
-                break;
-            case 'database':
-                examQuestions = questions.subject_a.filter(q => q.subcategory === 'database');
-                break;
-            case 'network':
-                examQuestions = questions.subject_a.filter(q => q.subcategory === 'network');
-                break;
-            case 'security-theory':
-                examQuestions = questions.subject_a.filter(q => q.subcategory === 'security');
-                break;
-            default:
-                examQuestions = [];
-        }
-
-        if (examQuestions.length === 0) {
-            alert('問題が見つかりません。');
-            return;
-        }
-
-        showScreen('exam-container');
-        startTimer();
-        displayQuestion();
-        
-        console.log(`科目A学習開始: ${examType} - ${examQuestions.length}問`);
-        return;
-    }
-    
-    // 既存の処理を実行
-    originalStartExam(examType);
-};
+// startExam function is now unified above - no need for separate extension
 
 // 初期化時にカウントダウン開始
 document.addEventListener('DOMContentLoaded', function() {

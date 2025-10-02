@@ -2215,12 +2215,8 @@ end function
 
     // ===== 完全過去問データベース（232問） =====
     past_r5_a:     [
-            {
-                    "id": "r5a001",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "16進小数0.Cを10進小数に変換したものはどれか。",
-                    "code": null,
+            {"id": "r5a001",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "0.12",
@@ -2236,12 +2232,8 @@ end function
                     "originalTopic": "基礎理論",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a002",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "双方向のポインタをもつリスト構造のデータを表に示す。この表において新たな社員Gを社員Aと社員Kの間に追加する。追加後の表のポインタa～fの中で追加前と比べて値が変わるポインタだけを全て列記したものはどれか。",
-                    "code": null,
+            {"id": "r5a002",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "a, b, e, f",
                             "a, e, f",
@@ -2256,12 +2248,8 @@ end function
                     "originalTopic": "アルゴリズムとプログラミング",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a003",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "コンピュータの高速化技術の一つであるメモリインタリーブに関する記述として，適切なものはどれか。",
-                    "code": null,
+            {"id": "r5a003",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "主記憶と入出力装置，又は主記憶同士のデータの受渡しをCPU経由でなく直接やり取りする方式",
                             "主記憶にデータを送り出す際に，データをキャッシュに書き込み，キャッシュがあふれたときに主記憶へ書き込む方式",
@@ -2276,12 +2264,8 @@ end function
                     "originalTopic": "コンピュータシステム",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a004",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "エッジコンピューティングの説明として，最も適切なものはどれか。",
-                    "code": null,
+            {"id": "r5a004",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "画面生成やデータ処理をクライアント側で実行することによって，Webアプリケーションソフトウェアの操作性や表現力を高めること",
                             "データが送信されてきたときだけ必要なサーバを立ち上げて，処理が終わり次第サーバを停止してリソースを解放すること",
@@ -2296,12 +2280,8 @@ end function
                     "originalTopic": "システム構成",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a005",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "3次元グラフィックス処理におけるクリッピングの説明はどれか。",
-                    "code": null,
+            {"id": "r5a005",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "CG映像作成における最終段階として，物体のデータをディスプレイに描画できるように映像化する処理である。",
                             "画像表示領域にウィンドウを定義し，ウィンドウの外側を除去し，内側の見える部分だけを取り出す処理である。",
@@ -2316,12 +2296,8 @@ end function
                     "originalTopic": "マルチメディア",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a006",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "次の関数従属を満足するとき，成立する推移的関数従属はどれか。ここで，",
-                    "code": null,
+            {"id": "r5a006",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "仕入先コード → 仕入担当者コード → 仕入先住所",
                             "商品コード → 仕入先コード → 商品販売価格",
@@ -2336,12 +2312,8 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a007",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "トランザクションが，データベースに対する更新処理を完全に行うか，全く処理しなかったかのように取り消すか，のどちらかの結果になることを保証する特性はどれか。",
-                    "code": null,
+            {"id": "r5a007",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "一貫性（consistency）",
                             "原子性（atomicity）",
@@ -2356,12 +2328,8 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a008",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "IPv4ネットワークにおいて，ネットワークの疎通確認に使われるものはどれか。",
-                    "code": null,
+            {"id": "r5a008",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "BOOTP",
                             "DHCP",
@@ -2376,12 +2344,8 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a009",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ドライブバイダウンロード攻撃に該当するものはどれか。",
-                    "code": null,
+            {"id": "r5a009",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "PCから物理的にハードディスクドライブを盗み出し、その中のデータをWebサイトで公開し、ダウンロードさせる。",
                             "電子メールの添付ファイルを開かせて、マルウェアに感染したPCのハードディスクドライブ内のファイルを暗号化し、元に戻すための鍵を攻撃者のサーバからダウンロードさせることと引換えに金銭を要求する。",
@@ -2396,12 +2360,8 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a010",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "図のような構成と通信サービスのシステムにおいて、Webアプリケーションの脆弱性対策のためのWAFの設置場所として、最も適切な箇所はどこか。ここで、WAFには通信を暗号化したり、復号したりする機能はないものとする。",
-                    "code": null,
+            {"id": "r5a010",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "a",
                             "b",
@@ -2416,12 +2376,8 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a011",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "図のフローチャートにおいて、変数aの初期値を8、変数bの初期値を12としたとき、実行終了後のaとbの関係はどれか。",
-                    "code": null,
+            {"id": "r5a011",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "a = b",
                             "2a = b",
@@ -2436,12 +2392,8 @@ end function
                     "originalTopic": "アルゴリズムとプログラミング",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a012",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "アジャイル開発手法のスクラムにおいて，開発チームの全員が1人ずつ",
-                    "code": null,
+            {"id": "r5a012",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "スプリントプランニング",
                             "スプリントレビュー",
@@ -2456,12 +2408,8 @@ end function
                     "originalTopic": "ソフトウェア開発管理技術",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a013",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "図に示すとおりに作業を実施する予定であったが、作業Aで1日の遅れが生じた。各作業の費用増加率を表の値とするとき、当初の予定日数で終了するために掛かる増加費用を最も少なくするには、どの作業を短縮すべきか。ここで、費用増加率とは、作業を1日短縮するために要する増加費用のことである。",
-                    "code": null,
+            {"id": "r5a013",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "B",
                             "C",
@@ -2476,12 +2424,8 @@ end function
                     "originalTopic": "プロジェクトマネジメント",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a014",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "A 社では，従業員が自宅の PC からインターネット経由で自社のネットワークに接続して仕事を行うテレワーキングの実施を計画している。A 社が定めたテレワーキング運用規程について，情報セキュリティ管理基準（平成 28 年）に従って監査を実施した。判明した事項のうち，監査人が，指摘事項として監査報告書に記載すべきものはどれか。",
-                    "code": null,
+            {"id": "r5a014",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "テレワーキング運用規程に従うことを条件に，全ての従業員が利用できる。",
                             "テレワーキングで従業員が使用する PC は，A 社から支給されたものに限定する。",
@@ -2496,12 +2440,8 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a015",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ハイブリッドクラウドの説明はどれか。",
-                    "code": null,
+            {"id": "r5a015",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "クラウドサービスが提供している機能の一部を，自社用にカスタマイズして利用すること",
                             "クラウドサービスのサービス内容を，消費者向けと法人向けの両方を対象とするように構成して提供すること",
@@ -2516,12 +2456,8 @@ end function
                     "originalTopic": "システム構成",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a016",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ダイバーシティマネジメントの説明はどれか。",
-                    "code": null,
+            {"id": "r5a016",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "従業員が仕事と生活の調和を図り，やりがいをもって業務に取り組み，組織の活力を向上させることである。",
                             "性別や年齢，国籍などの面で従業員の多様性を尊重することによって，組織の活力を向上させることである。",
@@ -2536,12 +2472,8 @@ end function
                     "originalTopic": "企業活動",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a017",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ERPを説明したものはどれか。",
-                    "code": null,
+            {"id": "r5a017",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "営業活動に IT を活用して営業の効率と品質を高め，売上・利益の大幅な増加や，顧客満足度の向上を目指す手法・概念である。",
                             "卸売業・メーカが小売店の経営活動を支援することによって，自社との取引量の拡大につなげる手法・概念である。",
@@ -2556,12 +2488,8 @@ end function
                     "originalTopic": "企業活動",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a018",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "イノベータ理論では，消費者を新製品の購入時期によって，イノベータ，アーリーアダプタ，アーリーマジョリティ，レイトマジョリティ，ラガードの五つに分類する。アーリーアダプタの説明として，適切なものはどれか。",
-                    "code": null,
+            {"id": "r5a018",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "新しい製品及び新技術の採用には懐疑的で，周囲の大多数が採用している場面を見てから採用する層",
                             "新商品，サービスなどを，リスクを恐れず最も早い段階で受容する層",
@@ -2576,12 +2504,8 @@ end function
                     "originalTopic": "経営戦略",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a019",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "CIOの説明はどれか。",
-                    "code": null,
+            {"id": "r5a019",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "経営戦略の立案及び業務執行を統括する最高責任者",
                             "資金調達，財務報告などの財務面での戦略策定及び執行を統括する最高責任者",
@@ -2596,12 +2520,8 @@ end function
                     "originalTopic": "経営戦略",
                     "sourceFile": "r5Questions.ts"
             },
-            {
-                    "id": "r5a020",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ボリュームライセンス契約の説明はどれか。",
-                    "code": null,
+            {"id": "r5a020",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "企業などソフトウェアの大量購入者向けに，インストールできる台数をあらかじめ取り決め，ソフトウェアの使用を認める契約",
                             "使用場所を限定した契約であり，特定の施設の中であれば台数や人数に制限なく使用が許される契約",
@@ -2625,6 +2545,7 @@ end function
                     "level": "advanced",
                     "text": "次のプログラム中の【 a 】と【 b 】に入れる正しい答えの組合せを，解答群の中から選べ。ここで，配列の要素番号は 1 から始まる。\n\n関数 findPrimeNumbers は，引数で与えられた整数以下の，全ての素数だけを格納した配列を返す関数である。ここで，引数に与える整数は 2 以上である。\n\n〔プログラム〕\n○整数型の配列: findPrimeNumbers(整数型: maxNum)\n  整数型の配列: pnList ← {} // 要素数0の配列\n  整数型: i, j\n  論理型: divideFlag\n  for (i を 2 から 【 a 】 まで 1 ずつ増やす)\n    divideFlag ← true\n    /* iの正の平方根の整数部分が2未満のときは，繰返し処理を実行しない */\n    for (j を 2 から iの正の平方根の整数部分 まで 1 ずつ増やす) // α\n      if (【 b 】)\n        divideFlag ← false\n        αの行から始まる繰返し処理を終了する\n      endif\n    endfor\n    if (divideFlag が true と等しい)\n      pnListの末尾 に iの値 を追加する\n    endif\n  endfor\n  return pnList",
                     "code": null,
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "a=maxNum, b=i ÷ j の余り が 0 と等しい",
                             "a=maxNum, b=i ÷ j の商 が 1 と等しくない",
@@ -2639,12 +2560,8 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "r5BQuestions.ts"
             },
-            {
-                    "id": "r5b002",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "次の記述中の【　】に入れる正しい答えを，解答群の中から選べ。\n\n次のプログラムにおいて，手続 proc2 を呼び出すと，【　】の順に出力される。\n\n〔プログラム〕\n○proc1()",
-                    "code": null,
+            {"id": "r5b002",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "",
                             ", ",
@@ -2690,12 +2607,8 @@ end function
                     "originalTopic": "プログラミング",
                     "sourceFile": "r5BQuestions.ts"
             },
-            {
-                    "id": "r5b003",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次の記述中の【　】に入れる正しい答えを，解答群の中から選べ。ここで，配列の要素番号は 1 から始まる。\n\n次の手続 sort は，大域の整数型の配列 data の，引数 first で与えられた要素番号から引数 last で与えられた要素番号までの要素を昇順に整列する。ここで，first ＜ last とする。手続 sort を sort(1, 5) として呼び出すと，/*** α ***/ の行を最初に実行したときの出力は",
-                    "code": null,
+            {"id": "r5b003",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "1 2 3 4 5",
                             "1 2 3 5 4",
@@ -2716,6 +2629,7 @@ end function
                     "level": "advanced",
                     "text": "次の記述中の【　】に入れる正しい答えを，解答群の中から選べ。ここで，配列の要素番号は 1 から始まる。\n\n関数 add は，引数で指定された正の整数 value を大域の整数型の配列 hashArray に格納する。格納できた場合は true を返し，格納できなかった場合は false を返す。ここで，整数 value を hashArray のどの要素に格納すべきかを，関数 calcHash1 及び calcHash2 を利用して決める。\n\n手続 test は，関数 add を呼び出して，hashArray に正の整数を格納する。手続 test の処理が終了した直後の hashArray の内容は，【　】である。\n\n〔プログラム〕\n大域: 整数型の配列: hashArray\n\n○論理型: add(整数型: value)\n  整数型: i ← calcHash1(value)\n  if (hashArray[i] ＝ －1)\n    hashArray[i] ← value\n    return true\n  else\n    i ← calcHash2(value)\n    if (hashArray[i] ＝ －1)\n      hashArray[i] ← value\n      return true\n    endif\n  endif\n  return false\n\n○整数型: calcHash1(整数型: value)\n  return (value mod hashArrayの要素数) ＋ 1\n\n○整数型: calcHash2(整数型: value)\n  return ((value ＋ 3) mod hashArrayの要素数) ＋ 1\n\n○test()\n  hashArray ← {5個の －1}\n  add(3)\n  add(18)\n  add(11)",
                     "code": null,
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "{－1, 3, －1, 18, 11}",
                             "{－1, 11, －1, 3, －1}",
@@ -2731,12 +2645,8 @@ end function
                     "originalTopic": "データ構造",
                     "sourceFile": "r5BQuestions.ts"
             },
-            {
-                    "id": "r5b006",
-                    "category": "algorithm",
-                    "level": "advanced",
-                    "text": "A社は，放送会社や運輸会社向けに広告制作ビジネスを展開している。A社は，人事業務の効率化を図るべく，人事業務の委託を検討することにした。A社が委託する業務（以下，B業務という）を図1に示す。\n\n・採用予定者から郵送されてくる入社時の誓約書，前職の源泉徴収票などの書類をPDFファイルに変換し，ファイルサーバに格納する。\n（省略）\n\n委託先候補のC社は，B業務について，次のようにA社に提案した。\n・B業務だけに従事する専任の従業員を割り当てる。\n・B業務では，図2の複合機のスキャン機能を使用する。\n・スキャン機能を使用する際は，従業員ごとに付与した利用者IDとパスワードをパネルに入力する。\n・スキャンしたデータをPDFファイルに変換する。\n・PDFファイルを従業員ごとに異なる鍵で暗号化して，電子メールに添付する。\n・スキャンを実行した本人宛てに電子メールを送信する。\n・PDFファイルが大きい場合は，PDFファイルを添付する代わりに，自社の社内ネットワーク上に設置したサーバ（以下，Bサーバという）に自動的に保存し，保存先のURLを電子メールの本文に記載して送信する。\n注1）Bサーバにアクセスする際は，従業員ごとの利用者IDとパスワードが必要になる。\n\nA社は，C社と業務委託契約を締結する前に，秘密保持契約を締結した。その後，C社に質問表を送付し，回答を受けて，業務委託での情報セキュリティリスクの評価を実施した。その結果，図3の発見があった。\n\n・複合機のスキャン機能では，電子メールの差出人アドレス，件名，本文及び添付ファイル名を初期設定の状態で使用しており，誰がスキャンを実行しても同じである。\n・複合機のスキャン機能の初期設定情報はベンダーのWebサイトで公開されており，誰でも閲覧できる。\n注1）複合機の初期設定はC社の情報システム部だけが変更可能である。\n\nそこで，A社では，初期設定の状態のままではA社にとって情報セキュリティリスクがあり，初期設定から変更するという対策が必要であると評価した。\n\n設問　対策が必要であるとA社が評価した情報セキュリティリスクはどれか。解答群のうち，最も適切なものを選べ。",
-                    "code": null,
+            {"id": "r5b006",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "B業務に従事する従業員が，攻撃者からの電子メールを複合機からのものと信じて本文中にあるURLをクリックし，フィッシングサイトに誘導される。その結果，A社の採用予定者の個人情報が漏えいする。",
                             "B業務に従事する従業員が，複合機から送信される電子メールをスパムメールと誤認し，電子メールを削除する。その結果，再スキャンが必要となり，B業務が遅延する。",
@@ -2754,12 +2664,8 @@ end function
     ],
 
     past_r6_a:     [
-            {
-                    "id": "r6a001",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "X 及び Y はそれぞれ 0 又は 1 の値をとる変数である。X □Y を X と Y の論理演算としたとき，次の真理値表が得られた。X □Y の真理値表はどれか。\n\n【与えられた真理値表】\n┌───┬───┬─────────────┬─────────────┐\n│ X │ Y │ X AND (X □Y) │ X OR (X □Y) │\n├───┼───┼─────────────┼─────────────┤\n│ 0 │ 0 │      0       │      1      │\n│ 0 │ 1 │      0       │      1      │\n│ 1 │ 0 │      0       │      1      │\n│ 1 │ 1 │      1       │      1      │\n└───┴───┴─────────────┴─────────────┘",
-                    "code": null,
+            {"id": "r6a001",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "X=0,Y=0 → 0; X=0,Y=1 → 0; X=1,Y=0 → 0; X=1,Y=1 → 1",
                             "X=0,Y=0 → 0; X=0,Y=1 → 1; X=1,Y=0 → 0; X=1,Y=1 → 1",
@@ -2774,12 +2680,8 @@ end function
                     "originalTopic": "基礎理論",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a002",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "キーが小文字のアルファベット 1 文字（a，b，…，z のいずれか）であるデータを，大きさが 10 のハッシュ表に格納する。ハッシュ関数として，アルファベットの ASCII コードを 10 進表記法で表したときの 1 の位の数を用いることにする。衝突が起こるキーの組合せはどれか。ASCII コードでは，昇順に連続した 2 進数が，アルファベット順にコードとして割り当てられている。",
-                    "code": null,
+            {"id": "r6a002",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "a と i",
                             "b と r",
@@ -2794,12 +2696,8 @@ end function
                     "originalTopic": "アルゴリズムとプログラミング",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a003",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "図に示す構成で，表に示すようにキャッシュメモリと主記憶のアクセス時間だけが異なり，他の条件は同じ 2 種類の CPU X と Y がある。\n\n【構成図】\nCPU → キャッシュメモリ（256kバイト） → 主記憶（256Mバイト）\n\n【アクセス時間の表】\n                CPU X    CPU Y\nキャッシュメモリ   40ns     20ns\n主記憶           400ns    580ns\n\nあるプログラムを CPU X と Y とでそれぞれ実行したところ，両者の処理時間が等しかった。このとき，キャッシュメモリのヒット率は幾らか。ここで，CPU 以外の処理による影響はないものとする。",
-                    "code": null,
+            {"id": "r6a003",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "0.75",
                             "0.90",
@@ -2814,12 +2712,8 @@ end function
                     "originalTopic": "コンピュータシステム",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a004",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "あるシステムの今年度の MTBF は 3,000 時間，MTTR は 1,000 時間である。翌年度は MTBF について今年度の 20％分の改善，MTTR について今年度の 10％分の改善を図ると，翌年度の稼働率は何％になるか。",
-                    "code": null,
+            {"id": "r6a004",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "69",
                             "73",
@@ -2834,12 +2728,8 @@ end function
                     "originalTopic": "システム構成",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a005",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "複数の Web サービスの入出力処理を連結させて新たなサービスを提供する，",
-                    "code": null,
+            {"id": "r6a005",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "利用者が選択した飲食店情報のページを表示する際に，他の Web サービスが提供する地図コンテンツをアクセスマップとして表示する。",
                             "利用者が選択した投資商品の情報を表示する際に，関連する経済指標のデータを複数の Web サービスから取得し，グラフに加工して表示する。",
@@ -2854,12 +2744,8 @@ end function
                     "originalTopic": "システム開発技術",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a006",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "液晶ディスプレイなどの表示装置において，傾いた直線の境界を滑らかに表示する手法はどれか。",
-                    "code": null,
+            {"id": "r6a006",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "アンチエイリアシング",
                             "シェーディング",
@@ -2874,12 +2760,8 @@ end function
                     "originalTopic": "マルチメディア",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a007",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "DBMS に実装すべき原子性（atomicity）を説明したものはどれか。",
-                    "code": null,
+            {"id": "r6a007",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "同一データベースに対する同一処理は，何度実行しても結果は同じである。",
                             "トランザクション完了後にハードウェア障害が発生しても，更新されたデータベースの内容は保証される。",
@@ -2894,12 +2776,8 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a008",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "LAN 間接続装置に関する記述のうち，適切なものはどれか。",
-                    "code": null,
+            {"id": "r6a008",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "ゲートウェイは，OSI 基本参照モデルにおける第 1 ～ 3 層だけのプロトコルを変換する。",
                             "ブリッジは，IP アドレスを基にしてフレームを中継する。",
@@ -2914,12 +2792,8 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a009",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ペネトレーションテストに該当するものはどれか。",
-                    "code": null,
+            {"id": "r6a009",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "検査対象の実行プログラムの設計書，ソースコードに着目し，開発プロセスの各工程にセキュリティ上の問題がないかどうかをツールや目視で確認する。",
                             "公開 Web サーバの各コンテンツファイルのハッシュ値を管理し，定期的に各ファイルから生成したハッシュ値と一致するかどうかを確認する。",
@@ -2934,12 +2808,8 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a010",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "SQL インジェクションの対策として，有効なものはどれか。",
-                    "code": null,
+            {"id": "r6a010",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "URL を Web ページに出力するときは，",
                             "や",
@@ -2956,12 +2826,8 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a011",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "階層構造のモジュール群から成るソフトウェアの結合テストを，上位のモジュールから行う。この場合に使用する，下位のモジュールの代替となるテスト用のモジュールはどれか。",
-                    "code": null,
+            {"id": "r6a011",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "エミュレータ",
                             "シミュレータ",
@@ -2976,12 +2842,8 @@ end function
                     "originalTopic": "ソフトウェア工学",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a012",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "アジャイル開発手法の一つであるスクラムで定義され，スプリントで実施するイベントのうち，毎日決まった時間に決まった場所で行い，開発チームの全員が前回からの進捗状況や今後の作業計画を共有するものはどれか。",
-                    "code": null,
+            {"id": "r6a012",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "スプリントプランニング",
                             "スプリントレトロスペクティブ",
@@ -2996,12 +2858,8 @@ end function
                     "originalTopic": "ソフトウェア開発管理技術",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a013",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "アローダイアグラムで表されるプロジェクトは，完了までに最少で何日を要するか。\n\n【プロジェクト作業一覧】\n・作業A: 所要時間30日（先行作業なし）\n・作業B: 所要時間5日（先行作業なし）  \n・作業C: 所要時間30日（作業A完了後）\n・作業D: 所要時間20日（作業B完了後）\n・作業E: 所要時間40日（作業B完了後）\n・作業F: 所要時間25日（作業C完了後）\n・作業G: 所要時間30日（作業D、E両方完了後）\n・作業H: 所要時間30日（作業F、G両方完了後）\n\n【考えられる経路】\n① A→C→F→H: 30+30+25+30 = 115日\n② B→D→G→H: 5+20+30+30 = 85日\n③ B→E→G→H: 5+40+30+30 = 105日",
-                    "code": null,
+            {"id": "r6a013",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "105",
                             "115",
@@ -3016,12 +2874,8 @@ end function
                     "originalTopic": "プロジェクトマネジメント",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a014",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "システムの開発部門と運用部門が別々に組織化されているとき，システム開発を伴う新規サービスの設計及び移行を円滑かつ効果的に進めるための方法のうち，適切なものはどれか。",
-                    "code": null,
+            {"id": "r6a014",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "運用テストの完了後に，開発部門がシステム仕様と運用方法を運用部門に説明する。",
                             "運用テストは，開発部門の支援を受けずに，運用部門だけで実施する。",
@@ -3036,12 +2890,8 @@ end function
                     "originalTopic": "システム開発技術",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a015",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ビッグデータ分析の前段階として，非構造化データを構造化データに加工する処理を記述している事例はどれか。",
-                    "code": null,
+            {"id": "r6a015",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "関係データベースに蓄積された大量の財務データから必要な条件に合致するデータを抽出し，利用者が扱いやすい表計算ソフトウェアデータに加工する。",
                             "個人情報を含むビッグデータを更に利活用するために，特定の個人を識別することができないように匿名化加工する。",
@@ -3058,12 +2908,8 @@ end function
                     "originalTopic": "データ活用",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a016",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "コアコンピタンスを説明したものはどれか。",
-                    "code": null,
+            {"id": "r6a016",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "経営活動における基本精神や行動指針",
                             "事業戦略の遂行によって達成すべき到達目標",
@@ -3078,12 +2924,8 @@ end function
                     "originalTopic": "企業活動",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a017",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "マーケティング戦略におけるブルーオーシャンの説明として，適切なものはどれか。",
-                    "code": null,
+            {"id": "r6a017",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "競争が存在していない未知の市場",
                             "コモディティ化が進んだ既存の市場",
@@ -3098,12 +2940,8 @@ end function
                     "originalTopic": "経営戦略",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a018",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "HR テックの説明はどれか。",
-                    "code": null,
+            {"id": "r6a018",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "ICT を活用して，住宅内のエネルギー使用状況の監視，機器の遠隔操作や自動制御などを可能にし，家庭におけるエネルギー管理を支援するソリューション",
                             "既存のビジネスモデルによる業界秩序や既得権益を破壊してしまうほど大きな影響を与える新しい ICT やビジネスモデル",
@@ -3118,12 +2956,8 @@ end function
                     "originalTopic": "技術戦略マネジメント",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a019",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "図は，製品の製造上のある要因の値 x と品質特性の値 y との関係をプロットしたものである。この図から読み取れることはどれか。",
-                    "code": null,
+            {"id": "r6a019",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "x から y を推定するためには，2 次回帰係数の計算が必要である。",
                             "x から y を推定するための回帰式は，y から x を推定する回帰式と同じである。",
@@ -3138,12 +2972,8 @@ end function
                     "originalTopic": "応用数学",
                     "sourceFile": "r6Questions.ts"
             },
-            {
-                    "id": "r6a020",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "日本において，産業財産権と総称される四つの権利はどれか。",
-                    "code": null,
+            {"id": "r6a020",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "意匠権，実用新案権，商標権，特許権",
                             "意匠権，実用新案権，著作権，特許権",
@@ -3161,12 +2991,8 @@ end function
     ],
 
     past_r6_b:     [
-            {
-                    "id": "r6b001",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のプログラム中の【 】に入れる正しい答えを，解答群の中から選べ。\n\n関数 maximum は，異なる三つの整数を引数で受け取り，そのうちの最大値を返す。\n\n〔プログラム〕\n○整数型: maximum(整数型: x, 整数型: y, 整数型: z)\n  if (【 】)\n    return x\n  elseif (y ＞ z)\n    return y\n  else\n    return z\n  endif",
-                    "code": null,
+            {"id": "r6b001",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "x ＞ y",
                             "x ＞ y and x ＞ z",
@@ -3183,12 +3009,8 @@ end function
                     "originalTopic": "プログラミング",
                     "sourceFile": "r6BQuestions.ts"
             },
-            {
-                    "id": "r6b002",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "次のプログラム中の【 】に入れる正しい答えを，解答群の中から選べ。\n\n関数 convDecimal は，引数として与えられた，",
-                    "code": null,
+            {"id": "r6b002",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "result ＋ int(binary の (length － i ＋ 1)文字目の文字)",
                             "result ＋ int(binary の i文字目の文字)",
@@ -3209,6 +3031,7 @@ end function
                     "level": "basic",
                     "text": "次の記述中の【 】に入れる正しい答えを，解答群の中から選べ。ここで，配列の要素番号は 1 から始まる。\n\n関数 merge は，昇順に整列された整数型の配列 data1 及び data2 を受け取り，これらを併合してできる昇順に整列された整数型の配列を返す。\n\n関数 merge を merge({2, 3}, {1, 4}) として呼び出すと，/*** α ***/ の行は【 】。",
                     "code": null,
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "実行されない",
                             "1 回実行される",
@@ -3223,12 +3046,8 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "r6BQuestions.ts"
             },
-            {
-                    "id": "r6b006",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "A社は従業員450名の商社であり，昨年から働き方改革の一環として，在宅でのテレワークを推進している。\n\nテレワークでA社利用クラウドサービスに接続する場合には，A社の社内ネットワークも社内PCも介さずに直接接続することを可能にするネットワークの設定変更を実施することにした。\n\n設定変更に当たり，A社利用クラウドサービスへの不正アクセスのリスクが増加することが問題となった。\n\n次の対策のうち，情報システム部に依頼することにしたものはどれか。解答群のうち，最も適切なものを選べ。",
-                    "code": null,
+            {"id": "r6b006",
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "A社の社内ネットワークからA社利用クラウドサービスへの通信を監視する。",
                             "A社の社内ネットワークとA社利用クラウドサービスとの間の通信速度を制限する。",
@@ -3247,12 +3066,8 @@ end function
     ],
 
     past_r7_a:     [
-            {
-                    "id": "r7a001",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "大規模言語モデルを用いた自然言語処理において、事前学習済みのモデルに対して行う、ファインチューニングに関する記述として、最も適切なものはどれか。",
-                    "code": null,
+            {"id": "r7a001",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "強化学習を行い、最適な結果が得られるようにする。",
                             "事前学習と同じデータを繰り返し用いて学習を行い、モデルの精度を高めるようにする。",
@@ -3267,12 +3082,8 @@ end function
                     "originalTopic": "AI・機械学習",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a002",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "浮動小数点形式で表現された数値の演算結果における丸め誤差の説明はどれか。",
-                    "code": null,
+            {"id": "r7a002",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "演算結果がコンピュータの扱える最大値を超えることによって生じる誤差である。",
                             "数表現のけた数に限度があるので、最下位けたより小さい部分について四捨五入や切上げ、切捨てを行うことによって生じる誤差である。",
@@ -3287,12 +3098,8 @@ end function
                     "originalTopic": "基礎理論",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a003",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "図の木構造は2分探索木である。a～gの値の大小関係として、適切なものはどれか。ここで、a～gの値は重複しないものとする。",
-                    "code": null,
+            {"id": "r7a003",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "a ＜ b ＜ d ＜ e ＜ c ＜ f ＜ g",
                             "d ＜ b ＜ e ＜ a ＜ f ＜ c ＜ g",
@@ -3307,12 +3114,8 @@ end function
                     "originalTopic": "アルゴリズムとプログラミング",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a004",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "MTBFは4,000時間、MTTRは1,000時間の装置がある。今後の6年間は、予防保守によってMTBFを前年に比べて毎年100時間ずつ改善し、遠隔保守によってMTTRを前年に比べて毎年100時間ずつ改善していく計画である。6年経過後の稼働率は幾らか。",
-                    "code": null,
+            {"id": "r7a004",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "0.88",
                             "0.90",
@@ -3327,12 +3130,8 @@ end function
                     "originalTopic": "システム管理",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a005",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ローコード開発ツールを用いたソフトウェア開発の説明はどれか。",
-                    "code": null,
+            {"id": "r7a005",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "アプリケーションソフトウェアの開発基盤の上で、用意された部品やテンプレートをGUIを用いた操作で組み合わせたり、必要に応じて一部の処理のソースコードを記述したりすることによって、アプリケーションソフトウェアを作成する。",
                             "アプリケーションソフトウェアの開発基盤の上で、用意された部品やテンプレートをGUIを用いた操作で組み合わせるだけで、ソースコードを記述せずに、アプリケーションソフトウェアを作成する。",
@@ -3347,12 +3146,8 @@ end function
                     "originalTopic": "システム開発技術",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a007",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "1Gバイトの動画データを40Mビット／秒の回線を使用してダウンロードしたところ、5分掛かった。このときの回線利用率はおよそ何％か。ここで、ダウンロード時には動画データに20％の制御情報が付加されるものとする。",
-                    "code": null,
+            {"id": "r7a007",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "10",
                             "53",
@@ -3367,12 +3162,8 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a008",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "HTTPとHTTPSを比較した場合において、HTTPSだけがもつ特徴を示したものはどれか。",
-                    "code": null,
+            {"id": "r7a008",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "cookieに保存されている情報を用いたセッション管理が可能である。",
                             "IDとパスワードによって利用者の認証を行うことが可能である。",
@@ -3387,12 +3178,8 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a009",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "暗号の危殆化に該当するものはどれか。",
-                    "code": null,
+            {"id": "r7a009",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "あるCAでデジタル証明書の署名に使っている公開鍵のデジタル証明書の有効期限が切れた。",
                             "ある暗号アルゴリズムの秘密鍵が不正アクセスによって漏えいした。",
@@ -3407,12 +3194,8 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a010",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "WAFの説明はどれか。",
-                    "code": null,
+            {"id": "r7a010",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "Webサイトに対するアクセス内容を監視し、攻撃とみなされるパターンを検知したときに当該アクセスを遮断する。",
                             "Wi-Fiアライアンスが認定した無線LANの暗号化方式の規格であり、AES暗号に対応している。",
@@ -3427,12 +3210,8 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a011",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "E-Rモデルにおけるエンティティの特徴はどれか。",
-                    "code": null,
+            {"id": "r7a011",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "エンティティとインスタンスとは、1対1の対応関係をとる。",
                             "エンティティとなり得るものは、物的に実現するものである。",
@@ -3447,12 +3226,8 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a012",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "オブジェクト指向プログラミングの特徴のうち、異なるクラスのオブジェクトを同一のインタフェースで操作したときに、操作対象クラスに応じた異なる動作を可能にすることを何と呼ぶか。",
-                    "code": null,
+            {"id": "r7a012",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "委譲",
                             "継承",
@@ -3467,12 +3242,8 @@ end function
                     "originalTopic": "プログラミング",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a013",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "アジャイル開発手法の一つであるスクラムにおいて、プロダクトバックログアイテムの内容や並び順を決定する役割をもつのは誰か。",
-                    "code": null,
+            {"id": "r7a013",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "開発者",
                             "顧客",
@@ -3487,12 +3258,8 @@ end function
                     "originalTopic": "システム開発技術",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a014",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "図は、あるプロジェクトの作業A～Iとその作業日数を表している。このプロジェクトの最短所要日数は何日か。",
-                    "code": null,
+            {"id": "r7a014",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "27",
                             "28",
@@ -3507,12 +3274,8 @@ end function
                     "originalTopic": "プロジェクトマネジメント",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a015",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "サーバ室の物理的な安全対策の状況について、情報セキュリティ管理基準（平成28年）に照らして、情報セキュリティ監査を行って判明した状況のうち、監査人が、指摘事項として監査報告書に記載すべきものはどれか。",
-                    "code": null,
+            {"id": "r7a015",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "サーバが設置されている施設の無人領域では、営業時間中でも、警報装置が作動するようになっている。",
                             "サーバ室に非常口、避難器具、誘導灯などを設置している。",
@@ -3527,12 +3290,8 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a016",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データマイニングの手法の一つであって、POSなどの蓄積データから",
-                    "code": null,
+            {"id": "r7a016",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "3C分析",
                             "ABC分析",
@@ -3547,12 +3306,8 @@ end function
                     "originalTopic": "ストラテジ",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a017",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "インターネット上の生成AIサービスを利用する際に、オプトアウトを設定することはどのような場合に有効か。",
-                    "code": null,
+            {"id": "r7a017",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "個々の利用者が、自身が生成AIから得た情報に対して、著作権を主張したい場合",
                             "個々の利用者が入力した情報を、生成AIの学習に利用させたくない場合",
@@ -3567,12 +3322,8 @@ end function
                     "originalTopic": "AI・機械学習",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a018",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "物販事業において、ロングテールをビジネスとして成功させるために必要な施策はどれか。",
-                    "code": null,
+            {"id": "r7a018",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "多くの有名ブランド店が出店するショッピングモールの構築",
                             "交通の利便性が高い地域に対する、生活必需品を広く浅く取りそろえた出店計画",
@@ -3587,12 +3338,8 @@ end function
                     "originalTopic": "ストラテジ",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a019",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "表の条件で喫茶店を開業したい。月10万円の利益を出すためには、1客席当たり1日平均何人の客が必要か。\n\n客1人当たりの売上高：500円\n客1人当たりの変動費：100円\n固定費：300,000円／月\n1か月の営業日数：20日\n客席数：10席",
-                    "code": null,
+            {"id": "r7a019",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "3.75",
                             "4",
@@ -3607,12 +3354,8 @@ end function
                     "originalTopic": "ストラテジ",
                     "sourceFile": "r7Questions.ts"
             },
-            {
-                    "id": "r7a020",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "カーボンフットプリントの説明として、適切なものはどれか。",
-                    "code": null,
+            {"id": "r7a020",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "温室効果ガスの排出量から吸収量と除去量を差し引いた合計をゼロにする取組",
                             "原材料調達から廃棄・リサイクルに至るまでのライフサイクル全体を通して排出される温室効果ガスの排出量を、CO2量に換算して、その値を商品やサービスに表示すること",
@@ -3630,12 +3373,8 @@ end function
     ],
 
     past_r7_b:     [
-            {
-                    "id": "r7b001",
-                    "category": "algorithm",
-                    "level": "advanced",
-                    "text": "次のプログラム中の【 a 】と【 b 】に入れる正しい答えの組合せを、解答群の中から選べ。\n\n関数 function1 が受け取る引数と、関数 function2 が受け取る引数とが同じとき、二つの関数は同じ値を返す。ここで、引数 n と引数 m は正の整数であり、引数 m は引数 n よりも 10 以上大きい数とする。\n\n〔プログラム〕\n○整数型: function1(整数型: n, 整数型: m)\n  整数型: count ← 0\n  整数型: i\n  for (iをnからmまで1ずつ増やす)\n    if ((i mod 4)が0と等しい)\n      count ← count ＋ 1\n    endif\n  endfor\n  return count\n\n○整数型: function2(整数型: n, 整数型: m)\n  整数型: count ← 0\n  整数型: tempN ← n\n  整数型: i, j\n  for ( 【 a 】 )\n    if ((tempN mod 4)が0と等しい)\n      繰返し処理を終了する\n    endif\n    tempN ← tempN ＋ 1\n  endfor\n  for ( 【 b 】 )\n    count ← count ＋ 1\n  endfor\n  return count",
-                    "code": null,
+            {"id": "r7b001",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "ア: a=iを1から2まで1ずつ増やす, b=jをnから始めてmを超えない範囲でtempNずつ増やす",
                             "イ: a=iを1から2まで1ずつ増やす, b=jをtempNからmまで1ずつ増やす",
@@ -3652,12 +3391,8 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "r7BQuestions.ts"
             },
-            {
-                    "id": "r7b002",
-                    "category": "algorithm",
-                    "level": "advanced",
-                    "text": "次のプログラム中の【　】に入れる正しい答えを、解答群の中から選べ。\n\n関数 change は、10 より大きい整数を引数 n で受け取り、1 円玉、5 円玉、10 円玉を使ってちょうど n 円にする組合せの総数を返す。\n\n例えば、12 円にする組合せは、次のように数えられる。10 円玉を使わない場合には、1 円玉と 5 円玉だけでちょうど 12 円にすることになる。その組合せは、使える 5 円玉の枚数が 0 以上 (12 ÷ 5 の商) 以下なので、(12 ÷ 5 の商) ＋ 1 ＝ 3 通りある。同様に、10 円玉を 1 枚使う場合には、1 円玉と 5 円玉だけでちょうど 2 円にすることになり、その組合せは (2 ÷ 5 の商) ＋ 1 ＝ 1 通りある。10 円玉を 2 枚以上使う組合せはない。よって、1 円玉、5 円玉、10 円玉を使ってちょうど 12 円にする組合せは、3 ＋ 1 ＝ 4 通りである。\n\n〔プログラム〕\n○整数型: change(整数型: n)\n  整数型: count ← 0\n  整数型: rest ← n\n  while ( 【　】 )\n    count ← count ＋ (rest ÷ 5 の商) ＋ 1\n    rest ← rest － 10\n  endwhile\n  return count",
-                    "code": null,
+            {"id": "r7b002",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "rest ≧ 0",
                             "rest ≧ 5",
@@ -3680,6 +3415,7 @@ end function
                     "level": "advanced",
                     "text": "次のプログラム中の【 a 】と【 b 】に入れる正しい答えの組合せを、解答群の中から選べ。ここで、配列の要素番号は 1 から始まる。\n\n関数 push は、引数で与えられた整数をスタックに格納する。格納できた場合は true を返し、格納できなかった場合は false を返す。\n関数 pop は、スタックから値を取り出して返す。スタックが空のときは未定義の値を返す。\n\nスタックを、要素数が 4 である大域の整数型の配列 stack、及び次に値を格納する位置を示す大域の変数 stackPos で表現する。スタックの初期状態は、stack = {4, 3, 未定義の値, 未定義の値}、stackPos = 3 である。\n\n〔プログラム〕\n大域: 整数型: stackPos ← 3\n大域: 整数型の配列: stack ← {4, 3, 未定義の値, 未定義の値}\n\n○論理型: push(整数型: inputData)\n  if (stackPos ≦ stackの要素数)\n    stack[【 a 】] ← inputData\n    stackPos ← stackPos ＋ 1\n    return true\n  else\n    return false\n  endif\n\n○整数型: pop()\n  整数型: popData ← 未定義の値\n  if (stackPos ＞ 1)\n    stackPos ← 【 b 】\n    popData ← stack[stackPos]\n    stack[stackPos] ← 未定義の値\n  endif\n  return popData",
                     "code": null,
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "ア: a=stackPos, b=stackPos ＋ 1",
                             "イ: a=stackPos, b=stackPos － 1",
@@ -3694,12 +3430,8 @@ end function
                     "originalTopic": "データ構造",
                     "sourceFile": "r7BQuestions.ts"
             },
-            {
-                    "id": "r7b004",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "次の記述中の【　】に入れる正しい答えを、解答群の中から選べ。ここで、配列の要素番号は 1 から始まる。\n\n関数 search は、二つの文字型の配列を、それぞれ引数 data 及び key で受け取り、data から、key の要素の並びと同じ並びを全て探し、その先頭の要素番号を全て格納した配列を返す。見つからなければ、要素数 0 の配列を返す。\n\n関数 search を search({",
-                    "code": null,
+            {"id": "r7b004",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "1",
                             "2",
@@ -3726,6 +3458,7 @@ end function
                     "level": "advanced",
                     "text": "次の記述中の【 a 】と【 b 】に入れる正しい答えの組合せを、解答群の中から選べ。ここで、配列の要素番号は 1 から始まる。\n\n予防接種の病気 X に対する予防効果を調査するために集めたデータの集計結果を基に、病気 X にかかるかどうかが、予防接種の有無に影響されないと仮定した場合の人数を計算する。この人数を理論度数という。\n\n関数 f は、引数 data で受け取った集計結果を基に計算した理論度数を返す。引数と戻り値は二次元配列で、その行が表の行、その列が表の列に対応する。\n\n表1の集計結果の例：\n- 予防接種を受けた・病気Xにかからなかった: 82人\n- 予防接種を受けた・病気Xにかかった: 6人  \n- 予防接種を受けていない・病気Xにかからなかった: 58人\n- 予防接種を受けていない・病気Xにかかった: 8人\n\n表2を基に計算した理論度数で、予防接種を受けた・病気Xにかからなかった場合は【 a 】人、予防接種を受けていない・病気Xにかかった場合は【 b 】人である。\n\n〔プログラム〕\n○実数型の二次元配列: f(実数型の二次元配列: data)\n  実数型: t ← dataの要素の和\n  整数型: row ← dataの行数\n  整数型: col ← dataの列数\n  実数型の二次元配列: result ← {row行col列の 未定義の値}\n  整数型: r, c\n  for (r を 1 から row まで 1 ずつ増やす)\n    for (c を 1 から col まで 1 ずつ増やす)\n      result[r, c] ← (dataの行番号rの要素の和) × (dataの列番号cの要素の和) ÷ t\n    endfor\n  endfor\n  return result",
                     "code": null,
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "ア: a=44, b=33",
                             "イ: a=58, b=8",
@@ -3743,12 +3476,8 @@ end function
                     "originalTopic": "統計",
                     "sourceFile": "r7BQuestions.ts"
             },
-            {
-                    "id": "r7b006",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "A社は従業員200名の電子機器メーカーである。東京に本社があり、新潟に工場がある。\n\nA社では、ファイルサーバを次のように運用している。\n・土曜日の午前2時からフルバックアップを取得\n・翌週の火曜日と木曜日の午前2時から増分バックアップを取得\n・フルバックアップからのリストアには平均して4時間、1回の増分バックアップからは平均して0.25時間\n・目標復旧時点（RPO）は72時間、目標復旧時間(RTO)は120時間\n\n表2 内部監査室へのBさんの回答（抜粋）\n1. 例えば、金曜日の正午に障害が発生した場合、少なくとも【 a1 】の時点のデータは復元しなければならない。\n2. 例えば、木曜日の正午に障害が発生し、ファイルサーバの全データが消失したとすると、バックアップからのリストアには【 a2 】時間掛かると予想される。\n3. ICT継続の計画書は、【 a3 】が承認している。\n\n【 a1 】～【 a3 】に入れる字句の適切な組合せを選べ。",
-                    "code": null,
+            {"id": "r7b006",
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "ア: a1=月曜日の正午, a2=4.25, a3=CISO",
                             "イ: a1=月曜日の正午, a2=4.25, a3=情報システム部の担当者",
@@ -3774,9 +3503,9 @@ end function
     practice_questions:     [
             {
                     "id": "prac001",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "10進数の25を2進数で表したものはどれか。",
+                    "category": "practice",
+                    "level": "standard",
+                    "text": "10進数25を2進数で表したものはどれか。",
                     "code": null,
                     "choices": [
                             "10011",
@@ -3792,12 +3521,7 @@ end function
                     "originalTopic": "基礎理論",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac002",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "CPUの性能指標であるCPIの説明として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac002",
                     "choices": [
                             "Clock cycles Per Instruction：1命令当たりの平均クロック数",
                             "Commands Per Instruction：1命令当たりの平均コマンド数",
@@ -3812,12 +3536,7 @@ end function
                     "originalTopic": "コンピュータシステム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac003",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "キャッシュメモリのヒット率が90%、キャッシュアクセス時間が2ns、主記憶アクセス時間が50nsのとき、実効アクセス時間は何nsか。",
-                    "code": null,
+            {"id": "prac003",
                     "choices": [
                             "4.8",
                             "6.8",
@@ -3832,12 +3551,7 @@ end function
                     "originalTopic": "コンピュータシステム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac004",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "浮動小数点数の表現で、仮数部のビット数を増やすことによって向上するものはどれか。",
-                    "code": null,
+            {"id": "prac004",
                     "choices": [
                             "演算速度",
                             "表現可能な数値の範囲",
@@ -3852,12 +3566,7 @@ end function
                     "originalTopic": "基礎理論",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac005",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "OSのプロセススケジューリングにおいて、短い処理から順に実行する方式はどれか。",
-                    "code": null,
+            {"id": "prac005",
                     "choices": [
                             "FCFS（First Come First Served）",
                             "SJF（Shortest Job First）",
@@ -3872,12 +3581,7 @@ end function
                     "originalTopic": "ソフトウェア",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac006",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "RAIDのレベルのうち、ミラーリングによってデータの冗長性を確保するものはどれか。",
-                    "code": null,
+            {"id": "prac006",
                     "choices": [
                             "RAID0",
                             "RAID1",
@@ -3892,12 +3596,7 @@ end function
                     "originalTopic": "ハードウェア",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac007",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "スタックを用いた逆ポーランド記法の計算で、「3 4 + 2 ×」の結果はどれか。",
-                    "code": null,
+            {"id": "prac007",
                     "choices": [
                             "10",
                             "14",
@@ -3912,12 +3611,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac008",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ページング方式の仮想記憶において、ページフォルトが発生する原因はどれか。",
-                    "code": null,
+            {"id": "prac008",
                     "choices": [
                             "CPUの処理能力不足",
                             "参照したページが主記憶にない",
@@ -3932,12 +3626,7 @@ end function
                     "originalTopic": "コンピュータシステム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac009",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "デッドロックの発生を回避するための条件のうち、正しいものはどれか。",
-                    "code": null,
+            {"id": "prac009",
                     "choices": [
                             "複数のプロセスが同時に実行される",
                             "資源の獲得順序を統一する",
@@ -3952,12 +3641,7 @@ end function
                     "originalTopic": "ソフトウェア",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac010",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "コンパイラとインタプリタの違いについて、正しい説明はどれか。",
-                    "code": null,
+            {"id": "prac010",
                     "choices": [
                             "コンパイラは実行時に翻訳、インタプリタは事前に翻訳",
                             "コンパイラは事前に翻訳、インタプリタは実行時に翻訳",
@@ -3972,12 +3656,7 @@ end function
                     "originalTopic": "ソフトウェア",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac011",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "16進数のA3を10進数で表すとどれか。",
-                    "code": null,
+            {"id": "prac011",
                     "choices": [
                             "163",
                             "164",
@@ -3992,12 +3671,7 @@ end function
                     "originalTopic": "基礎理論",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac012",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "CPUの動作周波数が2GHzで、CPIが3のとき、1秒間に実行できる命令数は約何MIPSか。",
-                    "code": null,
+            {"id": "prac012",
                     "choices": [
                             "333",
                             "500",
@@ -4012,12 +3686,7 @@ end function
                     "originalTopic": "コンピュータシステム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac013",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "バブルソートで配列[5,2,8,1,9]を昇順にソートする際、最初のパスで比較される回数はどれか。",
-                    "code": null,
+            {"id": "prac013",
                     "choices": [
                             "3回",
                             "4回",
@@ -4032,12 +3701,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac014",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "DMAの説明として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac014",
                     "choices": [
                             "CPUを介さずに主記憶と周辺装置間でデータ転送を行う",
                             "CPUの処理速度を向上させるためのキャッシュ機能",
@@ -4052,12 +3716,7 @@ end function
                     "originalTopic": "ハードウェア",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac015",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "論理演算において、「AまたはB」を表す演算子はどれか。",
-                    "code": null,
+            {"id": "prac015",
                     "choices": [
                             "AND",
                             "OR",
@@ -4072,12 +3731,7 @@ end function
                     "originalTopic": "基礎理論",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac016",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "プロセスの状態遷移において、実行状態から待機状態に移る原因として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac016",
                     "choices": [
                             "タイムスライスの終了",
                             "I/O処理の発生",
@@ -4092,12 +3746,7 @@ end function
                     "originalTopic": "ソフトウェア",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac017",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ハッシュ表において、異なるキーが同じハッシュ値になることを何というか。",
-                    "code": null,
+            {"id": "prac017",
                     "choices": [
                             "オーバーフロー",
                             "アンダーフロー",
@@ -4112,12 +3761,7 @@ end function
                     "originalTopic": "データ構造",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac018",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "オペレーティングシステムのスケジューラのうち、長期スケジューラの役割はどれか。",
-                    "code": null,
+            {"id": "prac018",
                     "choices": [
                             "CPUの使用権をどのプロセスに与えるかを決定",
                             "どのプロセスを主記憶に読み込むかを決定",
@@ -4132,12 +3776,7 @@ end function
                     "originalTopic": "ソフトウェア",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac019",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "2の補数表現で8ビットの-5を表すとどれか。",
-                    "code": null,
+            {"id": "prac019",
                     "choices": [
                             "10000101",
                             "11111011",
@@ -4152,12 +3791,7 @@ end function
                     "originalTopic": "基礎理論",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac020",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "キューの特徴として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac020",
                     "choices": [
                             "LIFO（Last In First Out）の構造",
                             "FIFO（First In First Out）の構造",
@@ -4172,12 +3806,7 @@ end function
                     "originalTopic": "データ構造",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac021",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "OSI参照モデルの第3層（ネットワーク層）の役割はどれか。",
-                    "code": null,
+            {"id": "prac021",
                     "choices": [
                             "ビットストリームの伝送",
                             "フレームの誤り制御",
@@ -4192,12 +3821,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac022",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "IPv4アドレス192.168.1.100のサブネットマスクが255.255.255.0の場合、ネットワークアドレスはどれか。",
-                    "code": null,
+            {"id": "prac022",
                     "choices": [
                             "192.168.1.0",
                             "192.168.1.100",
@@ -4212,12 +3836,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac023",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "TCPとUDPの違いについて、正しい説明はどれか。",
-                    "code": null,
+            {"id": "prac023",
                     "choices": [
                             "TCPはコネクションレス、UDPはコネクション型",
                             "TCPはコネクション型、UDPはコネクションレス",
@@ -4232,12 +3851,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac024",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "DNSの説明として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac024",
                     "choices": [
                             "IPアドレスを動的に割り当てるプロトコル",
                             "ドメイン名とIPアドレスを対応付けるシステム",
@@ -4252,12 +3866,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac025",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ファイアウォールの機能として最も適切なものはどれか。",
-                    "code": null,
+            {"id": "prac025",
                     "choices": [
                             "ウイルスの検出と駆除",
                             "データの暗号化",
@@ -4272,12 +3881,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac026",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "SSL/TLSプロトコルの主な目的はどれか。",
-                    "code": null,
+            {"id": "prac026",
                     "choices": [
                             "データの圧縮",
                             "データの暗号化と認証",
@@ -4292,12 +3896,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac027",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "DHCPの役割として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac027",
                     "choices": [
                             "ドメイン名の解決",
                             "IPアドレスの自動割り当て",
@@ -4312,12 +3911,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac028",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "DoS攻撃の対策として最も有効なものはどれか。",
-                    "code": null,
+            {"id": "prac028",
                     "choices": [
                             "ウイルス対策ソフトの導入",
                             "データの暗号化",
@@ -4332,12 +3926,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac029",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "MACアドレスについて正しい説明はどれか。",
-                    "code": null,
+            {"id": "prac029",
                     "choices": [
                             "インターネット上でのグローバルアドレス",
                             "ネットワークインターフェースの物理アドレス",
@@ -4352,12 +3941,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac030",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ルータの基本的な機能はどれか。",
-                    "code": null,
+            {"id": "prac030",
                     "choices": [
                             "フレームの誤り検出",
                             "異なるネットワーク間でのパケット転送",
@@ -4372,12 +3956,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac031",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "HTTPSが使用するデフォルトポート番号はどれか。",
-                    "code": null,
+            {"id": "prac031",
                     "choices": [
                             "80",
                             "443",
@@ -4392,12 +3971,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac032",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ソーシャルエンジニアリング攻撃の対策として最も重要なものはどれか。",
-                    "code": null,
+            {"id": "prac032",
                     "choices": [
                             "ファイアウォールの導入",
                             "ウイルス対策ソフトの更新",
@@ -4412,12 +3986,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac033",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "VPNの主な利点はどれか。",
-                    "code": null,
+            {"id": "prac033",
                     "choices": [
                             "通信速度の向上",
                             "インターネット上でのセキュアな通信",
@@ -4432,12 +4001,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac034",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "SQLインジェクション攻撃の対策として最も効果的なものはどれか。",
-                    "code": null,
+            {"id": "prac034",
                     "choices": [
                             "パスワードの定期変更",
                             "プリペアドステートメントの使用",
@@ -4452,12 +4016,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac035",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ネットワークにおけるNATの役割はどれか。",
-                    "code": null,
+            {"id": "prac035",
                     "choices": [
                             "ドメイン名の解決",
                             "プライベートIPアドレスとグローバルIPアドレスの変換",
@@ -4472,12 +4031,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac036",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "デジタル証明書の主な役割はどれか。",
-                    "code": null,
+            {"id": "prac036",
                     "choices": [
                             "データの圧縮",
                             "公開鍵の信頼性保証",
@@ -4492,12 +4046,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac037",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "スイッチングハブの特徴として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac037",
                     "choices": [
                             "コリジョンドメインを分割する",
                             "ブロードキャストドメインを分割する",
@@ -4512,12 +4061,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac038",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "フィッシング攻撃の特徴として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac038",
                     "choices": [
                             "システムの脆弱性を突く攻撃",
                             "偽のWebサイトで個人情報を詐取する攻撃",
@@ -4532,12 +4076,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac039",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "SNMP（Simple Network Management Protocol）の用途はどれか。",
-                    "code": null,
+            {"id": "prac039",
                     "choices": [
                             "ファイル転送",
                             "ネットワーク機器の監視・管理",
@@ -4552,12 +4091,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac040",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "IDS（Intrusion Detection System）の機能はどれか。",
-                    "code": null,
+            {"id": "prac040",
                     "choices": [
                             "ネットワークトラフィックの暗号化",
                             "不正アクセスの検知",
@@ -4572,12 +4106,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac041",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "リレーショナルデータベースの正規化の目的として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac041",
                     "choices": [
                             "データの検索速度向上",
                             "データの冗長性排除",
@@ -4592,12 +4121,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac042",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "SQLのSELECT文で、重複を除いた結果を得るために使用するキーワードはどれか。",
-                    "code": null,
+            {"id": "prac042",
                     "choices": [
                             "UNIQUE",
                             "DISTINCT",
@@ -4612,12 +4136,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac043",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースのACID特性のうち、\\",
-                    "code": null,
+            {"id": "prac043",
                     "choices": [
                             "Atomicity（原子性）",
                             "Availability（可用性）",
@@ -4632,12 +4151,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac044",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "配列の線形探索において、n個の要素から目的の要素を見つける際の平均比較回数はどれか。",
-                    "code": null,
+            {"id": "prac044",
                     "choices": [
                             "log₂n",
                             "n/2",
@@ -4652,12 +4166,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac045",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースの主キーの制約として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac045",
                     "choices": [
                             "NULL値を含むことができる",
                             "重複する値を持つことができる",
@@ -4672,12 +4181,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac046",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "クイックソートの平均時間計算量はどれか。",
-                    "code": null,
+            {"id": "prac046",
                     "choices": [
                             "O(n)",
                             "O(n log n)",
@@ -4692,12 +4196,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac047",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースのインデックスの主な目的はどれか。",
-                    "code": null,
+            {"id": "prac047",
                     "choices": [
                             "データの暗号化",
                             "データの圧縮",
@@ -4712,12 +4211,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac048",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ハッシュ関数の望ましい性質として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac048",
                     "choices": [
                             "同じ入力に対して異なる出力を生成する",
                             "計算に時間がかかる",
@@ -4732,12 +4226,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac049",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースの外部キーの役割はどれか。",
-                    "code": null,
+            {"id": "prac049",
                     "choices": [
                             "レコードを一意に識別する",
                             "他のテーブルとの関連を表現する",
@@ -4752,12 +4241,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac050",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "二分探索を行うための前提条件はどれか。",
-                    "code": null,
+            {"id": "prac050",
                     "choices": [
                             "データが連結リスト構造である",
                             "データがソート済みである",
@@ -4772,12 +4256,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac051",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "SQLのJOIN操作のうち、両方のテーブルに存在するレコードのみを結合するものはどれか。",
-                    "code": null,
+            {"id": "prac051",
                     "choices": [
                             "LEFT JOIN",
                             "RIGHT JOIN",
@@ -4792,12 +4271,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac052",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データ構造の木において、根から葉までの最長経路の長さを何というか。",
-                    "code": null,
+            {"id": "prac052",
                     "choices": [
                             "高さ（depth）",
                             "幅（width）",
@@ -4812,12 +4286,7 @@ end function
                     "originalTopic": "データ構造",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac053",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースのトランザクション制御において、変更を確定する命令はどれか。",
-                    "code": null,
+            {"id": "prac053",
                     "choices": [
                             "COMMIT",
                             "ROLLBACK",
@@ -4832,12 +4301,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac054",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "グラフのアルゴリズムにおいて、最短経路を求めるアルゴリズムはどれか。",
-                    "code": null,
+            {"id": "prac054",
                     "choices": [
                             "クラスカル法",
                             "プリム法",
@@ -4852,12 +4316,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac055",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースの第1正規形の条件はどれか。",
-                    "code": null,
+            {"id": "prac055",
                     "choices": [
                             "部分関数従属を排除する",
                             "推移関数従属を排除する",
@@ -4872,12 +4331,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac056",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "マージソートの時間計算量はどれか。",
-                    "code": null,
+            {"id": "prac056",
                     "choices": [
                             "O(n)",
                             "O(n log n)",
@@ -4892,12 +4346,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac057",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースのビューの特徴として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac057",
                     "choices": [
                             "物理的にデータを保存する",
                             "仮想的なテーブルである",
@@ -4912,12 +4361,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac058",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "動的プログラミングの特徴はどれか。",
-                    "code": null,
+            {"id": "prac058",
                     "choices": [
                             "問題を小さな部分問題に分割し、解を記録して再利用する",
                             "貪欲的に最適解を選択する",
@@ -4932,12 +4376,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac059",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースのロックの粒度で、最も細かいレベルはどれか。",
-                    "code": null,
+            {"id": "prac059",
                     "choices": [
                             "データベースレベル",
                             "テーブルレベル",
@@ -4952,12 +4391,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac060",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "二分木の走査方法のうち、「左の子→根→右の子」の順で訪問するものはどれか。",
-                    "code": null,
+            {"id": "prac060",
                     "choices": [
                             "前順走査（preorder）",
                             "中順走査（inorder）",
@@ -4972,12 +4406,7 @@ end function
                     "originalTopic": "データ構造",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac061",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "プロジェクトマネジメントにおけるWBSの目的はどれか。",
-                    "code": null,
+            {"id": "prac061",
                     "choices": [
                             "プロジェクトの予算を管理する",
                             "プロジェクトの作業を階層的に分解する",
@@ -4992,12 +4421,7 @@ end function
                     "originalTopic": "プロジェクトマネジメント",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac062",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "アジャイル開発の特徴として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac062",
                     "choices": [
                             "詳細な仕様書を最初に完成させる",
                             "短い期間での反復開発を行う",
@@ -5012,12 +4436,7 @@ end function
                     "originalTopic": "ソフトウェア開発管理技術",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac063",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ソフトウェアテストにおけるブラックボックステストの特徴はどれか。",
-                    "code": null,
+            {"id": "prac063",
                     "choices": [
                             "プログラムの内部構造を考慮してテストする",
                             "仕様書に基づいて入出力のみに着目してテストする",
@@ -5032,12 +4451,7 @@ end function
                     "originalTopic": "ソフトウェア工学",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac064",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "システム開発における要件定義の目的はどれか。",
-                    "code": null,
+            {"id": "prac064",
                     "choices": [
                             "プログラムのコーディングを行う",
                             "システムの詳細設計を行う",
@@ -5052,12 +4466,7 @@ end function
                     "originalTopic": "システム開発技術",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac065",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ITILにおけるインシデント管理の目的はどれか。",
-                    "code": null,
+            {"id": "prac065",
                     "choices": [
                             "ITサービスの改善を行う",
                             "ITサービスの中断を最小限に抑える",
@@ -5072,12 +4481,7 @@ end function
                     "originalTopic": "サービスマネジメント",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac066",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ソフトウェアライセンスのGPLの特徴はどれか。",
-                    "code": null,
+            {"id": "prac066",
                     "choices": [
                             "商用利用が禁止されている",
                             "改変したソフトウェアもGPLで公開する必要がある",
@@ -5092,12 +4496,7 @@ end function
                     "originalTopic": "法務",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac067",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "システム監査の目的として最も適切なものはどれか。",
-                    "code": null,
+            {"id": "prac067",
                     "choices": [
                             "システムの性能を向上させる",
                             "システムの信頼性と安全性を客観的に評価する",
@@ -5112,12 +4511,7 @@ end function
                     "originalTopic": "システム監査",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac068",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "著作権法において、プログラムの著作権の保護期間はどれか。",
-                    "code": null,
+            {"id": "prac068",
                     "choices": [
                             "公表後10年",
                             "公表後20年",
@@ -5132,12 +4526,7 @@ end function
                     "originalTopic": "法務",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac069",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "リスクマネジメントにおけるリスク対応戦略のうち、リスクを他者に移転するものはどれか。",
-                    "code": null,
+            {"id": "prac069",
                     "choices": [
                             "リスク受容",
                             "リスク回避",
@@ -5152,12 +4541,7 @@ end function
                     "originalTopic": "プロジェクトマネジメント",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac070",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ソフトウェア開発におけるV字モデルの特徴はどれか。",
-                    "code": null,
+            {"id": "prac070",
                     "choices": [
                             "開発工程とテスト工程を対応付けている",
                             "並行して複数の機能を開発する",
@@ -5172,12 +4556,7 @@ end function
                     "originalTopic": "ソフトウェア開発管理技術",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac071",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "プロジェクトのクリティカルパスの説明として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac071",
                     "choices": [
                             "最も費用のかかる作業の経路",
                             "最も重要な作業の経路",
@@ -5192,12 +4571,7 @@ end function
                     "originalTopic": "プロジェクトマネジメント",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac072",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "SLAの説明として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac072",
                     "choices": [
                             "システムの設計書",
                             "サービスレベルの合意書",
@@ -5212,12 +4586,7 @@ end function
                     "originalTopic": "サービスマネジメント",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac073",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "個人情報保護法における個人情報の定義に含まれないものはどれか。",
-                    "code": null,
+            {"id": "prac073",
                     "choices": [
                             "氏名",
                             "住所",
@@ -5232,12 +4601,7 @@ end function
                     "originalTopic": "法務",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac074",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ソフトウェアの品質特性のうち、保守性の説明として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac074",
                     "choices": [
                             "システムの応答時間",
                             "システムの修正・改良のしやすさ",
@@ -5252,12 +4616,7 @@ end function
                     "originalTopic": "ソフトウェア工学",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac075",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "エンタープライズアーキテクチャ（EA）の目的はどれか。",
-                    "code": null,
+            {"id": "prac075",
                     "choices": [
                             "ITシステムの性能向上",
                             "経営戦略とITの整合性確保",
@@ -5272,12 +4631,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac076",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "BCP（事業継続計画）の主な目的はどれか。",
-                    "code": null,
+            {"id": "prac076",
                     "choices": [
                             "日常業務の効率化",
                             "災害時の事業継続",
@@ -5292,12 +4646,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac077",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ソフトウェアの結合テストで使用される、下位モジュールの代替となるテスト用モジュールはどれか。",
-                    "code": null,
+            {"id": "prac077",
                     "choices": [
                             "スタブ",
                             "ドライバ",
@@ -5312,12 +4661,7 @@ end function
                     "originalTopic": "ソフトウェア工学",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac078",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "プロジェクトマネジメントにおけるスコープクリープの説明として正しいものはどれか。",
-                    "code": null,
+            {"id": "prac078",
                     "choices": [
                             "プロジェクトの予算超過",
                             "プロジェクトのスケジュール遅延",
@@ -5332,12 +4676,7 @@ end function
                     "originalTopic": "プロジェクトマネジメント",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac079",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ITガバナンスの目的として最も適切なものはどれか。",
-                    "code": null,
+            {"id": "prac079",
                     "choices": [
                             "IT部門の人員削減",
                             "ITシステムの統制と価値創出",
@@ -5352,12 +4691,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "practiceQuestions.ts"
             },
-            {
-                    "id": "prac080",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ファンクションポイント法の目的はどれか。",
-                    "code": null,
+            {"id": "prac080",
                     "choices": [
                             "プログラムの実行速度を測定する",
                             "ソフトウェアの規模を機能の観点から測定する",
@@ -5375,12 +4709,7 @@ end function
     ],
 
     more_subject_a:     [
-            {
-                    "id": "a011",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "10進数の123を2進数に変換すると、どれか。",
-                    "code": null,
+            {"id": "a011",
                     "choices": [
                             "1111011",
                             "1111001",
@@ -5395,12 +4724,7 @@ end function
                     "originalTopic": "基礎理論",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a012",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ハードディスクの記憶容量が1TBのとき、これをバイト単位で表すと約何バイトか。",
-                    "code": null,
+            {"id": "a012",
                     "choices": [
                             "10^9バイト",
                             "10^12バイト",
@@ -5415,12 +4739,7 @@ end function
                     "originalTopic": "コンピュータシステム",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a013",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "CPUのパイプライン処理の目的として、最も適切なものはどれか。",
-                    "code": null,
+            {"id": "a013",
                     "choices": [
                             "メモリ容量を増やす",
                             "命令実行の並列化による性能向上",
@@ -5435,12 +4754,7 @@ end function
                     "originalTopic": "コンピュータシステム",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a014",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "IPv6アドレスの長さは何ビットか。",
-                    "code": null,
+            {"id": "a014",
                     "choices": [
                             "32ビット",
                             "64ビット",
@@ -5455,12 +4769,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a015",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "HTTPSで使用される標準ポート番号はどれか。",
-                    "code": null,
+            {"id": "a015",
                     "choices": [
                             "80",
                             "443",
@@ -5475,12 +4784,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a016",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースのACID特性のうち、「A」が表すものはどれか。",
-                    "code": null,
+            {"id": "a016",
                     "choices": [
                             "Atomicity（原子性）",
                             "Availability（可用性）",
@@ -5495,12 +4799,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a017",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "SQLのGROUP BY句の説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a017",
                     "choices": [
                             "レコードを削除する",
                             "テーブルを結合する",
@@ -5515,12 +4814,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a018",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "公開鍵暗号方式の特徴として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a018",
                     "choices": [
                             "暗号化と復号化に同じ鍵を使用する",
                             "暗号化と復号化に異なる鍵を使用する",
@@ -5535,12 +4829,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a019",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ディジタル署名の目的として、適切でないものはどれか。",
-                    "code": null,
+            {"id": "a019",
                     "choices": [
                             "送信者の認証",
                             "データの完全性確保",
@@ -5555,12 +4844,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a020",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "プロジェクトマネジメントにおけるクリティカルパスとは何か。",
-                    "code": null,
+            {"id": "a020",
                     "choices": [
                             "最も重要な作業",
                             "最も時間のかかる作業順序",
@@ -5575,12 +4859,7 @@ end function
                     "originalTopic": "マネジメント",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a021",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ガントチャートの説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a021",
                     "choices": [
                             "組織図を表す",
                             "作業の進捗を時系列で表す",
@@ -5595,12 +4874,7 @@ end function
                     "originalTopic": "マネジメント",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a022",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "フローチャートにおいて、判断を表す記号はどれか。",
-                    "code": null,
+            {"id": "a022",
                     "choices": [
                             "楕円",
                             "長方形",
@@ -5615,12 +4889,7 @@ end function
                     "originalTopic": "アルゴリズムとプログラミング",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a023",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ソフトウェアのテスト技法のうち、ブラックボックステストの説明として正しいものはどれか。",
-                    "code": null,
+            {"id": "a023",
                     "choices": [
                             "プログラムの内部構造を基にテストする",
                             "プログラムの仕様を基にテストする",
@@ -5635,12 +4904,7 @@ end function
                     "originalTopic": "ソフトウェア工学",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a024",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "UMLの説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a024",
                     "choices": [
                             "プログラミング言語の一つ",
                             "データベース管理システム",
@@ -5655,12 +4919,7 @@ end function
                     "originalTopic": "ソフトウェア工学",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a025",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "システム開発におけるウォーターフォールモデルの特徴として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a025",
                     "choices": [
                             "各工程を並行して実施する",
                             "各工程を順次進める",
@@ -5675,12 +4934,7 @@ end function
                     "originalTopic": "ソフトウェア工学",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a026",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "コンピュータの五大機能に含まれないものはどれか。",
-                    "code": null,
+            {"id": "a026",
                     "choices": [
                             "入力",
                             "記憶",
@@ -5695,12 +4949,7 @@ end function
                     "originalTopic": "コンピュータシステム",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a027",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "RAIDの説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a027",
                     "choices": [
                             "メモリの高速化技術",
                             "ディスクの冗長化技術",
@@ -5715,12 +4964,7 @@ end function
                     "originalTopic": "コンピュータシステム",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a028",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "OSの機能として、適切でないものはどれか。",
-                    "code": null,
+            {"id": "a028",
                     "choices": [
                             "プロセス管理",
                             "メモリ管理",
@@ -5735,12 +4979,7 @@ end function
                     "originalTopic": "ソフトウェア",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a029",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "インタープリタの説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a029",
                     "choices": [
                             "プログラムを事前に機械語に変換する",
                             "プログラムを実行時に逐次解釈実行する",
@@ -5755,12 +4994,7 @@ end function
                     "originalTopic": "ソフトウェア",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a030",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "バイナリサーチ（二分探索）の計算量はどれか。",
-                    "code": null,
+            {"id": "a030",
                     "choices": [
                             "O(1)",
                             "O(log n)",
@@ -5775,12 +5009,7 @@ end function
                     "originalTopic": "アルゴリズムとプログラミング",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a031",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ハッシュ法における衝突（コリジョン）とは何か。",
-                    "code": null,
+            {"id": "a031",
                     "choices": [
                             "メモリ不足が発生すること",
                             "異なるキーが同じハッシュ値になること",
@@ -5795,12 +5024,7 @@ end function
                     "originalTopic": "アルゴリズムとプログラミング",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a032",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "スタックの操作でpush以外のものはどれか。",
-                    "code": null,
+            {"id": "a032",
                     "choices": [
                             "pop",
                             "top",
@@ -5815,12 +5039,7 @@ end function
                     "originalTopic": "アルゴリズムとプログラミング",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a033",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "LANで使用される伝送媒体として、最も一般的なものはどれか。",
-                    "code": null,
+            {"id": "a033",
                     "choices": [
                             "同軸ケーブル",
                             "ツイストペアケーブル",
@@ -5835,12 +5054,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a034",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "IPアドレスのクラスBの特徴はどれか。",
-                    "code": null,
+            {"id": "a034",
                     "choices": [
                             "先頭8ビットがネットワーク部",
                             "先頭16ビットがネットワーク部",
@@ -5855,12 +5069,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a035",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "DNSの説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a035",
                     "choices": [
                             "ドメイン名をIPアドレスに変換する",
                             "IPアドレスを自動割り当てする",
@@ -5875,12 +5084,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a036",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースの正規化の主な目的はどれか。",
-                    "code": null,
+            {"id": "a036",
                     "choices": [
                             "検索速度の向上",
                             "データの冗長性の排除",
@@ -5895,12 +5099,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a037",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースのインデックスの説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a037",
                     "choices": [
                             "データの圧縮率を向上させる",
                             "データの検索速度を向上させる",
@@ -5915,12 +5114,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a038",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "SQLのJOIN文の説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a038",
                     "choices": [
                             "複数のテーブルを結合する",
                             "テーブルを分割する",
@@ -5935,12 +5129,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a039",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "コンピュータウイルスの感染経路として、最も多いものはどれか。",
-                    "code": null,
+            {"id": "a039",
                     "choices": [
                             "フロッピーディスク",
                             "電子メール",
@@ -5955,12 +5144,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a040",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "パスワードの安全性を高める方法として、適切でないものはどれか。",
-                    "code": null,
+            {"id": "a040",
                     "choices": [
                             "英数字と記号を組み合わせる",
                             "定期的に変更する",
@@ -5975,12 +5159,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a041",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "SSL/TLSの主な目的はどれか。",
-                    "code": null,
+            {"id": "a041",
                     "choices": [
                             "データ圧縮",
                             "データ暗号化",
@@ -5995,12 +5174,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a042",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "プロジェクトマネジメントにおけるスコープとは何か。",
-                    "code": null,
+            {"id": "a042",
                     "choices": [
                             "プロジェクトの期間",
                             "プロジェクトの予算",
@@ -6015,12 +5189,7 @@ end function
                     "originalTopic": "マネジメント",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a043",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "リスクマネジメントの手順として、正しい順序はどれか。",
-                    "code": null,
+            {"id": "a043",
                     "choices": [
                             "リスク特定 → リスク分析 → リスク対応 → リスク監視",
                             "リスク分析 → リスク特定 → リスク対応 → リスク監視",
@@ -6035,12 +5204,7 @@ end function
                     "originalTopic": "マネジメント",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a044",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "アジャイル開発の特徴として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a044",
                     "choices": [
                             "詳細な文書を重視する",
                             "計画の厳密な遵守を重視する",
@@ -6055,12 +5219,7 @@ end function
                     "originalTopic": "ソフトウェア工学",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a045",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ITサービスマネジメントにおけるSLAとは何か。",
-                    "code": null,
+            {"id": "a045",
                     "choices": [
                             "システム設計書",
                             "サービス品質保証書",
@@ -6075,12 +5234,7 @@ end function
                     "originalTopic": "サービスマネジメント",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a046",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "システム監査の目的として、最も適切なものはどれか。",
-                    "code": null,
+            {"id": "a046",
                     "choices": [
                             "システムの開発",
                             "システムの運用",
@@ -6095,12 +5249,7 @@ end function
                     "originalTopic": "システム監査",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a047",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "BCP（事業継続計画）の説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a047",
                     "choices": [
                             "新規事業の計画",
                             "災害時の事業継続のための計画",
@@ -6115,12 +5264,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a048",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "クラウドコンピューティングの利点として、適切でないものはどれか。",
-                    "code": null,
+            {"id": "a048",
                     "choices": [
                             "初期投資の削減",
                             "スケーラビリティの向上",
@@ -6135,12 +5279,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a049",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "IoT（Internet of Things）の説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a049",
                     "choices": [
                             "インターネット上の電子商取引",
                             "様々なモノがインターネットに接続される仕組み",
@@ -6155,12 +5294,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a050",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "AI（人工知能）の活用事例として、適切でないものはどれか。",
-                    "code": null,
+            {"id": "a050",
                     "choices": [
                             "音声認識システム",
                             "画像認識システム",
@@ -6175,12 +5309,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a051",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ビッグデータの特徴を表す「3V」に含まれないものはどれか。",
-                    "code": null,
+            {"id": "a051",
                     "choices": [
                             "Volume（量）",
                             "Velocity（速度）",
@@ -6195,12 +5324,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a052",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "マルウェアの種類として、適切でないものはどれか。",
-                    "code": null,
+            {"id": "a052",
                     "choices": [
                             "ウイルス",
                             "ワーム",
@@ -6215,12 +5339,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a053",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ソーシャルエンジニアリング攻撃の例として、適切なものはどれか。",
-                    "code": null,
+            {"id": "a053",
                     "choices": [
                             "SQLインジェクション",
                             "フィッシング詐欺",
@@ -6235,12 +5354,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a054",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ITガバナンスの目的として、最も適切なものはどれか。",
-                    "code": null,
+            {"id": "a054",
                     "choices": [
                             "ITコストの削減",
                             "IT投資の効果を最大化",
@@ -6255,12 +5369,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a055",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データマイニングの説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a055",
                     "choices": [
                             "データを圧縮する技術",
                             "データを暗号化する技術",
@@ -6275,12 +5384,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a056",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ERPシステムの説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a056",
                     "choices": [
                             "電子メールシステム",
                             "企業資源計画システム",
@@ -6295,12 +5399,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a057",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "CRMシステムの主な目的はどれか。",
-                    "code": null,
+            {"id": "a057",
                     "choices": [
                             "在庫管理の最適化",
                             "顧客関係の管理",
@@ -6315,12 +5414,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a058",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "DevOpsの説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a058",
                     "choices": [
                             "開発者専用のツール",
                             "運用者専用のツール",
@@ -6335,12 +5429,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a059",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "コンテナ技術の利点として、適切でないものはどれか。",
-                    "code": null,
+            {"id": "a059",
                     "choices": [
                             "アプリケーションの軽量化",
                             "環境の一貫性",
@@ -6355,12 +5444,7 @@ end function
                     "originalTopic": "システム戦略",
                     "sourceFile": "moreQuestions.ts"
             },
-            {
-                    "id": "a060",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "APIエコノミーの説明として、正しいものはどれか。",
-                    "code": null,
+            {"id": "a060",
                     "choices": [
                             "APIを使った経済活動",
                             "APIの開発手法",
@@ -6378,12 +5462,7 @@ end function
     ],
 
     more_algorithm:     [
-            {
-                    "id": "b006",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "次のJavaコードの実行結果はどれか。",
-                    "code": null,
+            {"id": "b006",
                     "choices": [
                             "15",
                             "9",
@@ -6398,12 +5477,7 @@ end function
                     "originalTopic": "プログラミング",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b007",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "配列をバブルソートで昇順に並べ替える場合、最悪時間計算量はどれか。",
-                    "code": null,
+            {"id": "b007",
                     "choices": [
                             "O(n)",
                             "O(n log n)",
@@ -6418,12 +5492,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b008",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "次の疑似コードで実装されているアルゴリズムはどれか。",
-                    "code": null,
+            {"id": "b008",
                     "choices": [
                             "線形探索",
                             "二分探索",
@@ -6438,12 +5507,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b009",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "再帰関数において、スタックオーバーフローが発生する主な原因はどれか。",
-                    "code": null,
+            {"id": "b009",
                     "choices": [
                             "引数が多すぎる",
                             "ベースケース（終了条件）がない",
@@ -6458,12 +5522,7 @@ end function
                     "originalTopic": "プログラミング",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b010",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "次のPythonコードで実装されているデータ構造はどれか。",
-                    "code": null,
+            {"id": "b010",
                     "choices": [
                             "配列",
                             "連結リスト",
@@ -6478,12 +5537,7 @@ end function
                     "originalTopic": "プログラミング",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b011",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "マージソートの特徴として、正しいものはどれか。",
-                    "code": null,
+            {"id": "b011",
                     "choices": [
                             "不安定なソートアルゴリズムである",
                             "最悪時間計算量がO(n²)である",
@@ -6498,12 +5552,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b012",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "次のSQLクエリの実行結果として正しいものはどれか。",
-                    "code": null,
+            {"id": "b012",
                     "choices": [
                             "全従業員数",
                             "給与が50000を超える従業員数",
@@ -6518,12 +5567,7 @@ end function
                     "originalTopic": "プログラミング",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b013",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "グラフ理論において、全ての頂点を一度ずつ訪問する経路を何と呼ぶか。",
-                    "code": null,
+            {"id": "b013",
                     "choices": [
                             "オイラー路",
                             "ハミルトン路",
@@ -6538,12 +5582,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b014",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "動的計画法の特徴として、適切でないものはどれか。",
-                    "code": null,
+            {"id": "b014",
                     "choices": [
                             "部分問題の解を記憶する",
                             "重複する計算を避ける",
@@ -6558,12 +5597,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b016",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "TCPとUDPの違いとして、正しいものはどれか。",
-                    "code": null,
+            {"id": "b016",
                     "choices": [
                             "TCPは信頼性が低く、UDPは信頼性が高い",
                             "TCPはコネクションレス、UDPはコネクション型",
@@ -6578,12 +5612,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b017",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "ハッシュテーブルにおいて、衝突を解決する方法として適切でないものはどれか。",
-                    "code": null,
+            {"id": "b017",
                     "choices": [
                             "チェイン法",
                             "オープンアドレス法",
@@ -6598,12 +5627,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b018",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "REST APIの設計原則として、適切でないものはどれか。",
-                    "code": null,
+            {"id": "b018",
                     "choices": [
                             "ステートレスな通信",
                             "リソースベースのURL設計",
@@ -6618,12 +5642,7 @@ end function
                     "originalTopic": "プログラミング",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b019",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "次の正規表現が表す文字列として、正しいものはどれか。",
-                    "code": null,
+            {"id": "b019",
                     "choices": [
                             "URLアドレス",
                             "IPアドレス",
@@ -6638,12 +5657,7 @@ end function
                     "originalTopic": "プログラミング",
                     "sourceFile": "moreBQuestions.ts"
             },
-            {
-                    "id": "b020",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "XSS（クロスサイトスクリプティング）攻撃を防ぐ方法として、最も効果的なものはどれか。",
-                    "code": null,
+            {"id": "b020",
                     "choices": [
                             "パスワードの暗号化",
                             "入力値の検証とエスケープ処理",
@@ -6661,12 +5675,7 @@ end function
     ],
 
     sample_questions:     [
-            {
-                    "id": "a001",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "基数変換に関する記述のうち、正しいものはどれか。",
-                    "code": null,
+            {"id": "a001",
                     "choices": [
                             "10進数の25を2進数で表すと11001である",
                             "16進数のFFを10進数で表すと256である",
@@ -6681,12 +5690,7 @@ end function
                     "originalTopic": "基礎理論",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "a002",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "OSI基本参照モデルの第3層に位置するのはどれか。",
-                    "code": null,
+            {"id": "a002",
                     "choices": [
                             "データリンク層",
                             "ネットワーク層",
@@ -6701,12 +5705,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "a003",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "スタックの性質を表すものはどれか。",
-                    "code": null,
+            {"id": "a003",
                     "choices": [
                             "FIFO（First In First Out）",
                             "LIFO（Last In First Out）",
@@ -6721,12 +5720,7 @@ end function
                     "originalTopic": "アルゴリズムとプログラミング",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "a004",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "SQLのDML（Data Manipulation Language）に分類されるものはどれか。",
-                    "code": null,
+            {"id": "a004",
                     "choices": [
                             "CREATE",
                             "DROP",
@@ -6741,12 +5735,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "a005",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "プロジェクトマネジメントにおけるWBSの説明として、適切なものはどれか。",
-                    "code": null,
+            {"id": "a005",
                     "choices": [
                             "プロジェクトの作業を階層的に分解した構造図",
                             "プロジェクトメンバーの責任分担表",
@@ -6761,12 +5750,7 @@ end function
                     "originalTopic": "マネジメント",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "b002",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "次のアルゴリズムの時間計算量はどれか。",
-                    "code": null,
+            {"id": "b002",
                     "choices": [
                             "O(1)",
                             "O(n)",
@@ -6781,12 +5765,7 @@ end function
                     "originalTopic": "アルゴリズム",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "b003",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "HTTPSプロトコルにおいて、通信の暗号化に使用される技術の組み合わせはどれか。",
-                    "code": null,
+            {"id": "b003",
                     "choices": [
                             "SSLまたはTLS",
                             "FTPとSFTP",
@@ -6801,12 +5780,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "b004",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "オブジェクト指向プログラミングにおける「継承」の利点として、最も適切なものはどれか。",
-                    "code": null,
+            {"id": "b004",
                     "choices": [
                             "プログラムの実行速度が向上する",
                             "コードの再利用性が高まる",
@@ -6821,12 +5795,7 @@ end function
                     "originalTopic": "プログラミング",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "b005",
-                    "category": "algorithm",
-                    "level": "basic",
-                    "text": "データベースの正規化において、第1正規形の条件はどれか。",
-                    "code": null,
+            {"id": "b005",
                     "choices": [
                             "すべての非キー属性が主キーに完全関数従属する",
                             "すべての属性が原子値である",
@@ -6841,12 +5810,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "a006",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "キャッシュメモリの特徴として、最も適切なものはどれか。",
-                    "code": null,
+            {"id": "a006",
                     "choices": [
                             "メインメモリよりも容量が大きく、アクセス速度が遅い",
                             "メインメモリよりも容量が小さく、アクセス速度が速い",
@@ -6861,12 +5825,7 @@ end function
                     "originalTopic": "コンピュータシステム",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "a007",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "IPv4アドレスのクラスAの特徴はどれか。",
-                    "code": null,
+            {"id": "a007",
                     "choices": [
                             "先頭8ビットがネットワーク部、残り24ビットがホスト部",
                             "先頭16ビットがネットワーク部、残り16ビットがホスト部",
@@ -6881,12 +5840,7 @@ end function
                     "originalTopic": "ネットワーク",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "a008",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "データベースの正規化において、第2正規形の条件はどれか。",
-                    "code": null,
+            {"id": "a008",
                     "choices": [
                             "すべての属性が原子値である",
                             "第1正規形であり、部分関数従属がない",
@@ -6901,12 +5855,7 @@ end function
                     "originalTopic": "データベース",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "a009",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "ファイアウォールの主な機能はどれか。",
-                    "code": null,
+            {"id": "a009",
                     "choices": [
                             "コンピュータウイルスの検出と駆除",
                             "ネットワーク通信の監視と制御",
@@ -6921,12 +5870,7 @@ end function
                     "originalTopic": "セキュリティ",
                     "sourceFile": "sampleQuestions.ts"
             },
-            {
-                    "id": "a010",
-                    "category": "subject_a",
-                    "level": "basic",
-                    "text": "PDCA サイクルの各フェーズの正しい順序はどれか。",
-                    "code": null,
+            {"id": "a010",
                     "choices": [
                             "Plan → Do → Check → Action",
                             "Plan → Do → Action → Check",

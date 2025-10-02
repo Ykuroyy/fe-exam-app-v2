@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アルゴリズム問題 - バブルソート図解</title>
+    <style>
+        body {
+            font-family: 'Hiragino Sans', Arial, sans-serif;
+            margin: 20px;
+            background: white;
+            color: #333;
+        }
+        .diagram-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 2px solid #2c3e50;
+            border-radius: 12px;
+        }
+        .title {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .array-visualization {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .array-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+            gap: 5px;
+        }
+        .array-element {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #34495e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            background: #ecf0f1;
+        }
+        .highlight {
+            background: #f39c12 !important;
+            color: white;
+        }
+        .sorted {
+            background: #27ae60 !important;
+            color: white;
+        }
+        .step-label {
+            font-weight: bold;
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+        .arrow {
+            font-size: 1.5rem;
+            color: #e74c3c;
+            margin: 0 10px;
+        }
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        .explanation {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: center;
+        }
+        .comparison-table th {
+            background: #34495e;
+            color: white;
+        }
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <div class="title">📊 バブルソート アルゴリズム図解</div>
+        
+        <div class="explanation">
+            <h3>🎯 問題概要</h3>
+            <p>配列 a[1], a[2], ..., a[10] の要素をバブルソートで昇順に並べ替える時の<br>
+            <strong>最大交換回数</strong>を求める問題です。</p>
+        </div>
+
+        <div class="code-block">
+for i = 1 to 9
+    for j = 1 to 10-i  
+        if a[j] > a[j+1] then
+            a[j] と a[j+1] を交換
+        end if
+    end for
+end for
+        </div>
+
+        <div class="array-visualization">
+            <div class="step-label">🔸 初期状態（完全逆順 - 最悪ケース）</div>
+            <div class="array-row">
+                <div class="array-element">10</div>
+                <div class="array-element">9</div>
+                <div class="array-element">8</div>
+                <div class="array-element">7</div>
+                <div class="array-element">6</div>
+                <div class="array-element">5</div>
+                <div class="array-element">4</div>
+                <div class="array-element">3</div>
+                <div class="array-element">2</div>
+                <div class="array-element">1</div>
+            </div>
+
+            <div class="arrow">⬇️</div>
+
+            <div class="step-label">🔸 第1回目のパス後</div>
+            <div class="array-row">
+                <div class="array-element">9</div>
+                <div class="array-element">8</div>
+                <div class="array-element">7</div>
+                <div class="array-element">6</div>
+                <div class="array-element">5</div>
+                <div class="array-element">4</div>
+                <div class="array-element">3</div>
+                <div class="array-element">2</div>
+                <div class="array-element">9回交換</div>
+                <div class="array-element sorted">1</div>
+            </div>
+
+            <div class="arrow">⬇️</div>
+
+            <div class="step-label">🔸 第2回目のパス後</div>
+            <div class="array-row">
+                <div class="array-element">8</div>
+                <div class="array-element">7</div>
+                <div class="array-element">6</div>
+                <div class="array-element">5</div>
+                <div class="array-element">4</div>
+                <div class="array-element">3</div>
+                <div class="array-element">2</div>
+                <div class="array-element">8回交換</div>
+                <div class="array-element sorted">2</div>
+                <div class="array-element sorted">1</div>
+            </div>
+
+            <div class="step-label">⋮ (続く)</div>
+        </div>
+
+        <div class="explanation">
+            <h3>📈 交換回数の計算</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>パス回数 (i)</th>
+                        <th>比較回数</th>
+                        <th>交換回数（最悪ケース）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>9</td><td>9</td></tr>
+                    <tr><td>2</td><td>8</td><td>8</td></tr>
+                    <tr><td>3</td><td>7</td><td>7</td></tr>
+                    <tr><td>4</td><td>6</td><td>6</td></tr>
+                    <tr><td>5</td><td>5</td><td>5</td></tr>
+                    <tr><td>6</td><td>4</td><td>4</td></tr>
+                    <tr><td>7</td><td>3</td><td>3</td></tr>
+                    <tr><td>8</td><td>2</td><td>2</td></tr>
+                    <tr><td>9</td><td>1</td><td>1</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="explanation">
+            <h3>💡 答えの導出</h3>
+            <p><strong>最大交換回数 = 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1</strong></p>
+            <p><strong>= n(n-1)/2 = 10×9/2 = 45回</strong></p>
+            <br>
+            <p style="text-align: center; font-size: 1.2rem; font-weight: bold; color: #e74c3c;">
+                🎯 正解：<span style="font-size: 1.4rem;">45回</span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // 印刷用のスタイル調整
+        window.addEventListener('beforeprint', () => {
+            document.body.style.background = 'white';
+        });
+    </script>
+</body>
+</html>

@@ -2222,6 +2222,7 @@ end function
                     "text": "16進小数0.Cを10進小数に変換したものはどれか。",
                     "code": null,
                     "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "0.12",
                             "0.55",
@@ -2625,6 +2626,7 @@ end function
                     "level": "advanced",
                     "text": "次のプログラム中の【 a 】と【 b 】に入れる正しい答えの組合せを，解答群の中から選べ。ここで，配列の要素番号は 1 から始まる。\n\n関数 findPrimeNumbers は，引数で与えられた整数以下の，全ての素数だけを格納した配列を返す関数である。ここで，引数に与える整数は 2 以上である。\n\n〔プログラム〕\n○整数型の配列: findPrimeNumbers(整数型: maxNum)\n  整数型の配列: pnList ← {} // 要素数0の配列\n  整数型: i, j\n  論理型: divideFlag\n  for (i を 2 から 【 a 】 まで 1 ずつ増やす)\n    divideFlag ← true\n    /* iの正の平方根の整数部分が2未満のときは，繰返し処理を実行しない */\n    for (j を 2 から iの正の平方根の整数部分 まで 1 ずつ増やす) // α\n      if (【 b 】)\n        divideFlag ← false\n        αの行から始まる繰返し処理を終了する\n      endif\n    endfor\n    if (divideFlag が true と等しい)\n      pnListの末尾 に iの値 を追加する\n    endif\n  endfor\n  return pnList",
                     "code": null,
+                    "pdfUrl": "pdfs/2023r05_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "a=maxNum, b=i ÷ j の余り が 0 と等しい",
                             "a=maxNum, b=i ÷ j の商 が 1 と等しくない",
@@ -2760,6 +2762,7 @@ end function
                     "level": "standard",
                     "text": "X 及び Y はそれぞれ 0 又は 1 の値をとる変数である。X □Y を X と Y の論理演算としたとき，次の真理値表が得られた。X □Y の真理値表はどれか。\n\n【与えられた真理値表】\n┌───┬───┬─────────────┬─────────────┐\n│ X │ Y │ X AND (X □Y) │ X OR (X □Y) │\n├───┼───┼─────────────┼─────────────┤\n│ 0 │ 0 │      0       │      1      │\n│ 0 │ 1 │      0       │      1      │\n│ 1 │ 0 │      0       │      1      │\n│ 1 │ 1 │      1       │      1      │\n└───┴───┴─────────────┴─────────────┘",
                     "code": null,
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "X=0,Y=0 → 0; X=0,Y=1 → 0; X=1,Y=0 → 0; X=1,Y=1 → 1",
                             "X=0,Y=0 → 0; X=0,Y=1 → 1; X=1,Y=0 → 0; X=1,Y=1 → 1",
@@ -3167,6 +3170,7 @@ end function
                     "level": "standard",
                     "text": "次のプログラム中の【 】に入れる正しい答えを，解答群の中から選べ。\n\n関数 maximum は，異なる三つの整数を引数で受け取り，そのうちの最大値を返す。\n\n〔プログラム〕\n○整数型: maximum(整数型: x, 整数型: y, 整数型: z)\n  if (【 】)\n    return x\n  elseif (y ＞ z)\n    return y\n  else\n    return z\n  endif",
                     "code": null,
+                    "pdfUrl": "pdfs/2024r06_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "x ＞ y",
                             "x ＞ y and x ＞ z",
@@ -3253,6 +3257,7 @@ end function
                     "level": "basic",
                     "text": "大規模言語モデルを用いた自然言語処理において、事前学習済みのモデルに対して行う、ファインチューニングに関する記述として、最も適切なものはどれか。",
                     "code": null,
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_a_qs.pdf",
                     "choices": [
                             "強化学習を行い、最適な結果が得られるようにする。",
                             "事前学習と同じデータを繰り返し用いて学習を行い、モデルの精度を高めるようにする。",
@@ -3636,6 +3641,7 @@ end function
                     "level": "advanced",
                     "text": "次のプログラム中の【 a 】と【 b 】に入れる正しい答えの組合せを、解答群の中から選べ。\n\n関数 function1 が受け取る引数と、関数 function2 が受け取る引数とが同じとき、二つの関数は同じ値を返す。ここで、引数 n と引数 m は正の整数であり、引数 m は引数 n よりも 10 以上大きい数とする。\n\n〔プログラム〕\n○整数型: function1(整数型: n, 整数型: m)\n  整数型: count ← 0\n  整数型: i\n  for (iをnからmまで1ずつ増やす)\n    if ((i mod 4)が0と等しい)\n      count ← count ＋ 1\n    endif\n  endfor\n  return count\n\n○整数型: function2(整数型: n, 整数型: m)\n  整数型: count ← 0\n  整数型: tempN ← n\n  整数型: i, j\n  for ( 【 a 】 )\n    if ((tempN mod 4)が0と等しい)\n      繰返し処理を終了する\n    endif\n    tempN ← tempN ＋ 1\n  endfor\n  for ( 【 b 】 )\n    count ← count ＋ 1\n  endfor\n  return count",
                     "code": null,
+                    "pdfUrl": "pdfs/2025r07_fe_kamoku_b_qs.pdf",
                     "choices": [
                             "ア: a=iを1から2まで1ずつ増やす, b=jをnから始めてmを超えない範囲でtempNずつ増やす",
                             "イ: a=iを1から2まで1ずつ増やす, b=jをtempNからmまで1ずつ増やす",

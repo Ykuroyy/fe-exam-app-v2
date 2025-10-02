@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習問題修正テスト</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .test-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+        }
+        .question-sample {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-left: 4px solid #007bff;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .test-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 1rem;
+        }
+        .test-btn:hover {
+            background: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>📚 練習問題修正確認テスト</h1>
+        
+        <div class="test-section">
+            <h2>📊 修正統計</h2>
+            <div class="stats-grid" id="stats-grid">
+                <!-- 統計がここに表示されます -->
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔍 サンプル問題表示</h2>
+            <button class="test-btn" onclick="showRandomPracticeQuestion()">ランダム練習問題を表示</button>
+            <button class="test-btn" onclick="showPracticeQuestion(1)">prac001を表示</button>
+            <button class="test-btn" onclick="showPracticeQuestion(40)">prac040を表示</button>
+            <button class="test-btn" onclick="showPracticeQuestion(80)">prac080を表示</button>
+            
+            <div id="question-display" class="question-sample" style="display: none;">
+                <!-- 問題がここに表示されます -->
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>✅ 修正結果確認</h2>
+            <div id="verification-results">
+                <!-- 確認結果がここに表示されます -->
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🚀 実際に練習問題を開始</h2>
+            <button class="test-btn" onclick="startPracticeExam()" style="background: #dc3545;">
+                練習問題80問を開始
+            </button>
+            <p>修正が完了したので、実際に練習問題を解いてみましょう！</p>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function displayStats() {
+            const statsGrid = document.getElementById('stats-grid');
+            
+            if (!questions.practice_questions) {
+                statsGrid.innerHTML = '<div class="stat-card">❌ 練習問題が見つかりません</div>';
+                return;
+            }
+            
+            const practiceQuestions = questions.practice_questions;
+            const total = practiceQuestions.length;
+            const withText = practiceQuestions.filter(q => q.text).length;
+            const withCategory = practiceQuestions.filter(q => q.category).length;
+            const withLevel = practiceQuestions.filter(q => q.level).length;
+            
+            statsGrid.innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-number">${total}</div>
+                    <div>総練習問題数</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${withText}</div>
+                    <div>問題文あり</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${withCategory}</div>
+                    <div>カテゴリあり</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${withLevel}</div>
+                    <div>レベルあり</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${Math.round(withText/total*100)}%</div>
+                    <div>修正完了率</div>
+                </div>
+            `;
+            
+            console.log(`📊 練習問題統計: ${withText}/${total} 問に問題文追加完了`);
+        }
+        
+        function showPracticeQuestion(questionNumber) {
+            const questionId = `prac${questionNumber.toString().padStart(3, '0')}`;
+            const question = questions.practice_questions.find(q => q.id === questionId);
+            
+            const display = document.getElementById('question-display');
+            
+            if (!question) {
+                display.innerHTML = `❌ 問題 ${questionId} が見つかりません`;
+                display.style.display = 'block';
+                return;
+            }
+            
+            display.innerHTML = `
+                <h3>📝 ${question.id}</h3>
+                <div style="margin: 15px 0;">
+                    <strong>問題文:</strong><br>
+                    ${question.text || '❌ 問題文なし'}
+                </div>
+                <div style="margin: 15px 0;">
+                    <strong>選択肢:</strong><br>
+                    ${question.choices.map((choice, index) => 
+                        `${String.fromCharCode(65 + index)}. ${choice}`
+                    ).join('<br>')}
+                </div>
+                <div style="margin: 15px 0;">
+                    <strong>正解:</strong> ${String.fromCharCode(65 + question.correct)}. ${question.choices[question.correct]}
+                </div>
+                <div style="margin: 15px 0; font-size: 0.9rem; color: #666;">
+                    <strong>カテゴリ:</strong> ${question.category || 'なし'} | 
+                    <strong>レベル:</strong> ${question.level || 'なし'} | 
+                    <strong>トピック:</strong> ${question.originalTopic || 'なし'}
+                </div>
+            `;
+            display.style.display = 'block';
+            
+            console.log(`✅ ${questionId} を表示:`, question.text);
+        }
+        
+        function showRandomPracticeQuestion() {
+            const randomNumber = Math.floor(Math.random() * 80) + 1;
+            showPracticeQuestion(randomNumber);
+        }
+        
+        function verifyFix() {
+            const results = document.getElementById('verification-results');
+            
+            if (!questions.practice_questions) {
+                results.innerHTML = '❌ practice_questions が見つかりません';
+                return;
+            }
+            
+            const practiceQuestions = questions.practice_questions;
+            const issues = [];
+            let successCount = 0;
+            
+            practiceQuestions.forEach((q, index) => {
+                if (!q.text) {
+                    issues.push(`❌ ${q.id}: 問題文なし`);
+                } else if (!q.category) {
+                    issues.push(`⚠️ ${q.id}: カテゴリなし`);
+                } else if (!q.level) {
+                    issues.push(`⚠️ ${q.id}: レベルなし`);
+                } else {
+                    successCount++;
+                }
+            });
+            
+            const successRate = Math.round(successCount / practiceQuestions.length * 100);
+            
+            results.innerHTML = `
+                <div style="margin-bottom: 20px;">
+                    <strong>📈 修正成功率:</strong> 
+                    <span style="color: ${successRate >= 90 ? '#28a745' : '#dc3545'}; font-size: 1.2rem; font-weight: bold;">
+                        ${successRate}% (${successCount}/${practiceQuestions.length})
+                    </span>
+                </div>
+                ${issues.length > 0 ? `
+                    <div>
+                        <strong>⚠️ 修正が必要な項目 (${issues.length}件):</strong>
+                        <div style="max-height: 200px; overflow-y: auto; background: #f8f9fa; padding: 10px; border-radius: 6px; margin: 10px 0;">
+                            ${issues.join('<br>')}
+                        </div>
+                    </div>
+                ` : '<div style="color: #28a745;">✅ すべての練習問題が正常に修正されました！</div>'}
+            `;
+        }
+        
+        function startPracticeExam() {
+            if (typeof startExam === 'function') {
+                console.log('🚀 練習問題80問を開始します...');
+                startExam('practice');
+            } else {
+                alert('startExam関数が見つかりません。メインアプリから練習問題を開始してください。');
+            }
+        }
+        
+        // 初期化
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🚀 練習問題修正テストページを初期化');
+            displayStats();
+            verifyFix();
+            
+            // ランダム問題をひとつ表示
+            setTimeout(showRandomPracticeQuestion, 1000);
+        });
+    </script>
+</body>
+</html>

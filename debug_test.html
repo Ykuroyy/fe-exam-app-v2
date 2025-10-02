@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .menu-card { padding: 20px; margin: 10px; background: #f0f0f0; border: none; cursor: pointer; border-radius: 8px; }
+        .menu-card:hover { background: #e0e0e0; }
+        #debug-log { margin-top: 20px; padding: 10px; background: #f8f8f8; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Debug Test - Click these buttons:</h1>
+    
+    <button class="menu-card" onclick="debugStartExam('mock')">
+        <div>🎯 模擬試験 (Mock Exam)</div>
+        <div>Click to test navigation</div>
+    </button>
+    
+    <button class="menu-card" onclick="debugStartExam('algorithm')">
+        <div>🧮 アルゴリズム問題</div>
+        <div>Click to test algorithm section</div>
+    </button>
+    
+    <button class="menu-card" onclick="debugStartExam('practice')">
+        <div>📚 練習問題</div>
+        <div>Click to test practice questions</div>
+    </button>
+
+    <div id="debug-log">
+        <h3>Debug Log:</h3>
+        <div id="log-content"></div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function log(message) {
+            const logContent = document.getElementById('log-content');
+            const time = new Date().toLocaleTimeString();
+            logContent.innerHTML += `<p>[${time}] ${message}</p>`;
+            console.log(message);
+        }
+
+        function debugStartExam(examType) {
+            log(`🔵 Button clicked: ${examType}`);
+            
+            try {
+                log(`🔍 Checking if startExam function exists: ${typeof startExam}`);
+                log(`🔍 Checking if questions object exists: ${typeof questions}`);
+                log(`🔍 Checking algorithm questions: ${questions && questions.algorithm ? questions.algorithm.length : 'Not found'}`);
+                
+                log(`🚀 Calling startExam('${examType}')`);
+                startExam(examType);
+                log(`✅ startExam call completed successfully`);
+            } catch (error) {
+                log(`❌ Error: ${error.message}`);
+                console.error('Full error:', error);
+            }
+        }
+
+        // Test on page load
+        window.addEventListener('load', () => {
+            log('🎉 Page loaded successfully');
+            log(`Functions available: startExam=${typeof startExam}, questions=${typeof questions}`);
+            if (questions && questions.algorithm) {
+                log(`Total algorithm questions loaded: ${questions.algorithm.length}`);
+            }
+        });
+    </script>
+</body>
+</html>

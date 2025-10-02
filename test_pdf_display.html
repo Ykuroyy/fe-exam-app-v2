@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF表示機能テスト</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .test-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>📄 PDF表示機能テスト</h1>
+        
+        <div class="test-section">
+            <h2>🧮 バブルソート問題（図表付き）</h2>
+            <button onclick="testPDFDisplay('alg001')" class="control-btn">
+                テスト実行 - バブルソート図表を表示
+            </button>
+            <div id="test-result-1"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔍 二分探索問題（図表付き）</h2>
+            <button onclick="testPDFDisplay('alg004')" class="control-btn">
+                テスト実行 - 二分探索図表を表示
+            </button>
+            <div id="test-result-2"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>📊 図表表示エリア</h2>
+            <!-- 実際の問題表示エリア -->
+            <div class="question-card">
+                <h3>問題 <span id="question-number">1</span></h3>
+                <div class="question-text" id="question-text">
+                    問題文がここに表示されます
+                </div>
+                <div class="question-code" id="question-code" style="display: none;">
+                    <pre><code id="code-content"></code></pre>
+                </div>
+                
+                <!-- PDF添付ファイル表示エリア -->
+                <div class="question-pdf" id="question-pdf" style="display: none;">
+                    <div id="pdf-container">
+                        <!-- PDFがここに表示されます -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔧 テスト結果</h2>
+            <div id="test-log" style="background: #f8f9fa; padding: 15px; border-radius: 6px; min-height: 100px;">
+                テスト実行ログがここに表示されます
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function log(message) {
+            const logArea = document.getElementById('test-log');
+            const time = new Date().toLocaleTimeString();
+            logArea.innerHTML += `<p>[${time}] ${message}</p>`;
+            console.log(message);
+        }
+
+        function testPDFDisplay(questionId) {
+            log(`🔍 問題ID ${questionId} のPDF表示テストを開始...`);
+
+            // 問題データを検索
+            const question = questions.algorithm.find(q => q.id === questionId);
+            if (!question) {
+                log(`❌ 問題ID ${questionId} が見つかりません`);
+                return;
+            }
+
+            log(`✅ 問題データ発見: ${question.text.substring(0, 50)}...`);
+            log(`📄 PDF URL: ${question.pdfUrl || 'なし'}`);
+
+            // 問題を表示
+            displayTestQuestion(question);
+        }
+
+        function displayTestQuestion(question) {
+            // 問題番号と内容
+            document.getElementById('question-number').textContent = '1';
+            document.getElementById('question-text').textContent = question.text;
+
+            // コード表示
+            const codeElement = document.getElementById('question-code');
+            const codeContent = document.getElementById('code-content');
+            if (question.code) {
+                codeContent.textContent = question.code;
+                codeElement.style.display = 'block';
+                log('✅ コードブロックを表示');
+            } else {
+                codeElement.style.display = 'none';
+            }
+
+            // PDF添付ファイル表示
+            const pdfElement = document.getElementById('question-pdf');
+            const pdfContainer = document.getElementById('pdf-container');
+            if (question.pdfUrl) {
+                log(`📊 図表ファイルを読み込み中: ${question.pdfUrl}`);
+                
+                // PDFまたはHTML図表の表示
+                const isPdf = question.pdfUrl.endsWith('.pdf');
+                pdfContainer.innerHTML = `
+                    <div class="pdf-attachment">
+                        <h4>📄 問題図表・資料</h4>
+                        <div class="pdf-viewer">
+                            ${isPdf ? 
+                                `<embed src="${question.pdfUrl}" type="application/pdf" width="100%" height="600px" />` :
+                                `<iframe src="${question.pdfUrl}" width="100%" height="600px" frameborder="0" style="border-radius: 6px;"></iframe>`
+                            }
+                            <p class="pdf-fallback">
+                                図表が表示されない場合は 
+                                <a href="${question.pdfUrl}" target="_blank" class="pdf-link">
+                                    🔗 こちらをクリックして新しいタブで開く
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                `;
+                pdfElement.style.display = 'block';
+                log('✅ 図表表示エリアを展開');
+                log(`🎯 図表タイプ: ${isPdf ? 'PDF' : 'HTML'}`);
+            } else {
+                pdfElement.style.display = 'none';
+                log('ℹ️  この問題にはPDF図表が添付されていません');
+            }
+        }
+
+        // 初期化
+        document.addEventListener('DOMContentLoaded', () => {
+            log('🚀 PDF表示機能テストページを初期化');
+            log(`📚 読み込み済み問題数: ${questions.algorithm ? questions.algorithm.length : 0}`);
+            
+            // 問題データを確認
+            const pdfQuestions = questions.algorithm.filter(q => q.pdfUrl);
+            log(`📄 PDF図表付き問題数: ${pdfQuestions.length}`);
+            
+            pdfQuestions.forEach(q => {
+                log(`  - ${q.id}: ${q.pdfUrl}`);
+            });
+        });
+    </script>
+</body>
+</html>

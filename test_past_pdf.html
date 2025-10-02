@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>過去問PDF機能テスト</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .test-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+        }
+        .test-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .test-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+        .test-btn:hover {
+            background: #0056b3;
+        }
+        .pdf-stats {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>📄 過去問PDF機能テスト</h1>
+        
+        <div class="test-section">
+            <h2>📊 PDF割り当て状況確認</h2>
+            <div id="pdf-stats" class="pdf-stats">読み込み中...</div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 年度別過去問テスト</h2>
+            <div class="test-buttons">
+                <button class="test-btn" onclick="testPastQuestion('r5a', 'r5a001')">
+                    令和5年 科目A (r5a001)
+                </button>
+                <button class="test-btn" onclick="testPastQuestion('r5b', 'r5b001')">
+                    令和5年 科目B (r5b001)
+                </button>
+                <button class="test-btn" onclick="testPastQuestion('r6a', 'r6a001')">
+                    令和6年 科目A (r6a001)
+                </button>
+                <button class="test-btn" onclick="testPastQuestion('r6b', 'r6b001')">
+                    令和6年 科目B (r6b001)
+                </button>
+                <button class="test-btn" onclick="testPastQuestion('r7a', 'r7a001')">
+                    令和7年 科目A (r7a001)
+                </button>
+                <button class="test-btn" onclick="testPastQuestion('r7b', 'r7b001')">
+                    令和7年 科目B (r7b001)
+                </button>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📋 問題表示エリア</h2>
+            <!-- 実際の問題表示エリア -->
+            <div class="question-card">
+                <h3>問題 <span id="question-number">-</span> (<span id="question-id">-</span>)</h3>
+                <div class="question-text" id="question-text">
+                    テストボタンを押して問題を表示してください
+                </div>
+                <div class="question-code" id="question-code" style="display: none;">
+                    <pre><code id="code-content"></code></pre>
+                </div>
+                
+                <!-- PDF添付ファイル表示エリア -->
+                <div class="question-pdf" id="question-pdf" style="display: none;">
+                    <div id="pdf-container">
+                        <!-- PDFがここに表示されます -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔧 テストログ</h2>
+            <div id="test-log" style="background: #f8f9fa; padding: 15px; border-radius: 6px; min-height: 100px; font-family: monospace; font-size: 0.85rem;">
+                テスト実行ログがここに表示されます
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function log(message) {
+            const logArea = document.getElementById('test-log');
+            const time = new Date().toLocaleTimeString();
+            logArea.innerHTML += `<div>[${time}] ${message}</div>`;
+            logArea.scrollTop = logArea.scrollHeight;
+            console.log(message);
+        }
+
+        function displayPDFStats() {
+            log('📊 PDF割り当て状況を確認中...');
+            
+            const statsArea = document.getElementById('pdf-stats');
+            let stats = [];
+            
+            // 各カテゴリの統計を集計
+            const categories = ['past_r5_a', 'past_r5_b', 'past_r6_a', 'past_r6_b', 'past_r7_a', 'past_r7_b'];
+            let totalWithPDF = 0;
+            let totalQuestions = 0;
+            
+            categories.forEach(category => {
+                if (questions[category]) {
+                    const questionsInCategory = questions[category];
+                    const questionsWithPDF = questionsInCategory.filter(q => q.pdfUrl);
+                    
+                    stats.push(`${category}: ${questionsWithPDF.length}/${questionsInCategory.length} 問にPDF添付`);
+                    
+                    totalWithPDF += questionsWithPDF.length;
+                    totalQuestions += questionsInCategory.length;
+                    
+                    log(`✅ ${category}: ${questionsWithPDF.length}/${questionsInCategory.length} 問にPDF`);
+                }
+            });
+            
+            stats.push(`合計: ${totalWithPDF}/${totalQuestions} 問にPDF添付 (${Math.round(totalWithPDF/totalQuestions*100)}%)`);
+            
+            statsArea.innerHTML = stats.join('\n');
+            log(`📈 総計: ${totalWithPDF}/${totalQuestions} 問にPDF添付済み`);
+        }
+
+        function testPastQuestion(categoryPrefix, questionId) {
+            log(`🔍 ${questionId} の過去問PDFテストを開始...`);
+
+            // カテゴリを特定
+            let category = null;
+            let question = null;
+            
+            const categories = ['past_r5_a', 'past_r5_b', 'past_r6_a', 'past_r6_b', 'past_r7_a', 'past_r7_b'];
+            
+            for (let cat of categories) {
+                if (questions[cat]) {
+                    const found = questions[cat].find(q => q.id === questionId);
+                    if (found) {
+                        category = cat;
+                        question = found;
+                        break;
+                    }
+                }
+            }
+
+            if (!question) {
+                log(`❌ 問題ID ${questionId} が見つかりません`);
+                return;
+            }
+
+            log(`✅ 問題データ発見: ${category} - ${question.text.substring(0, 50)}...`);
+            log(`📄 PDF URL: ${question.pdfUrl || 'なし'}`);
+
+            // 問題を表示
+            displayTestQuestion(question);
+        }
+
+        function displayTestQuestion(question) {
+            // 問題番号と内容
+            document.getElementById('question-number').textContent = '1';
+            document.getElementById('question-id').textContent = question.id;
+            document.getElementById('question-text').textContent = question.text;
+
+            // コード表示
+            const codeElement = document.getElementById('question-code');
+            const codeContent = document.getElementById('code-content');
+            if (question.code) {
+                codeContent.textContent = question.code;
+                codeElement.style.display = 'block';
+                log('✅ コードブロックを表示');
+            } else {
+                codeElement.style.display = 'none';
+            }
+
+            // PDF添付ファイル表示
+            const pdfElement = document.getElementById('question-pdf');
+            const pdfContainer = document.getElementById('pdf-container');
+            if (question.pdfUrl) {
+                log(`📊 PDFファイルを読み込み中: ${question.pdfUrl}`);
+                
+                // PDFファイルの表示
+                pdfContainer.innerHTML = `
+                    <div class="pdf-attachment">
+                        <h4>📄 ${question.id} - 過去問PDF</h4>
+                        <div class="pdf-viewer">
+                            <embed src="${question.pdfUrl}" type="application/pdf" width="100%" height="600px" />
+                            <p class="pdf-fallback">
+                                PDFが表示されない場合は 
+                                <a href="${question.pdfUrl}" target="_blank" class="pdf-link">
+                                    🔗 こちらをクリックして新しいタブで開く
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                `;
+                pdfElement.style.display = 'block';
+                log('✅ PDF表示エリアを展開');
+                log(`🎯 PDFファイル: ${question.pdfUrl}`);
+            } else {
+                pdfElement.style.display = 'none';
+                log('ℹ️  この問題にはPDFが添付されていません');
+            }
+        }
+
+        // 初期化
+        document.addEventListener('DOMContentLoaded', () => {
+            log('🚀 過去問PDF機能テストページを初期化');
+            
+            // 問題データを確認
+            const totalQuestions = Object.keys(questions).reduce((sum, key) => {
+                return sum + (questions[key]?.length || 0);
+            }, 0);
+            
+            log(`📚 総問題数: ${totalQuestions}`);
+            
+            // PDF統計を表示
+            displayPDFStats();
+        });
+    </script>
+</body>
+</html>

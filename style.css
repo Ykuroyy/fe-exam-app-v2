@@ -564,3 +564,70 @@ body {
 .hidden {
     display: none !important;
 }
+
+/* PDF添付ファイル表示 */
+.question-pdf {
+    margin-top: 20px;
+}
+
+.pdf-attachment {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e1e8ed;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.pdf-attachment h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pdf-viewer {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e9ecef;
+    background: #f8f9fa;
+}
+
+.pdf-viewer embed {
+    border: none;
+    border-radius: 6px;
+}
+
+.pdf-fallback {
+    text-align: center;
+    padding: 15px;
+    background: #e9ecef;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.pdf-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.pdf-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* PDF表示エリアのレスポンシブ対応 */
+@media (max-width: 768px) {
+    .pdf-viewer embed {
+        height: 400px;
+    }
+    
+    .pdf-attachment {
+        padding: 15px;
+    }
+}

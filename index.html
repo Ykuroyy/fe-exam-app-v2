@@ -10,75 +10,85 @@
     <div class="container">
         <!-- ヘッダー -->
         <header class="header">
-            <h1>🖥️ 基本情報技術者試験 科目B対策</h1>
-            <p class="subtitle">アルゴリズム60問 + 情報セキュリティ4問 = 計64問</p>
-            <p class="exam-countdown" id="exam-countdown">⏰ 試験まで残り時間を表示</p>
+            <h1>基本情報技術者試験対策アプリ</h1>
+            <p class="subtitle">試験直前版</p>
+            <div class="exam-alert">
+                🔥 2025年10月26日が試験！最後の追い込み！
+            </div>
+            <div class="score-info">
+                <div class="score-item">
+                    <span class="label">前回結果（9/25）</span>
+                    <span class="value">科目A: 590点 / 科目B: 415点</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">目標点数</span>
+                    <span class="value">各科目600点で合格</span>
+                </div>
+            </div>
         </header>
 
+        <!-- データ読み込み状態表示 -->
+        <div class="loading-message" id="loading-message">
+            過去問データを読み込んでいます...
+        </div>
+
         <!-- メインメニュー -->
-        <div class="main-menu" id="main-menu">
-            <div class="menu-card intensive-mode">
-                <h2>🔥 徹底対策モード</h2>
-                <div class="score-display">
-                    <span class="current-score">前回スコア: <span id="previous-score">250</span>点</span>
-                    <span class="target-score">目標: 600点</span>
+        <div class="main-menu" id="main-menu" style="display: none;">
+            <div class="menu-section">
+                <h2>🎯 科目B対策（重点強化）</h2>
+                <div class="menu-grid">
+                    <button class="menu-card" onclick="startExam('algorithm')">
+                        <div class="card-icon">🧮</div>
+                        <div class="card-title">アルゴリズム問題</div>
+                        <div class="card-subtitle">60問完全攻略</div>
+                    </button>
+                    
+                    <button class="menu-card" onclick="startExam('mock')">
+                        <div class="card-icon">📝</div>
+                        <div class="card-title">模擬試験</div>
+                        <div class="card-subtitle">本番形式16問</div>
+                    </button>
+
+                    <button class="menu-card" onclick="startExam('security')">
+                        <div class="card-icon">🔐</div>
+                        <div class="card-title">セキュリティ</div>
+                        <div class="card-subtitle">必須4問対策</div>
+                    </button>
                 </div>
-                <button class="menu-btn intensive-btn" onclick="showWeaknessAnalysis()">
-                    🎯 弱点診断＆集中学習
-                    <span class="sub-text">あなたの苦手分野を特定</span>
-                </button>
-                <button class="menu-btn intensive-btn" onclick="showStudyPlan()">
-                    📅 2日間完璧学習プラン
-                    <span class="sub-text">試験まで残り時間で効率学習</span>
-                </button>
-                <button class="menu-btn intensive-btn" onclick="startIntensiveMode()">
-                    💪 集中トレーニング（60問）
-                    <span class="sub-text">レベル別・分野別完全制覇</span>
-                </button>
             </div>
 
-            <div class="menu-card">
-                <h2>📖 標準学習メニュー</h2>
-                <button class="menu-btn" onclick="startExam('mock')">
-                    🎯 模擬試験（16問）
-                    <span class="sub-text">本番と同じ問題構成</span>
-                </button>
-                <button class="menu-btn" onclick="showAlgorithmSelection()">
-                    🧮 アルゴリズム問題（60問）
-                    <span class="sub-text">問題を番号で選択して学習</span>
-                </button>
-                <button class="menu-btn" onclick="startExam('security')">
-                    🔐 情報セキュリティ問題（4問）
-                    <span class="sub-text">暗号化・認証・脅威対策</span>
-                </button>
-                <button class="menu-btn" onclick="startExam('level-basic')">
-                    📚 基礎レベル問題
-                    <span class="sub-text">基本的なアルゴリズム</span>
-                </button>
-                <button class="menu-btn" onclick="startExam('level-standard')">
-                    📖 標準レベル問題
-                    <span class="sub-text">実践的なプログラミング</span>
-                </button>
-                <button class="menu-btn" onclick="startExam('level-advanced')">
-                    🎓 応用レベル問題
-                    <span class="sub-text">高度なアルゴリズム</span>
-                </button>
+            <div class="menu-section">
+                <h2>📚 科目A対策</h2>
+                <div class="menu-grid">
+                    <button class="menu-card" onclick="startExam('subject-a-all')">
+                        <div class="card-icon">💻</div>
+                        <div class="card-title">基礎知識</div>
+                        <div class="card-subtitle">全分野学習</div>
+                    </button>
+
+                    <button class="menu-card" onclick="showSubjectASelection()">
+                        <div class="card-icon">🔍</div>
+                        <div class="card-title">分野別学習</div>
+                        <div class="card-subtitle">DB・NW・セキュリティ</div>
+                    </button>
+                </div>
             </div>
 
-            <div class="menu-card">
-                <h2>📊 学習管理</h2>
-                <button class="menu-btn" onclick="showStats()">
-                    📊 学習履歴
-                    <span class="sub-text">正答率・復習問題</span>
-                </button>
-                <button class="menu-btn" onclick="showBookmarks()">
-                    📌 ブックマーク
-                    <span class="sub-text">重要問題の確認</span>
-                </button>
-                <button class="menu-btn" onclick="showProgress()">
-                    📈 学習進捗
-                    <span class="sub-text">分野別習熟度</span>
-                </button>
+            <div class="menu-section">
+                <h2>📅 過去問・学習管理</h2>
+                <div class="menu-grid">
+                    <button class="menu-card" onclick="showPastExamSelection()">
+                        <div class="card-icon">📖</div>
+                        <div class="card-title">過去問</div>
+                        <div class="card-subtitle">R3-R5年度</div>
+                    </button>
+
+                    <button class="menu-card" onclick="showStats()">
+                        <div class="card-icon">📊</div>
+                        <div class="card-title">学習履歴</div>
+                        <div class="card-subtitle">進捗・正答率</div>
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -153,6 +163,187 @@
             <div class="exit-controls">
                 <button class="control-btn exit-btn" onclick="exitExam()">
                     🏠 メニューに戻る
+                </button>
+            </div>
+            
+            <!-- 科目A学習メニュー -->
+            <div class="menu-card">
+                <h2>📚 科目A（基礎知識）</h2>
+                <button class="menu-btn subject-a-btn" onclick="startExam('subject-a-all')">
+                    🧠 科目A 全分野学習
+                    <span class="sub-text">基礎知識を総合的に学習</span>
+                </button>
+                <button class="menu-btn subject-a-btn" onclick="showSubjectASelection()">
+                    🔍 分野別学習
+                    <span class="sub-text">コンピュータ・DB・ネット・セキュリティ</span>
+                </button>
+                <button class="menu-btn subject-a-btn" onclick="startExam('subject-a-weak')">
+                    💪 弱点克服モード
+                    <span class="sub-text">間違えた問題を重点復習</span>
+                </button>
+                <button class="menu-btn subject-a-btn" onclick="startExam('subject-a-random')">
+                    🎲 ランダム20問
+                    <span class="sub-text">効率的な知識確認</span>
+                </button>
+            </div>
+
+            <!-- 過去問メニュー -->
+            <div class="menu-card">
+                <h2>📅 過去問チャレンジ</h2>
+                <button class="menu-btn past-exam-btn" onclick="startExam('past-r5')">
+                    📝 令和5年春期（最新）
+                    <span class="sub-text">最新傾向の4問で実力確認</span>
+                </button>
+                <button class="menu-btn past-exam-btn" onclick="startExam('past-r4')">
+                    📝 令和4年春期
+                    <span class="sub-text">重要アルゴリズム4問</span>
+                </button>
+                <button class="menu-btn past-exam-btn" onclick="startExam('past-r3')">
+                    📝 令和3年春期
+                    <span class="sub-text">基礎固め4問</span>
+                </button>
+                <button class="menu-btn past-exam-btn" onclick="showPastExamSelection()">
+                    🎯 過去問ミックス
+                    <span class="sub-text">3年分から選択して学習</span>
+                </button>
+            </div>
+            
+            <!-- 学習計画・進捗管理 -->
+            <div class="menu-card">
+                <h2>📈 学習管理</h2>
+                <button class="menu-btn study-plan-btn" onclick="showStudyPlan()">
+                    📅 学習計画
+                    <span class="sub-text">10月26日までの学習スケジュール</span>
+                </button>
+                <button class="menu-btn study-plan-btn" onclick="showProgress()">
+                    📊 学習進捗
+                    <span class="sub-text">今日の学習時間と達成状況</span>
+                </button>
+                <button class="menu-btn study-plan-btn" onclick="showWeaknessAnalysis()">
+                    🎯 弱点分析
+                    <span class="sub-text">苦手分野の詳細分析</span>
+                </button>
+                <button class="menu-btn study-plan-btn" onclick="showRecommendations()">
+                    💡 学習提案
+                    <span class="sub-text">AIによる最適学習プラン</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 科目A分野選択画面 -->
+        <div class="subject-a-selection-container" id="subject-a-selection-container" style="display: none;">
+            <div class="selection-header">
+                <h2>📚 科目A 分野別学習</h2>
+                <p class="selection-description">学習したい分野を選択してください</p>
+            </div>
+            
+            <div class="subject-categories">
+                <button class="category-btn" onclick="startExam('computer-system')">
+                    💻 コンピュータシステム
+                    <span class="category-count">ハードウェア・アーキテクチャ</span>
+                </button>
+                <button class="category-btn" onclick="startExam('database')">
+                    🗃️ データベース
+                    <span class="category-count">正規化・SQL・トランザクション</span>
+                </button>
+                <button class="category-btn" onclick="startExam('network')">
+                    🌐 ネットワーク
+                    <span class="category-count">OSI・TCP/IP・プロトコル</span>
+                </button>
+                <button class="category-btn" onclick="startExam('security-theory')">
+                    🔒 セキュリティ理論
+                    <span class="category-count">暗号・認証・脅威</span>
+                </button>
+            </div>
+            
+            <div class="selection-controls">
+                <button class="control-btn exit-btn" onclick="hideSubjectASelection()">
+                    🔙 メニューに戻る
+                </button>
+            </div>
+        </div>
+
+        <!-- 学習計画画面 -->
+        <div class="study-plan-container" id="study-plan-container" style="display: none;">
+            <div class="study-plan-header">
+                <h2>📅 10月26日試験対策 学習計画</h2>
+                <div class="days-remaining" id="days-remaining">
+                    残り日数を計算中...
+                </div>
+            </div>
+            
+            <div class="study-schedule">
+                <div class="schedule-card">
+                    <h3>🗓️ 週間スケジュール</h3>
+                    <div class="weekly-plan" id="weekly-plan">
+                        <!-- JavaScriptで生成 -->
+                    </div>
+                </div>
+                
+                <div class="schedule-card">
+                    <h3>📊 今日の進捗</h3>
+                    <div class="daily-progress" id="daily-progress">
+                        <div class="progress-item">
+                            <span class="progress-label">学習時間</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="time-progress"></div>
+                            </div>
+                            <span class="progress-value" id="time-value">0分 / 60分</span>
+                        </div>
+                        
+                        <div class="progress-item">
+                            <span class="progress-label">問題数</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="problems-progress"></div>
+                            </div>
+                            <span class="progress-value" id="problems-value">0問 / 20問</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="selection-controls">
+                <button class="control-btn exit-btn" onclick="hideStudyPlan()">
+                    🔙 メニューに戻る
+                </button>
+            </div>
+        </div>
+
+        <!-- 過去問選択画面 -->
+        <div class="past-exam-selection-container" id="past-exam-selection-container" style="display: none;">
+            <div class="selection-header">
+                <h2>📅 過去問を選択</h2>
+                <p class="selection-description">学習したい過去問を選択してください</p>
+            </div>
+            
+            <!-- 年度別セクション -->
+            <div class="past-exam-sections">
+                <div class="year-section">
+                    <h3>📝 令和5年春期（最新傾向）</h3>
+                    <div class="past-problem-grid" id="past-r5-grid">
+                        <!-- JavaScriptで問題ボタンを生成 -->
+                    </div>
+                </div>
+                
+                <div class="year-section">
+                    <h3>📝 令和4年春期</h3>
+                    <div class="past-problem-grid" id="past-r4-grid">
+                        <!-- JavaScriptで問題ボタンを生成 -->
+                    </div>
+                </div>
+                
+                <div class="year-section">
+                    <h3>📝 令和3年春期</h3>
+                    <div class="past-problem-grid" id="past-r3-grid">
+                        <!-- JavaScriptで問題ボタンを生成 -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 戻るボタン -->
+            <div class="selection-controls">
+                <button class="control-btn exit-btn" onclick="hidePastExamSelection()">
+                    🔙 メニューに戻る
                 </button>
             </div>
         </div>
@@ -432,9 +623,8 @@
 
         <!-- フッター -->
         <footer class="footer">
-            <p>© 2024 基本情報技術者試験 科目B対策アプリ</p>
-            <p>実際の試験: アルゴリズム16問 + 情報セキュリティ4問</p>
-            <p>🔥 徹底対策: 60問完全制覇で合格点突破!</p>
+            <p>© 2025 基本情報技術者試験対策アプリ</p>
+            <p>次回試験: 2025年10月26日</p>
         </footer>
     </div>
 

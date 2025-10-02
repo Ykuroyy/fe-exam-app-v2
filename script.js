@@ -1153,6 +1153,18 @@ function startExam(examType) {
             // 令和5年度 科目A+B（下位互換）
             examQuestions = [...questions.past_r5_a, ...questions.past_r5_b];
             break;
+        case 'practice':
+            // 練習問題（80問）
+            examQuestions = shuffleArray([...questions.practice_questions]);
+            break;
+        case 'more-questions':
+            // 追加問題（科目A+B）
+            examQuestions = [...questions.more_subject_a, ...questions.more_algorithm];
+            break;
+        case 'sample':
+            // サンプル問題
+            examQuestions = [...questions.sample_questions];
+            break;
         case 'past-r4':
             // 令和4年春期過去問（下位互換）
             examQuestions = [...questions.past_r4] || [];

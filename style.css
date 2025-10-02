@@ -169,6 +169,8 @@ body {
     margin-bottom: 25px;
     padding-bottom: 15px;
     border-bottom: 2px solid #ecf0f1;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .progress-info {
@@ -183,6 +185,62 @@ body {
     border-radius: 20px;
     font-size: 0.8rem;
     margin-left: 10px;
+}
+
+.question-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.question-navigation label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.question-select {
+    padding: 5px 10px;
+    border: 2px solid #ecf0f1;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background: white;
+    color: #2c3e50;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.question-select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.quick-nav {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-btn {
+    padding: 5px 12px;
+    border: 2px solid #3498db;
+    background: white;
+    color: #3498db;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: #3498db;
+    color: white;
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .progress-bar {
@@ -495,6 +553,21 @@ body {
     .progress-area {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .question-navigation {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .question-select {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .quick-nav {
+        justify-content: center;
     }
     
     .controls {

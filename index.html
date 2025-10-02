@@ -58,7 +58,7 @@
             </div>
 
             <div class="menu-section">
-                <h2>💪 大量練習問題（232問）</h2>
+                <h2>💪 大量練習問題（158問）</h2>
                 <div class="menu-grid">
                     <button class="menu-card" onclick="startExam('practice')">
                         <div class="card-icon">📚</div>
@@ -69,7 +69,7 @@
                     <button class="menu-card" onclick="startExam('more-questions')">
                         <div class="card-icon">➕</div>
                         <div class="card-title">追加問題</div>
-                        <div class="card-subtitle">64問で応用力UP</div>
+                        <div class="card-subtitle">78問で応用力UP</div>
                     </button>
 
                     <button class="menu-card" onclick="startExam('sample')">
@@ -137,6 +137,16 @@
                 </div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="question-navigation">
+                    <label for="question-selector">📋 問題選択:</label>
+                    <select id="question-selector" onchange="jumpToQuestion(this.value)" class="question-select">
+                        <!-- 問題リストはJavaScriptで動的生成 -->
+                    </select>
+                    <div class="quick-nav">
+                        <button onclick="previousQuestion()" id="prev-btn" class="nav-btn">← 前</button>
+                        <button onclick="nextQuestion()" id="next-btn" class="nav-btn">次 →</button>
+                    </div>
                 </div>
                 <div class="time-info">
                     <span>⏱️ 経過時間: <span id="timer">00:00</span></span>

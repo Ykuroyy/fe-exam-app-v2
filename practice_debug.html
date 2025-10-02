@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習問題デバッグ</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .question { border: 1px solid #ccc; margin: 10px 0; padding: 15px; }
+        .no-text { background-color: #ffeeee; }
+        .has-text { background-color: #eeffee; }
+        .text-content { font-weight: bold; color: #333; }
+        .choices { margin: 10px 0; }
+        .choice { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>練習問題８０ - 問題文チェック</h1>
+    <button onclick="checkAllQuestions()">全問題をチェック</button>
+    <div id="summary"></div>
+    <div id="questions-list"></div>
+    
+    <script src="questions.js"></script>
+    <script>
+        function checkAllQuestions() {
+            console.log("練習問題チェック開始");
+            
+            if (typeof questions === 'undefined' || !questions.practice_questions) {
+                document.getElementById('summary').innerHTML = '<p style="color: red;">❌ 練習問題データが見つかりません</p>';
+                return;
+            }
+            
+            const practiceQuestions = questions.practice_questions;
+            let hasTextCount = 0;
+            let noTextCount = 0;
+            let questionsHtml = '';
+            
+            practiceQuestions.forEach((question, index) => {
+                const hasText = question.text && question.text.trim() !== '';
+                if (hasText) {
+                    hasTextCount++;
+                } else {
+                    noTextCount++;
+                }
+                
+                questionsHtml += `
+                    <div class="question ${hasText ? 'has-text' : 'no-text'}">
+                        <h3>問題 ${index + 1} - ID: ${question.id}</h3>
+                        <div class="text-content">
+                            問題文: ${hasText ? `"${question.text}"` : '❌ 問題文なし'}
+                        </div>
+                        <div class="choices">
+                            <strong>選択肢:</strong>
+                            ${question.choices ? question.choices.map((choice, i) => 
+                                `<div class="choice">${i + 1}. ${choice}</div>`
+                            ).join('') : '選択肢なし'}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            document.getElementById('summary').innerHTML = `
+                <h2>チェック結果</h2>
+                <p>総問題数: ${practiceQuestions.length}</p>
+                <p style="color: green;">✅ 問題文あり: ${hasTextCount}問</p>
+                <p style="color: red;">❌ 問題文なし: ${noTextCount}問</p>
+            `;
+            
+            document.getElementById('questions-list').innerHTML = questionsHtml;
+        }
+        
+        // 自動実行
+        window.onload = function() {
+            console.log("ページ読み込み完了 - 練習問題チェック開始");
+            checkAllQuestions();
+        };
+    </script>
+</body>
+</html>

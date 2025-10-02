@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セキュリティ問題デバッグ</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .debug-section { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .error { background: #ffe6e6; color: red; }
+        .success { background: #e6ffe6; color: green; }
+        .warning { background: #fff3e6; color: orange; }
+    </style>
+</head>
+<body>
+    <h1>セキュリティ問題の16問表示問題デバッグ</h1>
+    
+    <button onclick="debugSecurityIssue()">セキュリティ問題を詳細調査</button>
+    <button onclick="simulateSecurityExam()">セキュリティ試験開始をシミュレート</button>
+    
+    <div id="debug-results"></div>
+    
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function debugSecurityIssue() {
+            const results = [];
+            
+            results.push('<div class="debug-section"><h2>1. セキュリティ問題データ確認</h2>');
+            
+            if (typeof questions === 'undefined') {
+                results.push('<p class="error">❌ questions オブジェクトが存在しません</p>');
+                document.getElementById('debug-results').innerHTML = results.join('');
+                return;
+            }
+            
+            if (!questions.security) {
+                results.push('<p class="error">❌ questions.security が存在しません</p>');
+            } else {
+                results.push(`<p class="success">✅ questions.security が存在: ${questions.security.length}問</p>`);
+                
+                // 各問題の詳細情報
+                questions.security.forEach((q, index) => {
+                    results.push(`<p>問題${index + 1}: ID=${q.id}, category=${q.category}</p>`);
+                });
+            }
+            results.push('</div>');
+            
+            // 他のセクションもチェック
+            results.push('<div class="debug-section"><h2>2. 他のセクション確認</h2>');
+            const sections = ['algorithm', 'practice_questions', 'more_subject_a', 'more_algorithm'];
+            sections.forEach(section => {
+                if (questions[section]) {
+                    const count = questions[section].length;
+                    results.push(`<p>${section}: ${count}問</p>`);
+                } else {
+                    results.push(`<p class="warning">${section}: 存在しません</p>`);
+                }
+            });
+            results.push('</div>');
+            
+            document.getElementById('debug-results').innerHTML = results.join('');
+        }
+        
+        function simulateSecurityExam() {
+            const results = [];
+            
+            results.push('<div class="debug-section"><h2>3. startExam(\'security\') シミュレーション</h2>');
+            
+            // startExam関数のsecurityケースを手動で実行
+            let examQuestions;
+            
+            try {
+                // script.jsのstartExam関数のsecurityケースをシミュレート
+                examQuestions = [...questions.security];
+                
+                results.push(`<p class="success">✅ examQuestions = [...questions.security] 実行成功</p>`);
+                results.push(`<p>結果: ${examQuestions.length}問が選択されました</p>`);
+                
+                // ドロップダウンに表示される内容をシミュレート
+                results.push('<h3>ドロップダウンに表示される問題一覧:</h3>');
+                examQuestions.forEach((question, index) => {
+                    results.push(`<p>問題${index + 1} (${question.id}): ${question.text.substring(0, 60)}...</p>`);
+                });
+                
+                // 16問になる原因を調査
+                if (examQuestions.length !== 4) {
+                    results.push(`<p class="error">❌ 異常: 4問のはずが${examQuestions.length}問になっています！</p>`);
+                    
+                    // questions.securityの内容を詳細に調査
+                    results.push('<h3>questions.security の詳細内容:</h3>');
+                    console.log('questions.security:', questions.security);
+                    
+                    if (Array.isArray(questions.security)) {
+                        questions.security.forEach((item, index) => {
+                            results.push(`<p>インデックス${index}: ${JSON.stringify(item).substring(0, 100)}...</p>`);
+                        });
+                    } else {
+                        results.push(`<p class="error">questions.security が配列ではありません: ${typeof questions.security}</p>`);
+                    }
+                } else {
+                    results.push('<p class="success">✅ 正常: 4問が選択されました</p>');
+                }
+                
+            } catch (error) {
+                results.push(`<p class="error">❌ エラー: ${error.message}</p>`);
+                console.error('シミュレーションエラー:', error);
+            }
+            
+            results.push('</div>');
+            
+            document.getElementById('debug-results').innerHTML += results.join('');
+        }
+        
+        // 自動実行
+        window.onload = function() {
+            debugSecurityIssue();
+        };
+    </script>
+</body>
+</html>

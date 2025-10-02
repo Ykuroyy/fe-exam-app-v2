@@ -5183,10 +5183,6 @@ end function
 
     more_subject_a:     [
             {"id": "a011",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の10進数を2進数で表したものはどれか。",
-                    "code": null,
                     "choices": [
                             "1111011",
                             "1111001",
@@ -5202,10 +5198,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a012",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の記憶容量の単位として正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "10^9バイト",
                             "10^12バイト",
@@ -5221,10 +5213,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a013",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "メモリ容量を増やす",
                             "命令実行の並列化による性能向上",
@@ -5240,10 +5228,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a014",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のネットワークに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "32ビット",
                             "64ビット",
@@ -5259,10 +5243,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a015",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の計算結果として正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "80",
                             "443",
@@ -5278,10 +5258,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a016",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "Atomicity（原子性）",
                             "Availability（可用性）",
@@ -5297,10 +5273,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a017",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のデータベースに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "レコードを削除する",
                             "テーブルを結合する",
@@ -5316,10 +5288,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a018",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "暗号化と復号化に同じ鍵を使用する",
                             "暗号化と復号化に異なる鍵を使用する",
@@ -5335,10 +5303,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a019",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "送信者の認証",
                             "データの完全性確保",
@@ -5354,10 +5318,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a020",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "最も重要な作業",
                             "最も時間のかかる作業順序",
@@ -5373,10 +5333,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a021",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "組織図を表す",
                             "作業の進捗を時系列で表す",
@@ -5392,10 +5348,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a022",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "楕円",
                             "長方形",
@@ -5411,10 +5363,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a023",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のプログラムを実行したとき、正しい結果はどれか。",
-                    "code": null,
                     "choices": [
                             "プログラムの内部構造を基にテストする",
                             "プログラムの仕様を基にテストする",
@@ -5430,10 +5378,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a024",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のデータベースに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "プログラミング言語の一つ",
                             "データベース管理システム",
@@ -5449,10 +5393,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a025",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "各工程を並行して実施する",
                             "各工程を順次進める",
@@ -5468,10 +5408,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a026",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "入力",
                             "記憶",
@@ -5487,10 +5423,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a027",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のネットワークに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "メモリの高速化技術",
                             "ディスクの冗長化技術",
@@ -5506,10 +5438,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a028",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "プロセス管理",
                             "メモリ管理",
@@ -5525,10 +5453,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a029",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のプログラムを実行したとき、正しい結果はどれか。",
-                    "code": null,
                     "choices": [
                             "プログラムを事前に機械語に変換する",
                             "プログラムを実行時に逐次解釈実行する",
@@ -5544,10 +5468,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a030",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "O(1)",
                             "O(log n)",
@@ -5563,10 +5483,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a031",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "メモリ不足が発生すること",
                             "異なるキーが同じハッシュ値になること",
@@ -5582,10 +5498,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a032",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "pop",
                             "top",
@@ -5601,10 +5513,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a033",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "同軸ケーブル",
                             "ツイストペアケーブル",
@@ -5620,10 +5528,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a034",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のネットワークに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "先頭8ビットがネットワーク部",
                             "先頭16ビットがネットワーク部",
@@ -5639,10 +5543,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a035",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のネットワークに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "ドメイン名をIPアドレスに変換する",
                             "IPアドレスを自動割り当てする",
@@ -5658,10 +5558,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a036",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のデータベースに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "検索速度の向上",
                             "データの冗長性の排除",
@@ -5677,10 +5573,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a037",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のプログラムを実行したとき、正しい結果はどれか。",
-                    "code": null,
                     "choices": [
                             "データの圧縮率を向上させる",
                             "データの検索速度を向上させる",
@@ -5696,10 +5588,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a038",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のデータベースに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "複数のテーブルを結合する",
                             "テーブルを分割する",
@@ -5715,10 +5603,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a039",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "フロッピーディスク",
                             "電子メール",
@@ -5734,10 +5618,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a040",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "英数字と記号を組み合わせる",
                             "定期的に変更する",
@@ -5753,10 +5633,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a041",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "データ圧縮",
                             "データ暗号化",
@@ -5772,10 +5648,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a042",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "プロジェクトの期間",
                             "プロジェクトの予算",
@@ -5791,10 +5663,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a043",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "リスク特定 → リスク分析 → リスク対応 → リスク監視",
                             "リスク分析 → リスク特定 → リスク対応 → リスク監視",
@@ -5810,10 +5678,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a044",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "詳細な文書を重視する",
                             "計画の厳密な遵守を重視する",
@@ -5829,10 +5693,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a045",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "システム設計書",
                             "サービス品質保証書",
@@ -5848,10 +5708,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a046",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "システムの開発",
                             "システムの運用",
@@ -5867,10 +5723,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a047",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "新規事業の計画",
                             "災害時の事業継続のための計画",
@@ -5886,10 +5738,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a048",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "初期投資の削減",
                             "スケーラビリティの向上",
@@ -5905,10 +5753,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a049",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "インターネット上の電子商取引",
                             "様々なモノがインターネットに接続される仕組み",
@@ -5924,10 +5768,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a050",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "音声認識システム",
                             "画像認識システム",
@@ -5943,10 +5783,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a051",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "Volume（量）",
                             "Velocity（速度）",
@@ -5962,10 +5798,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a052",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "ウイルス",
                             "ワーム",
@@ -5981,10 +5813,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a053",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のデータベースに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "SQLインジェクション",
                             "フィッシング詐欺",
@@ -6000,10 +5828,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a054",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "ITコストの削減",
                             "IT投資の効果を最大化",
@@ -6019,10 +5843,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a055",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "データを圧縮する技術",
                             "データを暗号化する技術",
@@ -6038,10 +5858,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a056",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "電子メールシステム",
                             "企業資源計画システム",
@@ -6057,10 +5873,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a057",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "在庫管理の最適化",
                             "顧客関係の管理",
@@ -6076,10 +5888,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a058",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "開発者専用のツール",
                             "運用者専用のツール",
@@ -6095,10 +5903,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a059",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "アプリケーションの軽量化",
                             "環境の一貫性",
@@ -6114,10 +5918,6 @@ end function
                     "sourceFile": "moreQuestions.ts"
             },
             {"id": "a060",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "APIを使った経済活動",
                             "APIの開発手法",
@@ -6136,10 +5936,6 @@ end function
 
     more_algorithm:     [
             {"id": "b006",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次の計算結果として正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "15",
                             "9",
@@ -6155,10 +5951,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b007",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のアルゴリズムまたはプログラムに関する問題として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "O(n)",
                             "O(n log n)",
@@ -6174,10 +5966,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b008",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のプログラムを実行したとき、正しい結果はどれか。",
-                    "code": null,
                     "choices": [
                             "線形探索",
                             "二分探索",
@@ -6193,10 +5981,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b009",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のアルゴリズムまたはプログラムに関する問題として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "引数が多すぎる",
                             "ベースケース（終了条件）がない",
@@ -6212,10 +5996,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b010",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のデータベースに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "配列",
                             "連結リスト",
@@ -6231,10 +6011,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b011",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のプログラムを実行したとき、正しい結果はどれか。",
-                    "code": null,
                     "choices": [
                             "不安定なソートアルゴリズムである",
                             "最悪時間計算量がO(n²)である",
@@ -6250,10 +6026,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b012",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のアルゴリズムまたはプログラムに関する問題として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "全従業員数",
                             "給与が50000を超える従業員数",
@@ -6269,10 +6041,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b013",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のアルゴリズムまたはプログラムに関する問題として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "オイラー路",
                             "ハミルトン路",
@@ -6288,10 +6056,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b014",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のプログラムを実行したとき、正しい結果はどれか。",
-                    "code": null,
                     "choices": [
                             "部分問題の解を記憶する",
                             "重複する計算を避ける",
@@ -6307,10 +6071,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b016",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のネットワークに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "TCPは信頼性が低く、UDPは信頼性が高い",
                             "TCPはコネクションレス、UDPはコネクション型",
@@ -6326,10 +6086,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b017",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のプログラムを実行したとき、正しい結果はどれか。",
-                    "code": null,
                     "choices": [
                             "チェイン法",
                             "オープンアドレス法",
@@ -6345,10 +6101,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b018",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のネットワークに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "ステートレスな通信",
                             "リソースベースのURL設計",
@@ -6364,10 +6116,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b019",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のネットワークに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "URLアドレス",
                             "IPアドレス",
@@ -6383,10 +6131,6 @@ end function
                     "sourceFile": "moreBQuestions.ts"
             },
             {"id": "b020",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のアルゴリズムまたはプログラムに関する問題として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "パスワードの暗号化",
                             "入力値の検証とエスケープ処理",
@@ -6405,10 +6149,6 @@ end function
 
     sample_questions:     [
             {"id": "a001",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "10進数の25を2進数で表すと11001である",
                             "16進数のFFを10進数で表すと256である",
@@ -6424,10 +6164,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "a002",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のネットワークに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "データリンク層",
                             "ネットワーク層",
@@ -6443,10 +6179,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "a003",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "FIFO（First In First Out）",
                             "LIFO（Last In First Out）",
@@ -6462,10 +6194,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "a004",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のデータベースに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "CREATE",
                             "DROP",
@@ -6481,10 +6209,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "a005",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "プロジェクトの作業を階層的に分解した構造図",
                             "プロジェクトメンバーの責任分担表",
@@ -6500,10 +6224,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "b002",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のアルゴリズムまたはプログラムに関する問題として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "O(1)",
                             "O(n)",
@@ -6519,10 +6239,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "b003",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のネットワークに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "SSLまたはTLS",
                             "FTPとSFTP",
@@ -6538,10 +6254,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "b004",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のアルゴリズムまたはプログラムに関する問題として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "プログラムの実行速度が向上する",
                             "コードの再利用性が高まる",
@@ -6557,10 +6269,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "b005",
-                    "category": "algorithm",
-                    "level": "standard",
-                    "text": "次のアルゴリズムまたはプログラムに関する問題として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "すべての非キー属性が主キーに完全関数従属する",
                             "すべての属性が原子値である",
@@ -6576,10 +6284,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "a006",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "メインメモリよりも容量が大きく、アクセス速度が遅い",
                             "メインメモリよりも容量が小さく、アクセス速度が速い",
@@ -6595,10 +6299,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "a007",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のネットワークに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "先頭8ビットがネットワーク部、残り24ビットがホスト部",
                             "先頭16ビットがネットワーク部、残り16ビットがホスト部",
@@ -6614,10 +6314,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "a008",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "すべての属性が原子値である",
                             "第1正規形であり、部分関数従属がない",
@@ -6633,10 +6329,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "a009",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次のネットワークに関する説明として、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "コンピュータウイルスの検出と駆除",
                             "ネットワーク通信の監視と制御",
@@ -6652,10 +6344,6 @@ end function
                     "sourceFile": "sampleQuestions.ts"
             },
             {"id": "a010",
-                    "category": "subject_a",
-                    "level": "standard",
-                    "text": "次の選択肢のうち、正しいものはどれか。",
-                    "code": null,
                     "choices": [
                             "Plan → Do → Check → Action",
                             "Plan → Do → Action → Check",

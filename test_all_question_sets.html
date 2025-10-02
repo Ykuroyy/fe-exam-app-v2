@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全問題セットテスト</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .result { margin: 5px 0; padding: 10px; border-radius: 3px; }
+        .success { background: #e6ffe6; color: green; }
+        .error { background: #ffe6e6; color: red; }
+        button { margin: 5px; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>全問題セット ドロップダウン数確認テスト</h1>
+    
+    <div class="test-section">
+        <h2>問題セット別テスト</h2>
+        <button onclick="testQuestionSet('algorithm', 'アルゴリズム問題', 60)">アルゴリズム(60問)</button>
+        <button onclick="testQuestionSet('security', 'セキュリティ問題', 4)">セキュリティ(4問)</button>
+        <button onclick="testQuestionSet('practice', '練習問題', 80)">練習問題(80問)</button>
+        <button onclick="testQuestionSet('more-questions', '追加問題', 78)">追加問題(78問)</button>
+        <button onclick="testQuestionSet('sample', 'サンプル問題', 14)">サンプル問題(14問)</button>
+    </div>
+    
+    <div id="test-results"></div>
+    
+    <script src="questions.js"></script>
+    <script>
+        // 各問題セットの実際の問題数を確認
+        function testQuestionSet(examType, displayName, expectedCount) {
+            const results = [];
+            results.push(`<div class="test-section"><h3>${displayName} (${examType}) テスト</h3>`);
+            
+            let examQuestions = [];
+            
+            try {
+                // startExam関数のswitch文をシミュレート
+                switch(examType) {
+                    case 'algorithm':
+                        examQuestions = questions.algorithm ? [...questions.algorithm] : [];
+                        break;
+                    case 'security':
+                        examQuestions = questions.security ? [...questions.security] : [];
+                        break;
+                    case 'practice':
+                        examQuestions = questions.practice_questions ? [...questions.practice_questions] : [];
+                        break;
+                    case 'more-questions':
+                        examQuestions = [
+                            ...(questions.more_subject_a || []),
+                            ...(questions.more_algorithm || [])
+                        ];
+                        break;
+                    case 'sample':
+                        examQuestions = questions.sample_questions ? [...questions.sample_questions] : [];
+                        break;
+                    default:
+                        examQuestions = [];
+                }
+                
+                const actualCount = examQuestions.length;
+                const isCorrect = actualCount === expectedCount;
+                
+                results.push(`<div class="result ${isCorrect ? 'success' : 'error'}">`);
+                results.push(`📊 期待問題数: ${expectedCount}問`);
+                results.push(`<br>📈 実際問題数: ${actualCount}問`);
+                results.push(`<br>🎯 結果: ${isCorrect ? '✅ 一致' : '❌ 不一致'}`);
+                
+                if (actualCount > 0) {
+                    results.push(`<br>🔤 最初の問題ID: ${examQuestions[0]?.id || 'なし'}`);
+                    results.push(`<br>🔤 最後の問題ID: ${examQuestions[actualCount-1]?.id || 'なし'}`);
+                }
+                
+                // ドロップダウン表示をシミュレート
+                results.push(`<br><br>📋 ドロップダウンに表示される問題一覧（最初の5問）:`);
+                examQuestions.slice(0, 5).forEach((question, index) => {
+                    results.push(`<br>  問題${index + 1} (${question.id}): ${question.text ? question.text.substring(0, 40) + '...' : '問題文なし'}`);
+                });
+                
+                if (actualCount > 5) {
+                    results.push(`<br>  ... 他${actualCount - 5}問`);
+                }
+                
+                results.push('</div>');
+                
+            } catch (error) {
+                results.push(`<div class="result error">❌ エラー: ${error.message}</div>`);
+            }
+            
+            results.push('</div>');
+            
+            document.getElementById('test-results').innerHTML += results.join('');
+        }
+        
+        // 全体概要を表示
+        function showOverview() {
+            const results = [];
+            results.push('<div class="test-section"><h3>📊 問題数概要</h3>');
+            
+            const sections = [
+                { name: 'アルゴリズム', key: 'algorithm', expected: 60 },
+                { name: 'セキュリティ', key: 'security', expected: 4 },
+                { name: '練習問題', key: 'practice_questions', expected: 80 },
+                { name: '追加問題A', key: 'more_subject_a', expected: 60 },
+                { name: '追加問題B', key: 'more_algorithm', expected: 18 },
+                { name: 'サンプル問題', key: 'sample_questions', expected: 14 }
+            ];
+            
+            sections.forEach(section => {
+                const actual = questions[section.key] ? questions[section.key].length : 0;
+                const match = actual === section.expected;
+                results.push(`<div class="result ${match ? 'success' : 'error'}">`);
+                results.push(`${section.name}: ${actual}問 (期待: ${section.expected}問) ${match ? '✅' : '❌'}`);
+                results.push('</div>');
+            });
+            
+            results.push('</div>');
+            document.getElementById('test-results').innerHTML = results.join('');
+        }
+        
+        // ページ読み込み時に概要表示
+        window.onload = function() {
+            showOverview();
+        };
+    </script>
+</body>
+</html>

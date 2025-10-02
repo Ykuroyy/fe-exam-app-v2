@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>問題数確認</title>
+</head>
+<body>
+    <h1>実際の問題数チェック</h1>
+    <div id="results"></div>
+    
+    <script src="questions.js"></script>
+    <script>
+        function checkCounts() {
+            const results = [];
+            
+            // 各セクションの問題数を確認
+            if (questions.algorithm) {
+                results.push(`🧮 アルゴリズム問題: ${questions.algorithm.length}問 (表示: 60問完全攻略) ${questions.algorithm.length === 60 ? '✅' : '❌'}`);
+            }
+            
+            if (questions.security) {
+                results.push(`🔒 セキュリティ問題: ${questions.security.length}問 (表示: 必須4問対策) ${questions.security.length === 4 ? '✅' : '❌'}`);
+            }
+            
+            if (questions.practice_questions) {
+                results.push(`📚 練習問題: ${questions.practice_questions.length}問 (表示: 80問で基礎固め) ${questions.practice_questions.length === 80 ? '✅' : '❌'}`);
+            }
+            
+            if (questions.more_subject_a && questions.more_algorithm) {
+                const additionalTotal = questions.more_subject_a.length + questions.more_algorithm.length;
+                results.push(`➕ 追加問題: ${additionalTotal}問 (科目A: ${questions.more_subject_a.length}, 科目B: ${questions.more_algorithm.length}) (表示: 78問で応用力UP) ${additionalTotal === 78 ? '✅' : '❌'}`);
+            }
+            
+            if (questions.sample_questions) {
+                results.push(`🎯 サンプル問題: ${questions.sample_questions.length}問 (表示: 14問で実力確認) ${questions.sample_questions.length === 14 ? '✅' : '❌'}`);
+            }
+            
+            // 大量練習問題の合計
+            const practiceTotal = (questions.practice_questions?.length || 0) + 
+                                 (questions.more_subject_a?.length || 0) + 
+                                 (questions.more_algorithm?.length || 0);
+            results.push(`💪 大量練習問題合計: ${practiceTotal}問 (表示: 158問) ${practiceTotal === 158 ? '✅' : '❌'}`);
+            
+            // 過去問合計
+            let pastTotal = 0;
+            const pastSections = ['past_r5_a', 'past_r5_b', 'past_r6_a', 'past_r6_b', 'past_r7_a', 'past_r7_b'];
+            pastSections.forEach(section => {
+                if (questions[section]) {
+                    pastTotal += questions[section].length;
+                    results.push(`📅 ${section}: ${questions[section].length}問`);
+                }
+            });
+            results.push(`📅 過去問合計: ${pastTotal}問`);
+            
+            document.getElementById('results').innerHTML = results.map(r => `<p>${r}</p>`).join('');
+        }
+        
+        window.onload = checkCounts;
+    </script>
+</body>
+</html>

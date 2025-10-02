@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>追加問題テスト</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .question { border: 1px solid #ccc; margin: 10px 0; padding: 15px; }
+        .no-text { background-color: #ffeeee; }
+        .has-text { background-color: #eeffee; }
+        .text-content { font-weight: bold; color: #333; margin: 10px 0; }
+        .choices { margin: 10px 0; }
+        .choice { margin: 5px 0; }
+        .summary { background: #f0f8ff; padding: 15px; border-radius: 5px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>追加問題64問 - 問題文チェック</h1>
+    <button onclick="checkAdditionalQuestions()">追加問題をチェック</button>
+    <div id="summary"></div>
+    <div id="questions-list"></div>
+    
+    <script src="questions.js"></script>
+    <script>
+        function checkAdditionalQuestions() {
+            console.log("追加問題チェック開始");
+            
+            if (typeof questions === 'undefined') {
+                document.getElementById('summary').innerHTML = '<p style="color: red;">❌ 問題データが見つかりません</p>';
+                return;
+            }
+            
+            // more_subject_a と more_algorithm を結合
+            const moreSubjectA = questions.more_subject_a || [];
+            const moreAlgorithm = questions.more_algorithm || [];
+            const allAdditional = [...moreSubjectA, ...moreAlgorithm];
+            
+            let hasTextCount = 0;
+            let noTextCount = 0;
+            let questionsHtml = '';
+            
+            console.log("more_subject_a:", moreSubjectA.length, "問");
+            console.log("more_algorithm:", moreAlgorithm.length, "問");
+            console.log("合計:", allAdditional.length, "問");
+            
+            allAdditional.forEach((question, index) => {
+                const hasText = question.text && question.text.trim() !== '';
+                if (hasText) {
+                    hasTextCount++;
+                } else {
+                    noTextCount++;
+                }
+                
+                questionsHtml += `
+                    <div class="question ${hasText ? 'has-text' : 'no-text'}">
+                        <h3>追加問題 ${index + 1} - ID: ${question.id}</h3>
+                        <div class="text-content">
+                            問題文: ${hasText ? `"${question.text}"` : '❌ 問題文なし'}
+                        </div>
+                        <div class="choices">
+                            <strong>選択肢:</strong>
+                            ${question.choices ? question.choices.map((choice, i) => 
+                                `<div class="choice">${i + 1}. ${choice}</div>`
+                            ).join('') : '選択肢なし'}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            document.getElementById('summary').innerHTML = `
+                <div class="summary">
+                    <h2>追加問題チェック結果</h2>
+                    <p><strong>科目A追加問題:</strong> ${moreSubjectA.length}問</p>
+                    <p><strong>科目B追加問題:</strong> ${moreAlgorithm.length}問</p>
+                    <p><strong>総追加問題数:</strong> ${allAdditional.length}問</p>
+                    <p style="color: green;"><strong>✅ 問題文あり:</strong> ${hasTextCount}問</p>
+                    <p style="color: red;"><strong>❌ 問題文なし:</strong> ${noTextCount}問</p>
+                </div>
+            `;
+            
+            // 最初の10問のみ表示（長すぎる場合）
+            if (allAdditional.length > 10) {
+                questionsHtml = questionsHtml.split('</div>').slice(0, 10).join('</div>') + '</div>';
+                questionsHtml += `<p><strong>注意:</strong> 最初の10問のみ表示。全${allAdditional.length}問が修正されています。</p>`;
+            }
+            
+            document.getElementById('questions-list').innerHTML = questionsHtml;
+        }
+        
+        // 自動実行
+        window.onload = function() {
+            console.log("ページ読み込み完了 - 追加問題チェック開始");
+            checkAdditionalQuestions();
+        };
+    </script>
+</body>
+</html>

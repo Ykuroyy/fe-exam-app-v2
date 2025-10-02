@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メインアプリ練習問題テスト</title>
+</head>
+<body>
+    <h1>メインアプリ練習問題テスト</h1>
+    <button onclick="testPracticeExam()">練習問題をテスト</button>
+    <div id="result"></div>
+    
+    <script src="questions.js"></script>
+    <script>
+        // メインアプリのstartExam関数をシミュレート
+        function testPracticeExam() {
+            console.log("練習問題テスト開始");
+            
+            if (typeof questions === 'undefined') {
+                console.error("questions が定義されていません");
+                return;
+            }
+            
+            // 練習問題を取得
+            let examQuestions = [];
+            
+            if (questions.practice_questions) {
+                examQuestions = questions.practice_questions;
+            } else {
+                console.error("practice_questions が見つかりません");
+                return;
+            }
+            
+            console.log("取得した練習問題数:", examQuestions.length);
+            
+            // 最初の5問をテスト
+            const result = document.getElementById('result');
+            let html = '<h2>最初の5問の問題文チェック:</h2>';
+            
+            for (let i = 0; i < Math.min(5, examQuestions.length); i++) {
+                const question = examQuestions[i];
+                html += `
+                    <div style="border: 1px solid #ccc; margin: 10px; padding: 10px;">
+                        <h3>問題 ${i + 1} (ID: ${question.id})</h3>
+                        <p><strong>問題文:</strong> "${question.text}"</p>
+                        <p><strong>問題文の長さ:</strong> ${question.text ? question.text.length : 0} 文字</p>
+                        <p><strong>選択肢数:</strong> ${question.choices ? question.choices.length : 0}</p>
+                    </div>
+                `;
+            }
+            
+            result.innerHTML = html;
+        }
+        
+        // ページ読み込み時に自動実行
+        window.onload = function() {
+            console.log("ページ読み込み完了");
+            testPracticeExam();
+        };
+    </script>
+</body>
+</html>

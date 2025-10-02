@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セキュリティ問題テスト</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .result { background: #f0f8ff; padding: 15px; border-radius: 5px; margin: 10px 0; }
+        .question { border: 1px solid #ccc; margin: 10px 0; padding: 15px; }
+        .error { background: #ffe6e6; color: red; }
+        .success { background: #e6ffe6; color: green; }
+    </style>
+</head>
+<body>
+    <h1>セキュリティ問題テスト</h1>
+    <button onclick="testSecurityQuestions()">セキュリティ問題をテスト</button>
+    <div id="results"></div>
+    
+    <script src="questions.js"></script>
+    <script>
+        function testSecurityQuestions() {
+            console.log("セキュリティ問題テスト開始");
+            
+            const results = [];
+            
+            // questions.securityの確認
+            if (typeof questions === 'undefined') {
+                results.push('<div class="result error">❌ questions オブジェクトが見つかりません</div>');
+            } else if (!questions.security) {
+                results.push('<div class="result error">❌ questions.security が見つかりません</div>');
+            } else {
+                results.push(`<div class="result success">✅ questions.security が存在: ${questions.security.length}問</div>`);
+                
+                // 各セキュリティ問題を確認
+                questions.security.forEach((question, index) => {
+                    results.push(`
+                        <div class="question">
+                            <h3>セキュリティ問題 ${index + 1}</h3>
+                            <p><strong>ID:</strong> ${question.id}</p>
+                            <p><strong>カテゴリ:</strong> ${question.category}</p>
+                            <p><strong>問題文:</strong> ${question.text}</p>
+                            <p><strong>選択肢数:</strong> ${question.choices ? question.choices.length : 0}</p>
+                        </div>
+                    `);
+                });
+            }
+            
+            // startExam('security') の動作をシミュレート
+            results.push('<h2>startExam(\'security\') シミュレーション:</h2>');
+            
+            if (questions && questions.security) {
+                const examQuestions = [...questions.security];
+                results.push(`<div class="result">シミュレート結果: ${examQuestions.length}問が選択される</div>`);
+                
+                // ドロップダウンに表示される問題一覧をシミュレート
+                results.push('<h3>ドロップダウンに表示される問題一覧:</h3>');
+                examQuestions.forEach((question, index) => {
+                    results.push(`<div>問題${index + 1} (${question.id}): ${question.text.substring(0, 50)}...</div>`);
+                });
+            }
+            
+            document.getElementById('results').innerHTML = results.join('');
+        }
+        
+        // 自動実行
+        window.onload = function() {
+            console.log("ページ読み込み完了");
+            testSecurityQuestions();
+        };
+    </script>
+</body>
+</html>

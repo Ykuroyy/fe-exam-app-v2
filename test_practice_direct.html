@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習問題テスト</title>
+</head>
+<body>
+    <h1>練習問題テスト</h1>
+    <div id="result"></div>
+    
+    <script src="questions.js"></script>
+    <script>
+        // 練習問題を直接テスト
+        console.log("questions オブジェクト:", typeof questions);
+        
+        if (typeof questions !== 'undefined' && questions.practice_questions) {
+            const practiceQuestions = questions.practice_questions;
+            console.log("練習問題数:", practiceQuestions.length);
+            
+            // 最初の問題をチェック
+            const firstQuestion = practiceQuestions[0];
+            console.log("最初の問題:", firstQuestion);
+            
+            // 最後の問題をチェック
+            const lastQuestion = practiceQuestions[practiceQuestions.length - 1];
+            console.log("最後の問題:", lastQuestion);
+            
+            // 問題文がある問題の数をカウント
+            let questionsWithText = 0;
+            let questionsWithoutText = 0;
+            
+            practiceQuestions.forEach((q, index) => {
+                if (q.text && q.text.trim() !== '') {
+                    questionsWithText++;
+                } else {
+                    questionsWithoutText++;
+                    console.log(`問題文なし: ${q.id}`, q);
+                }
+            });
+            
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <h2>練習問題分析結果</h2>
+                <p>総問題数: ${practiceQuestions.length}</p>
+                <p>問題文あり: ${questionsWithText}</p>
+                <p>問題文なし: ${questionsWithoutText}</p>
+                <h3>最初の問題:</h3>
+                <p>ID: ${firstQuestion.id}</p>
+                <p>問題文: "${firstQuestion.text}"</p>
+                <h3>最後の問題:</h3>
+                <p>ID: ${lastQuestion.id}</p>
+                <p>問題文: "${lastQuestion.text}"</p>
+            `;
+        } else {
+            document.getElementById('result').innerHTML = '<p>❌ questions.js が正しく読み込まれていません</p>';
+            console.error("questions オブジェクトが見つかりません");
+        }
+    </script>
+</body>
+</html>

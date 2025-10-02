@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>簡単セキュリティテスト</title>
+</head>
+<body>
+    <h1>セキュリティ問題カウント</h1>
+    <div id="result"></div>
+    
+    <script src="questions.js"></script>
+    <script>
+        // questions.security の正確な内容を確認
+        console.log('questions オブジェクト:', typeof questions);
+        
+        if (questions && questions.security) {
+            console.log('questions.security の型:', typeof questions.security);
+            console.log('questions.security は配列か:', Array.isArray(questions.security));
+            console.log('questions.security の長さ:', questions.security.length);
+            console.log('questions.security の内容:', questions.security);
+            
+            document.getElementById('result').innerHTML = `
+                <p>セキュリティ問題数: ${questions.security.length}</p>
+                <p>配列かどうか: ${Array.isArray(questions.security)}</p>
+                <p>各問題のID: ${questions.security.map(q => q.id).join(', ')}</p>
+            `;
+        } else {
+            document.getElementById('result').innerHTML = '<p>questions.security が見つかりません</p>';
+        }
+        
+        // startExam('security') の動作をシミュレート
+        if (questions && questions.security) {
+            const examQuestions = [...questions.security];
+            console.log('スプレッド演算子で展開後:', examQuestions.length);
+            console.log('展開後の内容:', examQuestions);
+        }
+    </script>
+</body>
+</html>

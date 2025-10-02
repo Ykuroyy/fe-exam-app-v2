@@ -331,7 +331,32 @@ function updateProgress() {
     // カテゴリバッジ更新
     const question = examQuestions[currentQuestionIndex];
     const categoryBadge = document.getElementById('current-category');
-    categoryBadge.textContent = question.category === 'algorithm' ? 'アルゴリズム' : '情報セキュリティ';
+    categoryBadge.textContent = question.category === 'algorithm' ? 'アルゴリズム' : 
+                               question.category === 'security' ? '情報セキュリティ' :
+                               question.category === 'practice' ? '練習問題' : 'その他';
+
+    // 問題選択ドロップダウンを更新
+    updateQuestionSelector();
+}
+
+// 問題選択ドロップダウンを更新
+function updateQuestionSelector() {
+    const selector = document.getElementById('question-selector');
+    if (!selector) return;
+
+    // 既存のオプションをクリア（重複防止）
+    selector.innerHTML = '';
+
+    // 全問題のオプションを生成
+    examQuestions.forEach((question, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = `問題${index + 1} (${question.id})`;
+        selector.appendChild(option);
+    });
+
+    // 現在の問題を選択状態に
+    selector.value = currentQuestionIndex;
 }
 
 // ボタン状態更新
@@ -340,15 +365,15 @@ function updateButtonStates() {
     const nextBtn = document.getElementById('next-btn');
     const submitBtn = document.getElementById('submit-btn');
 
-    // 前へボタン
-    prevBtn.disabled = currentQuestionIndex === 0;
+    // ナビゲーションボタンの状態更新
+    if (prevBtn) prevBtn.disabled = currentQuestionIndex === 0;
+    if (nextBtn) nextBtn.disabled = currentQuestionIndex >= examQuestions.length - 1;
 
-    // 次へボタン
-    nextBtn.disabled = true;
-
-    // 回答ボタン
-    submitBtn.disabled = userAnswers[currentQuestionIndex] === undefined;
-    submitBtn.style.display = 'inline-block';
+    // 回答ボタンの状態更新（既存の機能を維持）
+    if (submitBtn) {
+        submitBtn.disabled = userAnswers[currentQuestionIndex] === undefined;
+        submitBtn.style.display = 'inline-block';
+    }
 }
 
 // ナビゲーション
@@ -364,8 +389,25 @@ function nextQuestion() {
         currentQuestionIndex++;
         displayQuestion();
     } else {
-        // 試験終了
-        finishExam();
+        // 最後の問題の場合はボタンを無効化
+        document.getElementById('next-btn').disabled = true;
+    }
+}
+
+// 問題に直接ジャンプする関数
+function jumpToQuestion(questionIndex) {
+    const index = parseInt(questionIndex);
+    if (index >= 0 && index < examQuestions.length) {
+        currentQuestionIndex = index;
+        displayQuestion();
+    }
+}
+
+// 前の問題に戻る関数（既存のprevQuestion関数を拡張）
+function previousQuestion() {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        displayQuestion();
     }
 }
 

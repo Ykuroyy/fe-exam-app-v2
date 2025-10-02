@@ -1419,6 +1419,207 @@ function showSingleProblemResult(question, userAnswer, isCorrect) {
     showScreen('result-container');
 }
 
+// 統合アプリ用の新機能
+
+// 10月26日試験日の設定
+const EXAM_DATE = new Date('2024-10-26');
+const DAILY_STUDY_GOAL = 60; // 分
+
+// 科目A選択機能
+function showSubjectASelection() {
+    showScreen('subject-a-selection-container');
+}
+
+function hideSubjectASelection() {
+    showScreen('menu-container');
+}
+
+// 学習計画機能
+function showStudyPlan() {
+    showScreen('study-plan-container');
+    updateStudyPlan();
+}
+
+function hideStudyPlan() {
+    showScreen('menu-container');
+}
+
+function updateStudyPlan() {
+    // 残り日数の計算
+    const now = new Date();
+    const timeDiff = EXAM_DATE.getTime() - now.getTime();
+    const daysRemaining = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    
+    document.getElementById('days-remaining').textContent = 
+        daysRemaining > 0 ? `試験まで残り ${daysRemaining} 日` : '試験当日！頑張って！';
+    
+    // 週間スケジュールの生成
+    generateWeeklyPlan();
+    
+    // 今日の進捗更新
+    updateDailyProgress();
+}
+
+function generateWeeklyPlan() {
+    const weeklyPlan = document.getElementById('weekly-plan');
+    const dayNames = ['月', '火', '水', '木', '金', '土', '日'];
+    const studyTopics = [
+        '科目A：コンピュータシステム',
+        '科目B：アルゴリズム基礎',
+        '科目A：データベース',
+        '科目B：プログラミング',
+        '科目A：ネットワーク',
+        '過去問：総合演習',
+        '弱点克服・復習'
+    ];
+    
+    weeklyPlan.innerHTML = '';
+    
+    for (let i = 0; i < 7; i++) {
+        const dayPlan = document.createElement('div');
+        dayPlan.className = 'day-plan';
+        dayPlan.innerHTML = `
+            <span class="day-name">${dayNames[i]}曜日</span>
+            <span class="day-tasks">${studyTopics[i]}</span>
+        `;
+        weeklyPlan.appendChild(dayPlan);
+    }
+}
+
+function updateDailyProgress() {
+    // ローカルストレージから今日の学習データを取得
+    const today = new Date().toDateString();
+    const todayData = JSON.parse(localStorage.getItem(`study_${today}`) || '{"time": 0, "problems": 0}');
+    
+    // 学習時間の進捗更新
+    const timeProgress = Math.min((todayData.time / DAILY_STUDY_GOAL) * 100, 100);
+    document.getElementById('time-progress').style.width = `${timeProgress}%`;
+    document.getElementById('time-value').textContent = `${todayData.time}分 / ${DAILY_STUDY_GOAL}分`;
+    
+    // 問題数の進捗更新
+    const problemsGoal = 20;
+    const problemsProgress = Math.min((todayData.problems / problemsGoal) * 100, 100);
+    document.getElementById('problems-progress').style.width = `${problemsProgress}%`;
+    document.getElementById('problems-value').textContent = `${todayData.problems}問 / ${problemsGoal}問`;
+}
+
+function updateDailyStudyTime(minutes) {
+    const today = new Date().toDateString();
+    const todayData = JSON.parse(localStorage.getItem(`study_${today}`) || '{"time": 0, "problems": 0}');
+    todayData.time += minutes;
+    localStorage.setItem(`study_${today}`, JSON.stringify(todayData));
+}
+
+function updateDailyProblems(count) {
+    const today = new Date().toDateString();
+    const todayData = JSON.parse(localStorage.getItem(`study_${today}`) || '{"time": 0, "problems": 0}');
+    todayData.problems += count;
+    localStorage.setItem(`study_${today}`, JSON.stringify(todayData));
+}
+
+// 進捗表示機能
+function showProgress() {
+    // 簡易版の進捗表示
+    const today = new Date().toDateString();
+    const todayData = JSON.parse(localStorage.getItem(`study_${today}`) || '{"time": 0, "problems": 0}');
+    
+    alert(`今日の学習状況：\n学習時間: ${todayData.time}分 / ${DAILY_STUDY_GOAL}分\n問題数: ${todayData.problems}問\n\n${todayData.time >= DAILY_STUDY_GOAL ? '🎉 今日の目標達成！' : '💪 もう少し頑張りましょう！'}`);
+}
+
+// 試験日カウントダウン更新
+function updateExamCountdown() {
+    const now = new Date();
+    const timeDiff = EXAM_DATE.getTime() - now.getTime();
+    
+    if (timeDiff <= 0) {
+        document.getElementById('exam-countdown').textContent = '🎯 試験当日！頑張って！';
+        return;
+    }
+    
+    const days = Math.floor(timeDiff / (1000 * 3600 * 24));
+    const hours = Math.floor((timeDiff % (1000 * 3600 * 24)) / (1000 * 3600));
+    const minutes = Math.floor((timeDiff % (1000 * 3600)) / (1000 * 60));
+    
+    document.getElementById('exam-countdown').textContent = 
+        `⏰ 試験まで ${days}日 ${hours}時間 ${minutes}分`;
+}
+
+// startExam関数を拡張（科目A対応）
+const originalStartExam = window.startExam;
+window.startExam = function(examType) {
+    // 科目A関連の処理を追加
+    if (examType.startsWith('subject-a') || examType.includes('computer-system') || 
+        examType.includes('database') || examType.includes('network') || examType.includes('security-theory')) {
+        
+        currentExamType = examType;
+        userAnswers = [];
+        currentQuestionIndex = 0;
+
+        // 科目A問題の選択
+        switch(examType) {
+            case 'subject-a-all':
+                examQuestions = shuffleArray([...questions.subject_a]);
+                break;
+            case 'subject-a-random':
+                examQuestions = shuffleArray([...questions.subject_a]).slice(0, 20);
+                break;
+            case 'computer-system':
+                examQuestions = questions.subject_a.filter(q => q.subcategory === 'computer_system');
+                break;
+            case 'database':
+                examQuestions = questions.subject_a.filter(q => q.subcategory === 'database');
+                break;
+            case 'network':
+                examQuestions = questions.subject_a.filter(q => q.subcategory === 'network');
+                break;
+            case 'security-theory':
+                examQuestions = questions.subject_a.filter(q => q.subcategory === 'security');
+                break;
+            default:
+                examQuestions = [];
+        }
+
+        if (examQuestions.length === 0) {
+            alert('問題が見つかりません。');
+            return;
+        }
+
+        showScreen('exam-container');
+        startTimer();
+        displayQuestion();
+        
+        console.log(`科目A学習開始: ${examType} - ${examQuestions.length}問`);
+        return;
+    }
+    
+    // 既存の処理を実行
+    originalStartExam(examType);
+};
+
+// 初期化時にカウントダウン開始
+document.addEventListener('DOMContentLoaded', function() {
+    updateExamCountdown();
+    setInterval(updateExamCountdown, 60000); // 1分ごとに更新
+});
+
+// 学習時間トラッキング
+let studyStartTime = null;
+
+// 試験開始時の学習時間記録
+const originalShowScreen = window.showScreen;
+window.showScreen = function(screenId) {
+    if (screenId === 'exam-container') {
+        studyStartTime = new Date();
+    } else if (screenId === 'result-container' && studyStartTime) {
+        const studyTime = Math.floor((new Date() - studyStartTime) / 1000 / 60);
+        updateDailyStudyTime(studyTime);
+        updateDailyProblems(1);
+        studyStartTime = null;
+    }
+    
+    originalShowScreen(screenId);
+};
+
 // エクスポート（モジュール対応）
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -1432,6 +1633,11 @@ if (typeof module !== 'undefined' && module.exports) {
         startRandomAlgorithm,
         showPastExamSelection,
         hidePastExamSelection,
-        startSinglePastProblem
+        startSinglePastProblem,
+        showSubjectASelection,
+        hideSubjectASelection,
+        showStudyPlan,
+        hideStudyPlan,
+        showProgress
     };
 }

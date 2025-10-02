@@ -10,9 +10,21 @@
     <div class="container">
         <!-- ヘッダー -->
         <header class="header">
-            <h1>🖥️ 基本情報技術者試験 科目B対策</h1>
-            <p class="subtitle">アルゴリズム60問 + 情報セキュリティ4問 = 計64問</p>
-            <p class="exam-countdown" id="exam-countdown">⏰ 試験まで残り時間を表示</p>
+            <h1>🖥️ 基本情報技術者試験 完全対策</h1>
+            <p class="subtitle">科目A + 科目B + 過去問 = 総合学習システム</p>
+            <div class="exam-info-display">
+                <div class="exam-date">
+                    <span class="exam-date-label">🗓️ 試験日</span>
+                    <span class="exam-date-value">2024年10月26日</span>
+                </div>
+                <div class="exam-countdown-container">
+                    <p class="exam-countdown" id="exam-countdown">⏰ 試験まで残り時間を表示</p>
+                </div>
+                <div class="daily-goal">
+                    <span class="goal-label">🎯 毎日の目標</span>
+                    <span class="goal-value">1時間以上の学習</span>
+                </div>
+            </div>
         </header>
 
         <!-- メインメニュー -->
@@ -156,6 +168,27 @@
                 </button>
             </div>
             
+            <!-- 科目A学習メニュー -->
+            <div class="menu-card">
+                <h2>📚 科目A（基礎知識）</h2>
+                <button class="menu-btn subject-a-btn" onclick="startExam('subject-a-all')">
+                    🧠 科目A 全分野学習
+                    <span class="sub-text">基礎知識を総合的に学習</span>
+                </button>
+                <button class="menu-btn subject-a-btn" onclick="showSubjectASelection()">
+                    🔍 分野別学習
+                    <span class="sub-text">コンピュータ・DB・ネット・セキュリティ</span>
+                </button>
+                <button class="menu-btn subject-a-btn" onclick="startExam('subject-a-weak')">
+                    💪 弱点克服モード
+                    <span class="sub-text">間違えた問題を重点復習</span>
+                </button>
+                <button class="menu-btn subject-a-btn" onclick="startExam('subject-a-random')">
+                    🎲 ランダム20問
+                    <span class="sub-text">効率的な知識確認</span>
+                </button>
+            </div>
+
             <!-- 過去問メニュー -->
             <div class="menu-card">
                 <h2>📅 過去問チャレンジ</h2>
@@ -174,6 +207,106 @@
                 <button class="menu-btn past-exam-btn" onclick="showPastExamSelection()">
                     🎯 過去問ミックス
                     <span class="sub-text">3年分から選択して学習</span>
+                </button>
+            </div>
+            
+            <!-- 学習計画・進捗管理 -->
+            <div class="menu-card">
+                <h2>📈 学習管理</h2>
+                <button class="menu-btn study-plan-btn" onclick="showStudyPlan()">
+                    📅 学習計画
+                    <span class="sub-text">10月26日までの学習スケジュール</span>
+                </button>
+                <button class="menu-btn study-plan-btn" onclick="showProgress()">
+                    📊 学習進捗
+                    <span class="sub-text">今日の学習時間と達成状況</span>
+                </button>
+                <button class="menu-btn study-plan-btn" onclick="showWeaknessAnalysis()">
+                    🎯 弱点分析
+                    <span class="sub-text">苦手分野の詳細分析</span>
+                </button>
+                <button class="menu-btn study-plan-btn" onclick="showRecommendations()">
+                    💡 学習提案
+                    <span class="sub-text">AIによる最適学習プラン</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 科目A分野選択画面 -->
+        <div class="subject-a-selection-container" id="subject-a-selection-container" style="display: none;">
+            <div class="selection-header">
+                <h2>📚 科目A 分野別学習</h2>
+                <p class="selection-description">学習したい分野を選択してください</p>
+            </div>
+            
+            <div class="subject-categories">
+                <button class="category-btn" onclick="startExam('computer-system')">
+                    💻 コンピュータシステム
+                    <span class="category-count">ハードウェア・アーキテクチャ</span>
+                </button>
+                <button class="category-btn" onclick="startExam('database')">
+                    🗃️ データベース
+                    <span class="category-count">正規化・SQL・トランザクション</span>
+                </button>
+                <button class="category-btn" onclick="startExam('network')">
+                    🌐 ネットワーク
+                    <span class="category-count">OSI・TCP/IP・プロトコル</span>
+                </button>
+                <button class="category-btn" onclick="startExam('security-theory')">
+                    🔒 セキュリティ理論
+                    <span class="category-count">暗号・認証・脅威</span>
+                </button>
+            </div>
+            
+            <div class="selection-controls">
+                <button class="control-btn exit-btn" onclick="hideSubjectASelection()">
+                    🔙 メニューに戻る
+                </button>
+            </div>
+        </div>
+
+        <!-- 学習計画画面 -->
+        <div class="study-plan-container" id="study-plan-container" style="display: none;">
+            <div class="study-plan-header">
+                <h2>📅 10月26日試験対策 学習計画</h2>
+                <div class="days-remaining" id="days-remaining">
+                    残り日数を計算中...
+                </div>
+            </div>
+            
+            <div class="study-schedule">
+                <div class="schedule-card">
+                    <h3>🗓️ 週間スケジュール</h3>
+                    <div class="weekly-plan" id="weekly-plan">
+                        <!-- JavaScriptで生成 -->
+                    </div>
+                </div>
+                
+                <div class="schedule-card">
+                    <h3>📊 今日の進捗</h3>
+                    <div class="daily-progress" id="daily-progress">
+                        <div class="progress-item">
+                            <span class="progress-label">学習時間</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="time-progress"></div>
+                            </div>
+                            <span class="progress-value" id="time-value">0分 / 60分</span>
+                        </div>
+                        
+                        <div class="progress-item">
+                            <span class="progress-label">問題数</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="problems-progress"></div>
+                            </div>
+                            <span class="progress-value" id="problems-value">0問 / 20問</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="selection-controls">
+                <button class="control-btn exit-btn" onclick="hideStudyPlan()">
+                    🔙 メニューに戻る
                 </button>
             </div>
         </div>
